@@ -173,14 +173,10 @@ SECTIONS
         tools/agbcc/lib/libgcc.a:_udivsi3.o(.text);
         tools/agbcc/lib/libgcc.a:_umodsi3.o(.text);
 
-		asm/code.o(.text);
-           
-    /*
+        tools/agbcc/lib/libc.a:bzero.o(.text);
         tools/agbcc/lib/libc.a:memcpy.o(.text);
         tools/agbcc/lib/libc.a:memset.o(.text);
-        tools/agbcc/lib/libc.a:sprintf.o(.text);
-        tools/agbcc/lib/libc.a:strcmp.o(.text);
-        tools/agbcc/lib/libc.a:strlen.o(.text);
+        tools/agbcc/lib/libc.a:vsprintf.o(.text);
         tools/agbcc/lib/libc.a:vfprintf.o(.text);
         tools/agbcc/lib/libc.a:wsetup.o(.text);
         tools/agbcc/lib/libc.a:dtoa.o(.text);
@@ -201,6 +197,8 @@ SECTIONS
         tools/agbcc/lib/libc.a:s_isnan.o(.text);
         tools/agbcc/lib/libc.a:sbrkr.o(.text);
         tools/agbcc/lib/libc.a:stdio.o(.text);
+        tools/agbcc/lib/libc.a:strcmp.o(.text);
+        tools/agbcc/lib/libc.a:strlen.o(.text);
         tools/agbcc/lib/libc.a:syscalls.o(.text);
         tools/agbcc/lib/libc.a:writer.o(.text);
         tools/agbcc/lib/libc.a:callocr.o(.text);
@@ -210,14 +208,11 @@ SECTIONS
         tools/agbcc/lib/libc.a:libcfunc.o(.text);
         tools/agbcc/lib/libc.a:lseekr.o(.text);
         tools/agbcc/lib/libc.a:readr.o(.text);
-
-        tools/agbcc/lib/libgcc.a:_udivsi3.o(.text);
         tools/agbcc/lib/libgcc.a:dp-bit.o(.text);
         tools/agbcc/lib/libgcc.a:fp-bit.o(.text);
         tools/agbcc/lib/libgcc.a:_lshrdi3.o(.text);
         tools/agbcc/lib/libgcc.a:_muldi3.o(.text);
         tools/agbcc/lib/libgcc.a:_negdi2.o(.text);
-    */
 	} = 0
     
     . = 0x0811FB18;
@@ -227,23 +222,16 @@ SECTIONS
         /* Read Only Data */
         /* src/main.o(.rodata);                      // rodata 08018098 */
         /* src/sub_8000200.o(.rodata);               // rodata 0801809C */
-        data/data.o(.data);
         data/data.o(.rodata);
-    } = 0
-    
-    RODATA2 :
-	ALIGN(4)
-    {
-        /* Read Only Data */
+        tools/agbcc/lib/libc.a:impure.o(.rodata);
+        . = ALIGN(4); 
+        tools/agbcc/lib/libc.a:bzero.o(.rodata);
         tools/agbcc/lib/libc.a:memcpy.o(.rodata);
         tools/agbcc/lib/libc.a:memset.o(.rodata);
-        tools/agbcc/lib/libc.a:sprintf.o(.rodata);
-        tools/agbcc/lib/libc.a:strcmp.o(.rodata);
-        tools/agbcc/lib/libc.a:strlen.o(.rodata);
+        tools/agbcc/lib/libc.a:vsprintf.o(.rodata);
         tools/agbcc/lib/libc.a:vfprintf.o(.rodata);
         tools/agbcc/lib/libc.a:wsetup.o(.rodata);
         tools/agbcc/lib/libc.a:dtoa.o(.rodata);
-        tools/agbcc/lib/libc.a:impure.o(.rodata);
         tools/agbcc/lib/libc.a:fflush.o(.rodata);
         tools/agbcc/lib/libc.a:findfp.o(.rodata);
         tools/agbcc/lib/libc.a:freer.o(.rodata);
@@ -258,18 +246,61 @@ SECTIONS
         tools/agbcc/lib/libc.a:mlock.o(.rodata);
         tools/agbcc/lib/libc.a:mprec.o(.rodata);
         tools/agbcc/lib/libc.a:s_isinf.o(.rodata);
-        tools/agbcc/lib/libc.a:isnan.o(.rodata);
-        tools/agbcc/lib/libc.a:sbrk.o(.rodata);
+        tools/agbcc/lib/libc.a:s_isnan.o(.rodata);
+        tools/agbcc/lib/libc.a:sbrkr.o(.rodata);
         tools/agbcc/lib/libc.a:stdio.o(.rodata);
+        tools/agbcc/lib/libc.a:strcmp.o(.rodata);
+        tools/agbcc/lib/libc.a:strlen.o(.rodata);
         tools/agbcc/lib/libc.a:syscalls.o(.rodata);
-        tools/agbcc/lib/libc.a:writer.o(.rodata);
-        tools/agbcc/lib/libc.a:callocr.o(.rodata);
-        tools/agbcc/lib/libc.a:closer.o(.rodata);
+
+        data/data1.o(.data);
+        tools/agbcc/lib/libc.a:impure.o(.data);
+        tools/agbcc/lib/libc.a:locale.o(.data);
+        tools/agbcc/lib/libc.a:mallocr.o(.data);
+    } = 0
+    
+    RODATA2 :
+	ALIGN(4)
+    {
+        /* Read Only Data */
+        tools/agbcc/lib/libc.a:memcpy.o(.rodata);
+        tools/agbcc/lib/libc.a:bzero.o(.rodata);
+        tools/agbcc/lib/libc.a:memcpy.o(.rodata);
+        tools/agbcc/lib/libc.a:memset.o(.rodata);
+        tools/agbcc/lib/libc.a:vsprintf.o(.rodata);
+        tools/agbcc/lib/libc.a:vfprintf.o(.rodata);
+        tools/agbcc/lib/libc.a:wsetup.o(.rodata);
+        tools/agbcc/lib/libc.a:dtoa.o(.rodata);
+        tools/agbcc/lib/libc.a:fflush.o(.rodata);
+        tools/agbcc/lib/libc.a:findfp.o(.rodata);
+        tools/agbcc/lib/libc.a:freer.o(.rodata);
+        tools/agbcc/lib/libc.a:fvwrite.o(.rodata);
+        tools/agbcc/lib/libc.a:fwalk.o(.rodata);
+        tools/agbcc/lib/libc.a:locale.o(.rodata);
+        tools/agbcc/lib/libc.a:makebuf.o(.rodata);
+        tools/agbcc/lib/libc.a:mallocr.o(.rodata);
+        tools/agbcc/lib/libc.a:mbtowc_r.o(.rodata);
+        tools/agbcc/lib/libc.a:memchr.o(.rodata);
+        tools/agbcc/lib/libc.a:memmove.o(.rodata);
+        tools/agbcc/lib/libc.a:mlock.o(.rodata);
+        tools/agbcc/lib/libc.a:mprec.o(.rodata);
+        tools/agbcc/lib/libc.a:s_isinf.o(.rodata);
+        tools/agbcc/lib/libc.a:s_isnan.o(.rodata);
+        tools/agbcc/lib/libc.a:sbrkr.o(.rodata);
+        tools/agbcc/lib/libc.a:stdio.o(.rodata);
+        tools/agbcc/lib/libc.a:strcmp.o(.rodata);
+        tools/agbcc/lib/libc.a:strlen.o(.rodata);
+        tools/agbcc/lib/libc.a:syscalls.o(.rodata);
         tools/agbcc/lib/libc.a:errno.o(.rodata);
         tools/agbcc/lib/libc.a:fstatr.o(.rodata);
         tools/agbcc/lib/libc.a:libcfunc.o(.rodata);
         tools/agbcc/lib/libc.a:lseekr.o(.rodata);
         tools/agbcc/lib/libc.a:readr.o(.rodata);
+        tools/agbcc/lib/libgcc.a:dp-bit.o(.rodata);
+        tools/agbcc/lib/libgcc.a:fp-bit.o(.rodata);
+        tools/agbcc/lib/libgcc.a:_lshrdi3.o(.rodata);
+        tools/agbcc/lib/libgcc.a:_muldi3.o(.rodata);
+        tools/agbcc/lib/libgcc.a:_negdi2.o(.rodata);
     } = 0
     
     /* DWARF debug sections.
