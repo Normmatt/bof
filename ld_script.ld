@@ -27,6 +27,7 @@ SECTIONS
     ROM : SUBALIGN(0)
 	{
 		asm/crt0.o(.text);
+        src/main.o(.text);                          /* rodata 0811FB18 */
         asm/main.o(.text);                          /* rodata 0811FB18 */
         asm/sub_80007C4.o(.text);                   /* rodata 0811FB38 */
         asm/sub_8002524.o(.text);                   /* rodata 0811FEA8 */
