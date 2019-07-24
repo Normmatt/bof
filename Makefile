@@ -105,15 +105,17 @@ $(OBJ_DIR)/sym_data.txt: sym_data.txt
 	sed "s#tools/#../../tools/#g" sym_data.txt > $@
 
 $(C_BUILDDIR)/%.o : $(C_SUBDIR)/%.c
-	$(CPP) $(CPPFLAGS) $< | $(CC1) $(CC1FLAGS) -o $(C_BUILDDIR)/$*.s
+	$(CPP) $(CPPFLAGS) $< -o $(C_BUILDDIR)/$*.i
+	$(PREPROC) $(C_BUILDDIR)/$*.i charmap.txt > $(C_BUILDDIR)/$*.p.i
+	$(PREPROC) $(C_BUILDDIR)/$*.i charmap.txt | $(CC1) $(CC1FLAGS) -o $(C_BUILDDIR)/$*.s
 	@echo -e ".text\n\t.align\t2, 0\n" >> $(C_BUILDDIR)/$*.s
 	$(AS) $(ASFLAGS) -o $@ $(C_BUILDDIR)/$*.s
 
 $(ASM_BUILDDIR)/%.o: $(ASM_SUBDIR)/%.s
-	$(AS) $(ASFLAGS) -o $@ $<
+	$(PREPROC) $< charmap.txt | $(AS) $(ASFLAGS) -o $@
     
 $(DATA_ASM_BUILDDIR)/%.o: $(DATA_ASM_SUBDIR)/%.s
-	$(AS) $(ASFLAGS) -o $@ $<
+	$(PREPROC) $< charmap.txt | $(AS) $(ASFLAGS) -o $@
     
 $(SOUND_ASM_BUILDDIR)/%.o: $(SOUND_ASM_SUBDIR)/%.s
 	$(AS) $(ASFLAGS) -o $@ $<

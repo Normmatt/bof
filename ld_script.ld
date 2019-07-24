@@ -26,7 +26,7 @@ SECTIONS
 	. = 0x08000000;
     ROM : SUBALIGN(0)
 	{
-		asm/crt0.o(.text);
+        asm/crt0.o(.text);
         src/main.o(.text);                          /* rodata 0811FB18 */
         asm/main.o(.text);                          /* rodata 0811FB18 */
         asm/sub_80007C4.o(.text);                   /* rodata 0811FB38 */
@@ -162,7 +162,7 @@ SECTIONS
         asm/befect.o(.text);                        /* rodata 0812E7B0 */
         asm/btama.o(.text);                         /* rodata 0812E820 */
         asm/sub_81131A8.o(.text);                   /* rodata 08141DE4 */
-        asm/m4a.o(.text);                           /*  ? */
+        asm/m4a.o(.text);                           /* rodata 081423AC ends 08142684? */
         asm/svc.o(.text);                           /*  ? */
         asm/ISAGBPRN.o(.text);                      /*  ? */
         asm/sram.o(.text);                          /*  ? */
