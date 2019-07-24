@@ -1466,11 +1466,11 @@ gUnknown_08183124:
 
     .global gUnknown_08183140
 gUnknown_08183140:
-    .incbin "baserom.gba", 0x00183140, 0x9
+    .string "LANGUAGE\0"
 
     .global gUnknown_08183149
 gUnknown_08183149:
-    .incbin "baserom.gba", 0x00183149, 0x7
+    .string "LANGUE\0"
 
     .global gUnknown_08183150
 gUnknown_08183150:
