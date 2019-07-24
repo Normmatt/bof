@@ -6,7 +6,8 @@ gUnknown_0817B21C:
 
     .global gUnknown_0817B400
 gUnknown_0817B400:
-    .incbin "baserom.gba", 0x0017B400, 0x8
+    .word sub_800190C
+    .word sub_8001920
 
     .global gUnknown_0817B408
 gUnknown_0817B408:
@@ -14,15 +15,32 @@ gUnknown_0817B408:
 
     .global gUnknown_0817BCC8
 gUnknown_0817BCC8:
-    .incbin "baserom.gba", 0x0017BCC8, 0x10
+    .word sub_8001D38
+    .word sub_8001F5C
+    .word sub_800198C
+    .word sub_8001B98
 
     .global gUnknown_0817BCD8
 gUnknown_0817BCD8:
-    .incbin "baserom.gba", 0x0017BCD8, 0x20
+    .word sub_8004BE8
+    .word sub_8004CDC
+    .word sub_8004D20
+    .word sub_8004D50
+    .word sub_8004DC4
+    .word sub_8004E14
+    .word sub_8004E8C
+    .word sub_8004E98
 
     .global gUnknown_0817BCF8
 gUnknown_0817BCF8:
-    .incbin "baserom.gba", 0x0017BCF8, 0x1D0
+    .word sub_8003AF0
+    .word sub_8003B48
+    .word sub_8003BA0
+    .word sub_8003BF8
+
+    .global gUnknown_0817BD08
+gUnknown_0817BD08:
+    .incbin "baserom.gba", 0x0017BD08, 0x1C0
 
     .global gUnknown_0817BEC8
 gUnknown_0817BEC8:
@@ -42,35 +60,80 @@ gUnknown_0817BF7C:
 
     .global gUnknown_0817BF94
 gUnknown_0817BF94:
-    .incbin "baserom.gba", 0x0017BF94, 0x10
+    .word sub_80067DC
+    .word sub_8006844
+    .word sub_80068EC
+    .word sub_80069A8
 
     .global gUnknown_0817BFA4
 gUnknown_0817BFA4:
-    .incbin "baserom.gba", 0x0017BFA4, 0x1C
+    .word sub_800939C
+    .word sub_80111EC
+    .word sub_8017A34
+    .word sub_801E39C
+    .word sub_8024DC8
+    .word sub_8030548
+    .word sub_8035BC8
 
     .global gUnknown_0817BFC0
 gUnknown_0817BFC0:
-    .incbin "baserom.gba", 0x0017BFC0, 0x1C
+    .word sub_8009210
+    .word sub_8011174
+    .word sub_8017950
+    .word sub_801E048
+    .word sub_8024850
+    .word sub_80303A8
+    .word sub_8035B78
 
     .global gUnknown_0817BFDC
 gUnknown_0817BFDC:
-    .incbin "baserom.gba", 0x0017BFDC, 0x1C
+    .word sub_800DBA8
+    .word sub_8015A2C
+    .word sub_801B7E8
+    .word sub_8021EA8
+    .word sub_802D99C
+    .word sub_8035024
+    .word sub_803864C
 
     .global gUnknown_0817BFF8
 gUnknown_0817BFF8:
-    .incbin "baserom.gba", 0x0017BFF8, 0x1C
+    .word sub_800DF74
+    .word sub_8015E88
+    .word sub_801B9EC
+    .word sub_80224B0
+    .word sub_802DF70
+    .word sub_801B9EC
+    .word sub_801B9EC
 
     .global gUnknown_0817C014
 gUnknown_0817C014:
-    .incbin "baserom.gba", 0x0017C014, 0x1C
+    .word sub_801046C
+    .word sub_8016780
+    .word sub_801D680
+    .word sub_8023798
+    .word sub_802E494
+    .word sub_80353E4
+    .word sub_8038688
 
     .global gUnknown_0817C030
 gUnknown_0817C030:
-    .incbin "baserom.gba", 0x0017C030, 0x1C
+    .word sub_8010254
+    .word sub_8017394
+    .word sub_801D918
+    .word sub_80244E0
+    .word sub_802F65C
+    .word sub_803557C
+    .word sub_80386B0
 
     .global gUnknown_0817C04C
 gUnknown_0817C04C:
-    .incbin "baserom.gba", 0x0017C04C, 0x1C
+    .word sub_8010FF4
+    .word sub_8017798
+    .word sub_801DAEC
+    .word sub_8024784
+    .word sub_802FBA4
+    .word sub_8035814
+    .word sub_80386D4
 
     .global gUnknown_0817C068
 gUnknown_0817C068:
@@ -102,7 +165,18 @@ gUnknown_0817CCE0:
 
     .global gUnknown_0817CD28
 gUnknown_0817CD28:
-    .incbin "baserom.gba", 0x0017CD28, 0x30
+    .word sub_8007B34
+    .word sub_8007D14
+    .word sub_8007E3C
+    .word sub_8007F74
+    .word sub_800817C
+    .word sub_800822C
+    .word sub_8008274
+    .word sub_8008408
+    .word sub_800854C
+    .word sub_8008694
+    .word sub_80088B8
+    .word sub_8008A0C
 
     .global gUnknown_0817CD58
 gUnknown_0817CD58:
@@ -110,27 +184,175 @@ gUnknown_0817CD58:
 
     .global gUnknown_0817CD80
 gUnknown_0817CD80:
-    .incbin "baserom.gba", 0x0017CD80, 0x44
+    .word sub_8009400
+    .word sub_8009B14
+    .word sub_800B910
+    .word sub_8009268
+    .word sub_800BA40
+    .word sub_800BC98
+    .word sub_8009268
+    .word sub_8009268
+    .word sub_800C3C8
+    .word sub_800C4A0
+    .word sub_800C4FC
+    .word sub_800C630
+    .word sub_800D190
+    .word sub_800D400
+    .word sub_800D4B8
+    .word sub_800D9C8
+    .word sub_800DA5C
 
     .global gUnknown_0817CDC4
 gUnknown_0817CDC4:
-    .incbin "baserom.gba", 0x0017CDC4, 0x44
+    .word sub_800942C
+    .word sub_80094DC
+    .word sub_8009534
+    .word sub_8009684
+    .word sub_800974C
+    .word sub_80097D4
+    .word sub_800987C
+    .word sub_80098A8
+    .word sub_80098E0
+    .word sub_8009934
+    .word sub_80099AC
+    .word sub_80099F0
+    .word sub_8009A40
+    .word sub_8009268
+    .word sub_8009A94
+    .word sub_8009AF4
+    .word sub_8009268
 
     .global gUnknown_0817CE08
 gUnknown_0817CE08:
-    .incbin "baserom.gba", 0x0017CE08, 0x148
+    .word sub_8009B40
+    .word sub_8009B88
+    .word sub_8009BBC
+    .word sub_8009C6C
+    .word sub_8009268
+    .word sub_8009CC8
+    .word sub_8009D48
+    .word sub_8009D80
+    .word sub_8009DF8
+    .word sub_8009268
+    .word sub_8009E74
+    .word sub_8009EE8
+    .word sub_8009F3C
+    .word sub_8009F7C
+    .word sub_8009268
+    .word sub_8009FA4
+    .word sub_800A008
+    .word sub_800A078
+    .word sub_800A128
+    .word sub_800A174
+    .word sub_8009268
+    .word sub_800A1D0
+    .word sub_800A224
+    .word sub_800A288
+    .word sub_8009268
+    .word sub_800A2D8
+    .word sub_800A32C
+    .word sub_800A390
+    .word sub_8009268
+    .word sub_800A3E0
+    .word sub_800A430
+    .word sub_800A490
+    .word sub_800A4F0
+    .word sub_800A550
+    .word sub_800A5B4
+    .word sub_8009268
+    .word sub_800A5FC
+    .word sub_800A650
+    .word sub_800A6B0
+    .word sub_800A710
+    .word sub_800A770
+    .word sub_800A7D4
+    .word sub_800A848
+    .word sub_800A8A0
+    .word sub_800A8F8
+    .word sub_800A950
+    .word sub_800A9A4
+    .word sub_8009268
+    .word sub_800AA2C
+    .word sub_8009268
+    .word sub_800AAA0
+    .word sub_8009268
+    .word sub_800ABCC
+    .word sub_800AC78
+    .word sub_8009268
+    .word sub_800ACFC
+    .word sub_8009268
+    .word sub_800AD80
+    .word sub_800ADB8
+    .word sub_8009268
+    .word sub_800AE6C
+    .word sub_800AF30
+    .word sub_8009268
+    .word sub_800AF6C
+    .word sub_800AFC8
+    .word sub_800B028
+    .word sub_8009268
+    .word sub_800B084
+    .word sub_800B0B8
+    .word sub_8009268
+    .word sub_800B110
+    .word sub_800B140
+    .word sub_800B170
+    .word sub_800B22C
+    .word sub_800B280
+    .word sub_800B2E8
+    .word sub_800B340
+    .word sub_800B398
+    .word sub_800B438
+    .word sub_800B49C
+    .word sub_800B59C
+    .word sub_8009268
 
     .global gUnknown_0817CF50
 gUnknown_0817CF50:
-    .incbin "baserom.gba", 0x0017CF50, 0x24
+    .word sub_800B93C
+    .word sub_8009268
+    .word sub_800B97C
+    .word sub_8009268
+    .word sub_800B9B0
+    .word sub_8009268
+    .word sub_800B9E4
+    .word sub_800B9FC
+    .word sub_8009268
 
     .global gUnknown_0817CF74
 gUnknown_0817CF74:
-    .incbin "baserom.gba", 0x0017CF74, 0x24
+    .word sub_800BA6C
+    .word sub_8009268
+    .word sub_800BA90
+    .word sub_800BAA8
+    .word sub_8009268
+    .word sub_800BB18
+    .word sub_800BB70
+    .word sub_800BBDC
+    .word sub_800BC40
 
     .global gUnknown_0817CF98
 gUnknown_0817CF98:
-    .incbin "baserom.gba", 0x0017CF98, 0x50
+    .word sub_800BCC4
+    .word sub_800BCF4
+    .word sub_800BD18
+    .word sub_800BD64
+    .word sub_800BDA4
+    .word sub_8009268
+    .word sub_800BF58
+    .word sub_800BFA4
+    .word sub_800BFF8
+    .word sub_8009268
+    .word sub_800C034
+    .word sub_800C090
+    .word sub_800C0E4
+    .word sub_8009268
+    .word sub_800C124
+    .word sub_800C15C
+    .word sub_800C1B4
+    .word sub_800C208
+    .word sub_800C258
+    .word sub_800C2D0
 
     .global gUnknown_0817CFE8
 gUnknown_0817CFE8:
@@ -138,83 +360,427 @@ gUnknown_0817CFE8:
 
     .global gUnknown_0817D008
 gUnknown_0817D008:
-    .incbin "baserom.gba", 0x0017D008, 0x10
+    .word sub_8009268
+    .word sub_800C3F4
+    .word sub_800C460
+    .word sub_8009268
 
     .global gUnknown_0817D018
 gUnknown_0817D018:
-    .incbin "baserom.gba", 0x0017D018, 0x14
+    .word sub_800C4CC
+    .word sub_8009268
+    .word sub_800C4E4
+    .word sub_8009268
+    .word sub_8009268
 
     .global gUnknown_0817D02C
 gUnknown_0817D02C:
-    .incbin "baserom.gba", 0x0017D02C, 0x10
+    .word sub_800C528
+    .word sub_8009268
+    .word sub_800C5AC
+    .word sub_8009268
 
     .global gUnknown_0817D03C
 gUnknown_0817D03C:
-    .incbin "baserom.gba", 0x0017D03C, 0x8C
+    .word sub_800C65C
+    .word sub_800C760
+    .word sub_8009268
+    .word sub_800C85C
+    .word sub_800C918
+    .word sub_800C94C
+    .word sub_800C978
+    .word sub_800C9A4
+    .word sub_800C9D0
+    .word sub_800CA34
+    .word sub_800CAA8
+    .word sub_800CAD0
+    .word sub_800CB24
+    .word sub_800CB70
+    .word sub_800CB88
+    .word sub_800CBD4
+    .word sub_8009268
+    .word sub_800CC38
+    .word sub_8009268
+    .word sub_800CCB4
+    .word sub_800CCE4
+    .word sub_800CD20
+    .word sub_800CD54
+    .word sub_800CDA4
+    .word sub_800CDEC
+    .word sub_800CE40
+    .word sub_800CE94
+    .word sub_800CEE8
+    .word sub_800CF3C
+    .word sub_800CF7C
+    .word sub_800CFB8
+    .word sub_800CFF8
+    .word sub_800D018
+    .word sub_800D064
+    .word sub_8009268
 
     .global gUnknown_0817D0C8
 gUnknown_0817D0C8:
-    .incbin "baserom.gba", 0x0017D0C8, 0x4C
+    .word sub_8009268
+    .word sub_8009268
+    .word sub_800D21C
+    .word sub_800D22C
+    .word sub_800D20C
+    .word sub_800D22C
+    .word sub_8009268
+    .word sub_8009268
+    .word sub_800D26C
+    .word sub_800D2A8
+    .word sub_800D2A8
+    .word sub_8009268
+    .word sub_800D2D8
+    .word sub_800D318
+    .word sub_8009268
+    .word sub_8009268
+    .word sub_800D34C
+    .word sub_800D398
+    .word sub_8009268
 
     .global gUnknown_0817D114
 gUnknown_0817D114:
-    .incbin "baserom.gba", 0x0017D114, 0x8
+    .word sub_800D46C
+    .word sub_8009268
 
     .global gUnknown_0817D11C
 gUnknown_0817D11C:
-    .incbin "baserom.gba", 0x0017D11C, 0x50
+    .word sub_800D4E4
+    .word sub_800D4FC
+    .word sub_800D560
+    .word sub_800D5A0
+    .word sub_800D748
+    .word sub_8009268
+    .word sub_800D788
+    .word sub_800D7C8
+    .word sub_800D870
+    .word sub_8009268
+    .word sub_8009268
+    .word sub_800D8A4
+    .word sub_800D8FC
+    .word sub_8009268
+    .word sub_8009268
+    .word sub_800D96C
+    .word sub_8009268
+    .word sub_8009268
+    .word sub_800D97C
+    .word sub_8009268
 
     .global gUnknown_0817D16C
 gUnknown_0817D16C:
-    .incbin "baserom.gba", 0x0017D16C, 0x10
+    .word sub_800D9F4
+    .word sub_8009268
+    .word sub_800DA28
+    .word sub_8009268
 
     .global gUnknown_0817D17C
 gUnknown_0817D17C:
-    .incbin "baserom.gba", 0x0017D17C, 0x18
+    .word sub_800DA88
+    .word sub_800DAD0
+    .word sub_800DB28
+    .word sub_8009268
+    .word sub_800DB74
+    .word sub_8009268
 
     .global gUnknown_0817D194
 gUnknown_0817D194:
-    .incbin "baserom.gba", 0x0017D194, 0x40
+    .word sub_8009268
+    .word sub_8009268
+    .word sub_800DBEC
+    .word sub_8009268
+    .word sub_800DC50
+    .word sub_800DC5C
+    .word sub_800DCAC
+    .word sub_800DD88
+    .word sub_800DD70
+    .word sub_800DD98
+    .word sub_800DDCC
+    .word sub_800DE28
+    .word sub_800DE84
+    .word sub_800DEE8
+    .word sub_800DF00
+    .word sub_800DF18
 
     .global gUnknown_0817D1D4
 gUnknown_0817D1D4:
-    .incbin "baserom.gba", 0x0017D1D4, 0x274
+    .word sub_8009274
+    .word sub_800E168
+    .word sub_800E184
+    .word sub_800E1A4
+    .word sub_800E1F0
+    .word sub_800E214
+    .word sub_800E24C
+    .word sub_800E268
+    .word sub_800E284
+    .word sub_800E324
+    .word sub_800E33C
+    .word sub_800E37C
+    .word sub_800E3B0
+    .word sub_800E458
+    .word sub_800E494
+    .word sub_800E41C
+    .word sub_800E4FC
+    .word sub_800E514
+    .word sub_800E52C
+    .word sub_800E6E0
+    .word sub_800E544
+    .word sub_800E580
+    .word sub_800E5AC
+    .word sub_800E5E8
+    .word sub_800E624
+    .word sub_800E670
+    .word sub_800E694
+    .word sub_800E6F8
+    .word sub_800E710
+    .word sub_800E728
+    .word sub_800E740
+    .word sub_800E7A0
+    .word sub_800E7B8
+    .word sub_800E7D0
+    .word sub_8009274
+    .word sub_800E7E8
+    .word sub_800E838
+    .word sub_800E860
+    .word sub_800E898
+    .word sub_800E8CC
+    .word sub_800E8F0
+    .word sub_800E934
+    .word sub_800E97C
+    .word sub_800E9A8
+    .word sub_800E9CC
+    .word sub_800EA04
+    .word sub_800EA34
+    .word sub_800EA78
+    .word sub_800EAB0
+    .word sub_800EB28
+    .word sub_800EB64
+    .word sub_800EAEC
+    .word sub_800EB80
+    .word sub_800EBF4
+    .word sub_800EC10
+    .word sub_800EC38
+    .word sub_800EC5C
+    .word sub_800EC7C
+    .word sub_800EC9C
+    .word sub_800ECC0
+    .word sub_800ED14
+    .word sub_800ED3C
+    .word sub_800ED74
+    .word sub_800ED90
+    .word sub_800EDC8
+    .word sub_800EE00
+    .word sub_800EE38
+    .word sub_800EE54
+    .word sub_800EE84
+    .word sub_800EEB4
+    .word sub_800EEC8
+    .word sub_800EEF8
+    .word sub_800EF1C
+    .word sub_800EF70
+    .word sub_800EF94
+    .word sub_800EFBC
+    .word sub_800EFFC
+    .word sub_800F020
+    .word sub_800F044
+    .word sub_800F078
+    .word sub_800F09C
+    .word sub_800F0CC
+    .word sub_800F0F0
+    .word sub_800F10C
+    .word sub_800F148
+    .word sub_800F164
+    .word sub_800F1AC
+    .word sub_800F1CC
+    .word sub_800F20C
+    .word sub_800F248
+    .word sub_800F278
+    .word sub_800F2A0
+    .word sub_800F2C4
+    .word sub_800F2F4
+    .word sub_800F388
+    .word sub_800F3E0
+    .word sub_800F474
+    .word sub_800F4A4
+    .word sub_800F4C8
+    .word sub_800F4EC
+    .word sub_800F528
+    .word sub_800F548
+    .word sub_800F564
+    .word sub_800F588
+    .word sub_800F5C4
+    .word sub_800F5EC
+    .word sub_800F610
+    .word sub_800F638
+    .word sub_800F69C
+    .word sub_800F6E4
+    .word sub_800F704
+    .word sub_800F72C
+    .word sub_800F760
+    .word sub_800F788
+    .word sub_800F7C8
+    .word sub_800F7EC
+    .word sub_800F814
+    .word sub_800F850
+    .word sub_800F900
+    .word sub_800F96C
+    .word sub_800F9B4
+    .word sub_800FA64
+    .word sub_800FAAC
+    .word sub_800F91C
+    .word sub_800F7AC
+    .word sub_800FB5C
+    .word sub_800FBA4
+    .word sub_800FBC8
+    .word sub_800FBEC
+    .word sub_800FC24
+    .word sub_800FC44
+    .word sub_800FC64
+    .word sub_800FC94
+    .word sub_800FCBC
+    .word sub_800FCE0
+    .word sub_800FD74
+    .word sub_800FD98
+    .word sub_800FDB8
+    .word sub_800FE08
+    .word sub_800FE3C
+    .word sub_800FE60
+    .word sub_800FE90
+    .word sub_800FEA8
+    .word sub_800FEC0
+    .word sub_800FED8
+    .word sub_800FEF0
+    .word sub_800FF08
+    .word sub_800FF20
+    .word sub_800FF38
+    .word sub_800FF50
+    .word sub_800FF68
+    .word sub_800FF80
+    .word sub_800FF98
+    .word sub_800FFB0
+    .word sub_800FFC8
+    .word sub_800FFE0
+    .word sub_800FFF8
 
     .global gUnknown_0817D448
 gUnknown_0817D448:
-    .incbin "baserom.gba", 0x0017D448, 0x18
+    .word 0x92
+    .word sub_80103C4
+    .word 0x91
+    .word sub_8010374
+    .word 0xFFFF
+    .word 0
 
     .global gUnknown_0817D460
 gUnknown_0817D460:
-    .incbin "baserom.gba", 0x0017D460, 0x58
+    .word 0
+    .word sub_8010588
+    .word 6
+    .word sub_8010DF0
+    .word 0xF
+    .word sub_8010698
+    .word 0x91
+    .word sub_8010898
+    .word 0x90
+    .word sub_8010900
+    .word 0x51
+    .word sub_8010964
+    .word 0x7F
+    .word sub_8010B2C
+    .word 0x80
+    .word sub_8010BB0
+    .word 0x82
+    .word sub_8010C00
+    .word 0x10
+    .word sub_8010D44
+    .word 0xFFFF
+    .word 0
 
     .global gUnknown_0817D4B8
 gUnknown_0817D4B8:
-    .incbin "baserom.gba", 0x0017D4B8, 0x44
+    .word sub_8017944
+    .word sub_801121C
+    .word sub_80113D8
+    .word sub_801158C
+    .word sub_8011624
+    .word sub_8011868
+    .word sub_80119E4
+    .word sub_8012040
+    .word sub_8012680
+    .word sub_8013074
+    .word sub_80135DC
+    .word sub_8013698
+    .word sub_8013A40
+    .word sub_8014510
+    .word sub_8014708
+    .word sub_80155F0
+    .word sub_80156B0
 
     .global gUnknown_0817D4FC
 gUnknown_0817D4FC:
-    .incbin "baserom.gba", 0x0017D4FC, 0x10
+    .word sub_801124C
+    .word sub_8017944
+    .word sub_80112B0
+    .word sub_801132C
 
     .global gUnknown_0817D50C
 gUnknown_0817D50C:
-    .incbin "baserom.gba", 0x0017D50C, 0x1C
+    .word sub_8011408
+    .word sub_8017944
+    .word sub_8011468
+    .word sub_8017944
+    .word sub_80114B8
+    .word sub_8024DF8
+    .word sub_8011510
 
     .global gUnknown_0817D528
 gUnknown_0817D528:
-    .incbin "baserom.gba", 0x0017D528, 0x14
+    .word sub_8011654
+    .word sub_80116DC
+    .word sub_801177C
+    .word sub_80117D4
+    .word sub_8017944
 
     .global gUnknown_0817D53C
 gUnknown_0817D53C:
-    .incbin "baserom.gba", 0x0017D53C, 0x14
+    .word sub_8011898
+    .word sub_801190C
+    .word sub_8011960
+    .word sub_8017944
+    .word sub_80119A8
 
     .global gUnknown_0817D550
 gUnknown_0817D550:
-    .incbin "baserom.gba", 0x0017D550, 0x2C
+    .word sub_8011A14
+    .word sub_8011AC0
+    .word sub_8011B90
+    .word sub_8011C04
+    .word sub_8011C6C
+    .word sub_8011D00
+    .word sub_8011D88
+    .word sub_8011E1C
+    .word sub_8011EC4
+    .word sub_8017944
+    .word sub_8011FA8
 
     .global gUnknown_0817D57C
 gUnknown_0817D57C:
-    .incbin "baserom.gba", 0x0017D57C, 0x3C
+    .word sub_8012070
+    .word sub_8017944
+    .word sub_80120B0
+    .word sub_80120F0
+    .word sub_8012150
+    .word sub_8013E20
+    .word sub_80121F0
+    .word sub_8012234
+    .word sub_80122A8
+    .word sub_80123A8
+    .word sub_8012448
+    .word sub_8017944
+    .word sub_8012498
+    .word sub_8012508
+    .word sub_8017944
 
     .global gUnknown_0817D5B8
 gUnknown_0817D5B8:
@@ -222,35 +788,199 @@ gUnknown_0817D5B8:
 
     .global gUnknown_0817D5D8
 gUnknown_0817D5D8:
-    .incbin "baserom.gba", 0x0017D5D8, 0x6C
+    .word sub_80126B0
+    .word sub_8012700
+    .word sub_8012768
+    .word sub_8012700
+    .word sub_80127C0
+    .word sub_8012700
+    .word sub_801290C
+    .word sub_8012700
+    .word sub_801295C
+    .word sub_8012700
+    .word sub_80129B0
+    .word sub_8012A44
+    .word sub_8017944
+    .word sub_8012A98
+    .word sub_8012700
+    .word sub_8012AF0
+    .word sub_8012700
+    .word sub_8012B54
+    .word sub_8012700
+    .word sub_8012BF0
+    .word sub_8012700
+    .word sub_8012CE0
+    .word sub_8012D40
+    .word sub_8017944
+    .word sub_8012E44
+    .word sub_8017944
+    .word sub_8012E84
 
     .global gUnknown_0817D644
 gUnknown_0817D644:
-    .incbin "baserom.gba", 0x0017D644, 0x40
+    .word sub_80130A4
+    .word sub_8013174
+    .word sub_80131DC
+    .word sub_8013174
+    .word sub_8013254
+    .word sub_8017944
+    .word sub_80132AC
+    .word sub_8013174
+    .word sub_8013354
+    .word sub_8013174
+    .word sub_80133E0
+    .word sub_8013440
+    .word sub_8017944
+    .word sub_80134F0
+    .word sub_8017944
+    .word sub_8013530
 
     .global gUnknown_0817D684
 gUnknown_0817D684:
-    .incbin "baserom.gba", 0x0017D684, 0x38
+    .word sub_80136C8
+    .word sub_8017944
+    .word sub_8013730
+    .word sub_8017944
+    .word sub_8013774
+    .word sub_8013844
+    .word sub_80138F8
+    .word sub_8013844
+    .word sub_8013934
+    .word sub_8013980
+    .word sub_8017944
+    .word sub_80139CC
+    .word sub_8017944
+    .word sub_8013A18
 
     .global gUnknown_0817D6BC
 gUnknown_0817D6BC:
-    .incbin "baserom.gba", 0x0017D6BC, 0x6C
+    .word sub_8013A70
+    .word sub_8013C04
+    .word sub_8013AC0
+    .word sub_8013C04
+    .word sub_8013B18
+    .word sub_8013C04
+    .word sub_8013B58
+    .word sub_8013C04
+    .word sub_8013BA8
+    .word sub_8013C04
+    .word sub_8013C6C
+    .word sub_8013D58
+    .word sub_8013DC8
+    .word sub_8013E20
+    .word sub_8013E7C
+    .word sub_8013F0C
+    .word sub_8013F80
+    .word sub_8013C04
+    .word sub_80140CC
+    .word sub_8013C04
+    .word sub_8014118
+    .word sub_8013C04
+    .word sub_80141AC
+    .word sub_8014254
+    .word sub_8024DF8
+    .word sub_80142FC
+    .word sub_8014354
 
     .global gUnknown_0817D728
 gUnknown_0817D728:
-    .incbin "baserom.gba", 0x0017D728, 0xAC
+    .word sub_8017944
+    .word sub_8014738
+    .word sub_8017944
+    .word sub_80147AC
+    .word sub_8014AEC
+    .word sub_8014814
+    .word sub_80148A4
+    .word sub_80148D8
+    .word sub_80149E0
+    .word sub_8014B54
+    .word sub_80148D8
+    .word sub_80149E0
+    .word sub_8014BC4
+    .word sub_8014C9C
+    .word sub_8014AEC
+    .word sub_8014CF4
+    .word sub_8014D34
+    .word sub_8014DA0
+    .word sub_8014E1C
+    .word sub_8014EA8
+    .word sub_8014F1C
+    .word sub_8014F88
+    .word sub_8014AEC
+    .word sub_8014FE4
+    .word sub_8014AEC
+    .word sub_801506C
+    .word sub_8014AEC
+    .word sub_80150D8
+    .word sub_8015174
+    .word sub_80151CC
+    .word sub_8015230
+    .word sub_8014AEC
+    .word sub_8015288
+    .word sub_8014AEC
+    .word sub_8015374
+    .word sub_8014EA8
+    .word sub_80153C4
+    .word sub_801542C
+    .word sub_8014AEC
+    .word sub_8015550
+    .word sub_8014EA8
+    .word sub_80155B4
+    .word sub_80159C0
 
     .global gUnknown_0817D7D4
 gUnknown_0817D7D4:
-    .incbin "baserom.gba", 0x0017D7D4, 0x10
+    .word sub_80156E0
+    .word sub_8015730
+    .word sub_80157C0
+    .word sub_80158EC
 
     .global gUnknown_0817D7E4
 gUnknown_0817D7E4:
-    .incbin "baserom.gba", 0x0017D7E4, 0x30
+    .word sub_8015A6C
+    .word sub_8015A80
+    .word sub_8015A94
+    .word sub_8015AD0
+    .word sub_8015B14
+    .word sub_8015B7C
+    .word sub_8015BCC
+    .word sub_8015C50
+    .word sub_8015CF4
+    .word sub_8015D50
+    .word sub_8015DB0
+    .word sub_8015E28
 
     .global gUnknown_0817D814
 gUnknown_0817D814:
-    .incbin "baserom.gba", 0x0017D814, 0x74
+    .word sub_8015EB8
+    .word sub_8015EE8
+    .word sub_8016094
+    .word sub_80160EC
+    .word sub_801614C
+    .word sub_801617C
+    .word sub_80161A4
+    .word sub_80161CC
+    .word sub_801620C
+    .word sub_80161CC
+    .word sub_801623C
+    .word sub_801626C
+    .word sub_80162BC
+    .word sub_80162E4
+    .word sub_8016340
+    .word sub_801639C
+    .word sub_80163E0
+    .word sub_8016448
+    .word sub_801649C
+    .word sub_801652C
+    .word sub_80165A4
+    .word sub_80165EC
+    .word sub_8016644
+    .word sub_8016684
+    .word sub_80166C0
+    .word sub_80166F0
+    .word sub_8016720
+    .word sub_802E384
+    .word sub_8016750
 
     .global gUnknown_0817D888
 gUnknown_0817D888:
@@ -1254,27 +1984,184 @@ gUnknown_08181CC0:
 
     .global gUnknown_08181D20
 gUnknown_08181D20:
-    .incbin "baserom.gba", 0x00181D20, 0x38
+    .word sub_8051908
+    .word sub_805184C
+    .word sub_8050F3C
+    .word sub_8050F80
+    .word sub_8051018
+    .word sub_8051144
+    .word sub_80512BC
+    .word sub_8051474
+    .word sub_8051510
+    .word sub_805155C
+    .word sub_80515DC
+    .word sub_8051638
+    .word sub_8051694
+    .word sub_80516FC
 
     .global gUnknown_08181D58
 gUnknown_08181D58:
-    .incbin "baserom.gba", 0x00181D58, 0x6C
+    .word sub_805A088
+    .word sub_805A100
+    .word sub_805A1BC
+    .word sub_805A204
+    .word sub_805A288
+    .word sub_805A2DC
+    .word sub_805A358
+    .word sub_805A3CC
+    .word sub_805A43C
+    .word sub_805A494
+    .word sub_805A4D8
+    .word sub_805A550
+    .word sub_805A5A4
+    .word sub_805A6A4
+    .word sub_805A6E0
+    .word sub_805A71C
+    .word sub_805A800
+    .word sub_805A8D0
+    .word sub_805A8DC
+    .word sub_805A8E8
+    .word sub_805A930
+    .word sub_805A980
+    .word sub_805AA94
+    .word sub_805AB84
+    .word sub_805ACF8
+    .word sub_805AE0C
+    .word sub_805AF20
 
     .global gUnknown_08181DC4
 gUnknown_08181DC4:
-    .incbin "baserom.gba", 0x00181DC4, 0x17C
+    .word sub_805B4B4
+    .word sub_805B570
+    .word sub_805B590
+    .word sub_805B5C8
+    .word sub_805B5E8
+    .word sub_805B630
+    .word sub_805B6A0
+    .word sub_805B754
+    .word sub_805B78C
+    .word sub_805B804
+    .word sub_805B858
+    .word sub_805B86C
+    .word sub_805B89C
+    .word sub_805B914
+    .word sub_805B968
+    .word sub_805B97C
+    .word sub_805B9F4
+    .word sub_805BA94
+    .word sub_805BAEC
+    .word sub_805BB18
+    .word sub_805BB7C
+    .word sub_805BBB0
+    .word sub_805BBE4
+    .word sub_805BC2C
+    .word sub_805BC74
+    .word sub_805BD18
+    .word sub_805BD8C
+    .word sub_805BE50
+    .word sub_805BE94
+    .word sub_805BECC
+    .word sub_805BF08
+    .word sub_805BF44
+    .word sub_805BD60
+    .word sub_805BF80
+    .word sub_805BFB4
+    .word sub_805BFE8
+    .word sub_805C014
+    .word sub_805C040
+    .word sub_805C08C
+    .word sub_805C168
+    .word sub_805C1AC
+    .word sub_805C1D8
+    .word sub_805C234
+    .word sub_805C284
+    .word sub_805C2C4
+    .word sub_805C310
+    .word sub_805C35C
+    .word sub_805C4F0
+    .word sub_805C57C
+    .word sub_805C63C
+    .word sub_805C6D4
+    .word sub_805C754
+    .word sub_805C79C
+    .word sub_805C83C
+    .word sub_805C87C
+    .word sub_805C8C8
+    .word sub_805C914
+    .word sub_805C950
+    .word sub_805C99C
+    .word sub_805C66C
+    .word sub_805C9E4
+    .word sub_805CA2C
+    .word sub_805CA70
+    .word sub_805CAB8
+    .word sub_805CB04
+    .word sub_805CB34
+    .word sub_805CB60
+    .word sub_805CBAC
+    .word sub_805CC10
+    .word sub_805CC64
+    .word sub_805CCB0
+    .word sub_805CD1C
+    .word sub_805CD64
+    .word sub_805CE94
+    .word sub_805CEE0
+    .word sub_805CF2C
+    .word sub_805D014
+    .word sub_805D05C
+    .word sub_805D0A8
+    .word sub_805D0F4
+    .word sub_805D140
+    .word sub_805D198
+    .word sub_805D1DC
+    .word sub_805D224
+    .word sub_805D394
+    .word sub_805D53C
+    .word sub_805D588
+    .word sub_805D628
+    .word sub_805D658
+    .word sub_805B494
+    .word sub_805D6C4
+    .word sub_805D6F8
+    .word sub_805D74C
+    .word sub_805D780
+    .word sub_805D7AC
 
     .global gUnknown_08181F40
 gUnknown_08181F40:
-    .incbin "baserom.gba", 0x00181F40, 0x4
+    .word 1
 
     .global gUnknown_08181F44
 gUnknown_08181F44:
-    .incbin "baserom.gba", 0x00181F44, 0x28
+    .word sub_805E2D0
+    .word sub_805E338
+    .word sub_805E354
+    .word sub_805E370
+    .word sub_805E384
+    .word sub_805E370
+    .word sub_805E3EC
+    .word sub_805E370
+    .word sub_805E470
+    .word sub_805E48C
 
     .global gUnknown_08181F6C
 gUnknown_08181F6C:
-    .incbin "baserom.gba", 0x00181F6C, 0x40
+    .word sub_805E920
+    .word sub_805E984
+    .word sub_805E99C
+    .word sub_805E9B4
+    .word sub_805E9E4
+    .word sub_805E9E4
+    .word sub_805E9FC
+    .word sub_805EA58
+    .word sub_805EA58
+    .word sub_805EA58
+    .word sub_805EA70
+    .word sub_805EA94
+    .word sub_805EB60
+    .word sub_805EAE8
+    .word sub_805EB00
+    .word sub_805EB24
 
     .global gUnknown_08181FAC
 gUnknown_08181FAC:
@@ -1294,11 +2181,202 @@ gUnknown_0818202C:
 
     .global gUnknown_08182030
 gUnknown_08182030:
-    .incbin "baserom.gba", 0x00182030, 0x26C
+    .word sub_805DBD0
+    .word sub_805DD3C
+    .word sub_805DD0C
+
+    .global gUnknown_0818203C
+gUnknown_0818203C:
+    .word sub_8060C1C
+    .word sub_8060C2C
+    .word sub_8060C6C
+    .word sub_8060C2C
+    .word sub_8060D04
+    .word sub_8060C2C
+    .word sub_8060D8C
+    .word sub_8060C1C
+    .word sub_8060C1C
+    .word sub_8060C2C
+    .word sub_8060C1C
+    .word sub_8060C1C
+    .word sub_8060C1C
+    .word sub_8060C1C
+    .word sub_8060C1C
+    .word sub_8060C2C
+    .word sub_8060C2C
+    .word sub_8060C1C
+    .word sub_8060C1C
+
+    .global gUnknown_08182088
+gUnknown_08182088:
+    .word sub_8060EEC
+    .word sub_8060F28
+    .word sub_8060F28
+    .word sub_8060F28
+    .word sub_8060F38
+    .word sub_8060F94
+    .word sub_8060F38
+    .word sub_8060F38
+    .word sub_8060EEC
+    .word sub_8060F38
+    .word sub_8060F38
+    .word sub_8060F38
+    .word sub_8060F48
+    .word sub_8060F38
+    .word sub_8060F28
+    .word sub_8060F28
+    .word sub_8060F28
+    .word sub_8060EEC
+    .word sub_8060EEC
+
+    .global gUnknown_081820D4
+gUnknown_081820D4:
+    .word sub_80610C0
+    .word sub_80610D0
+    .word sub_80610E0
+    .word sub_80610D0
+    .word sub_80610D0
+    .word sub_80610D0
+    .word sub_8061114
+    .word sub_80610C0
+    .word sub_80610C0
+    .word sub_80610C0
+    .word sub_80610D0
+    .word sub_80610D0
+    .word sub_80610D0
+    .word sub_80610D0
+    .word sub_80610D0
+    .word sub_80610D0
+    .word sub_80610D0
+    .word sub_80610C0
+    .word sub_80610C0
+
+    .global gUnknown_08182120
+gUnknown_08182120:
+    .word sub_8061234
+    .word sub_8061270
+    .word sub_8061280
+    .word sub_80612CC
+    .word sub_8061270
+    .word sub_80612DC
+    .word sub_8061328
+    .word sub_8061374
+    .word sub_80612CC
+    .word sub_80612CC
+    .word sub_80612CC
+    .word sub_80612CC
+    .word sub_80612CC
+    .word sub_80612CC
+    .word sub_8061234
+    .word sub_80612CC
+    .word sub_8061270
+    .word sub_8061234
+    .word sub_80613B0
+
+    .global gUnknown_0818216C
+gUnknown_0818216C:
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DF8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+    .word sub_8060DE8
+
+    .global gUnknown_081821B8
+gUnknown_081821B8:
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FF0
+    .word sub_8061038
+    .word sub_806107C
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FE0
+    .word sub_8060FE0
+
+    .global gUnknown_08182204
+gUnknown_08182204:
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061158
+    .word sub_80611A0
+    .word sub_80611F0
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061148
+    .word sub_8061148
+
+    .global gUnknown_08182250
+gUnknown_08182250:
+    .word sub_8061418
+    .word sub_8061418
+    .word sub_8061418
+    .word sub_8061428
+    .word sub_8061418
+    .word sub_8061418
+    .word sub_8061418
+    .word sub_806143C
+    .word sub_8061538
+    .word sub_80615A4
+    .word sub_8061418
+    .word sub_8061418
+    .word sub_8061610
+    .word sub_8061610
+    .word sub_8061610
+    .word sub_8061610
+    .word sub_8061418
+    .word sub_8061418
+    .word sub_8061418
 
     .global gUnknown_0818229C
 gUnknown_0818229C:
-    .incbin "baserom.gba", 0x0018229C, 0xAA
+    .word gUnknown_0818203C
+    .word gUnknown_08182088
+    .word gUnknown_081820D4
+    .word gUnknown_08182120
+    .word gUnknown_08182120
+    .word gUnknown_0818216C
+    .word gUnknown_081821B8
+    .word gUnknown_08182204
+    .word gUnknown_08182250
+    .word gUnknown_08182250
+
+    .global gUnknown_081822C4
+gUnknown_081822C4:
+    .incbin "baserom.gba", 0x001822C4, 0x82
 
     .global gUnknown_08182346
 gUnknown_08182346:
@@ -1334,15 +2412,522 @@ gUnknown_081825BC:
 
     .global gUnknown_081825C4
 gUnknown_081825C4:
-    .incbin "baserom.gba", 0x001825C4, 0x7C0
+    .word sub_806929C
+    .word sub_80694E8
+    .word sub_8069528
+    .word sub_8069588
+    .word sub_8069588
+    .word sub_80695B0
+    .word sub_80695B0
+    .word sub_80695EC
+    .word sub_8069604
+    .word sub_80695EC
+    .word sub_8069620
+    .word sub_8069640
+    .word sub_80695EC
+    .word sub_806965C
+    .word sub_8069674
+    .word sub_8069694
+    .word sub_80696B4
+    .word sub_80696CC
+    .word sub_8069730
+    .word sub_8069750
+    .word sub_80695EC
+    .word sub_806975C
+    .word sub_8069730
+    .word sub_8069730
+    .word sub_8069768
+    .word sub_8069774
+    .word sub_8069774
+    .word sub_8069774
+    .word sub_8069774
+    .word sub_806979C
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_806979C
+    .word sub_80697BC
+    .word sub_806979C
+    .word sub_80697BC
+    .word sub_806979C
+    .word sub_806979C
+    .word sub_80695EC
+    .word sub_80697E0
+    .word sub_80695EC
+    .word sub_80697BC
+    .word sub_80695EC
+    .word sub_806979C
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_806979C
+    .word sub_8069800
+    .word sub_8069884
+    .word sub_8069884
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_806979C
+    .word sub_806979C
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_8069774
+    .word sub_8069750
+    .word sub_806989C
+    .word sub_806965C
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069730
+    .word sub_8069750
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_8069774
+    .word sub_8069750
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_80695EC
+    .word sub_806979C
+    .word sub_806979C
+    .word sub_80698BC
+    .word sub_8069750
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_8069774
+    .word sub_80695B0
+    .word sub_8069750
+    .word sub_80698D8
+    .word sub_80698F8
+    .word sub_8069910
+    .word sub_8069750
+    .word sub_8069730
+    .word sub_80697E0
+    .word sub_8069930
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_8069774
+    .word sub_80695EC
+    .word sub_8069958
+    .word sub_8069970
+    .word sub_8069970
+    .word sub_8069970
+    .word sub_8069970
+    .word sub_80698F8
+    .word sub_8069750
+    .word sub_80698F8
+    .word sub_80698F8
+    .word sub_8069988
+    .word sub_8069730
+    .word sub_8069750
+    .word sub_80699A8
+    .word sub_80699C8
+    .word sub_8069774
+    .word sub_8069750
+    .word sub_806979C
+    .word sub_80695EC
+    .word sub_8069A04
+    .word sub_8069884
+    .word sub_80696B4
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069604
+    .word sub_8069750
+    .word sub_8069A24
+    .word sub_80697E0
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_806965C
+    .word sub_8069A54
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069A84
+    .word sub_8069A9C
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069A9C
+    .word sub_8069ACC
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069AF4
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069B0C
+    .word sub_8069B2C
+    .word sub_8069A24
+    .word sub_8069B4C
+    .word sub_8069B4C
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069ACC
+    .word sub_8069B4C
+    .word sub_8069B4C
+    .word sub_8069B6C
+    .word sub_8069B8C
+    .word sub_8069BC4
+    .word sub_8069750
+    .word sub_8069BE4
+    .word sub_8069750
+    .word sub_8069C04
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069C24
+    .word sub_8069674
+    .word sub_8069AF4
+    .word sub_8069C54
+    .word sub_8069AF4
+    .word sub_8069A54
+    .word sub_8069C7C
+    .word sub_8069730
+    .word sub_8069AF4
+    .word sub_8069AF4
+    .word sub_8069750
+    .word sub_8069CA8
+    .word sub_8069CC8
+    .word sub_80695EC
+    .word sub_8069CE0
+    .word sub_8069ACC
+    .word sub_8069CFC
+    .word sub_8069ACC
+    .word sub_8069ACC
+    .word sub_8069970
+    .word sub_8069750
+    .word sub_80696B4
+    .word sub_8069D2C
+    .word sub_8069674
+    .word sub_8069674
+    .word sub_8069674
+    .word sub_8069674
+    .word sub_8069674
+    .word sub_8069674
+    .word sub_8069674
+    .word sub_8069D54
+    .word sub_8069CE0
+    .word sub_8069910
+    .word sub_806989C
+    .word sub_8069AF4
+    .word sub_8069D7C
+    .word sub_8069D7C
+    .word sub_8069DA0
+    .word sub_8069DB8
+    .word sub_8069DF8
+    .word sub_8069DF8
+    .word sub_8069DF8
+    .word sub_8069DF8
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069E18
+    .word sub_8069750
+    .word sub_806979C
+    .word sub_80695EC
+    .word sub_806979C
+    .word sub_80695EC
+    .word sub_806979C
+    .word sub_806979C
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069E30
+    .word sub_8069750
+    .word sub_8069E60
+    .word sub_8069E78
+    .word sub_8069EA4
+    .word sub_8069750
+    .word sub_8069910
+    .word sub_8069EC4
+    .word sub_8069EEC
+    .word sub_8069B4C
+    .word sub_8069750
+    .word sub_806989C
+    .word sub_8069750
+    .word sub_8069F04
+    .word sub_8069750
+    .word sub_8069674
+    .word sub_8069730
+    .word sub_8069750
+    .word sub_8069B6C
+    .word sub_8069F20
+    .word sub_8069F20
+    .word sub_8069F20
+    .word sub_8069750
+    .word sub_8069CC8
+    .word sub_8069CC8
+    .word sub_8069CC8
+    .word sub_8069CC8
+    .word sub_8069C24
+    .word sub_8069C24
+    .word sub_8069C24
+    .word sub_8069C24
+    .word sub_8069774
+    .word sub_8069970
+    .word sub_8069F58
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069F88
+    .word sub_8069750
+    .word sub_80697E0
+    .word sub_806979C
+    .word sub_8069750
+    .word sub_806979C
+    .word sub_8069750
+    .word sub_806979C
+    .word sub_8069750
+    .word sub_806979C
+    .word sub_8069750
+    .word sub_8069FB4
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_8069774
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069774
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069774
+    .word sub_80695EC
+    .word sub_80697BC
+    .word sub_80695EC
+    .word sub_8069FD0
+    .word sub_80695EC
+    .word sub_80697BC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_8069774
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069774
+    .word sub_806A000
+    .word sub_8069750
+    .word sub_8069774
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069694
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_806A018
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_806A030
+    .word sub_8069774
+    .word sub_806A054
+    .word sub_80695EC
+    .word sub_80697BC
+    .word sub_80695EC
+    .word sub_80697BC
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_8069958
+    .word sub_80695EC
+    .word sub_8069774
+    .word sub_8069774
+    .word sub_80695EC
+    .word sub_80697BC
+    .word sub_80697BC
+    .word sub_80697BC
+    .word sub_80697BC
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069774
+    .word sub_8069774
+    .word sub_806A078
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069958
+    .word sub_8069750
+    .word sub_8069958
+    .word sub_8069588
+    .word sub_8069B4C
+    .word sub_806A0A4
+    .word sub_806A0E4
+    .word sub_8069750
+    .word sub_806A0FC
+    .word sub_806A11C
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_806A134
+    .word sub_8069ACC
+    .word sub_8069674
+    .word sub_8069730
+    .word sub_8069730
+    .word sub_806A14C
+    .word sub_8069C24
+    .word sub_8069C24
+    .word sub_8069750
+    .word sub_8069EEC
+    .word sub_806A16C
+    .word sub_8069730
+    .word sub_8069B4C
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069B4C
+    .word sub_806A1B4
+    .word sub_8069AF4
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_806A1E4
+    .word sub_806A1FC
+    .word sub_806A230
+    .word sub_8069B4C
+    .word sub_8069B4C
+    .word sub_8069A24
+    .word sub_8069750
+    .word sub_8069B4C
+    .word sub_8069B4C
+    .word sub_8069B4C
+    .word sub_806A270
+    .word sub_806A2A4
+    .word sub_8069B4C
+    .word sub_806A14C
+    .word sub_80698F8
+    .word sub_806A2C0
+    .word sub_8069AF4
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_80695EC
+    .word sub_806A2D8
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_80695EC
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_806A320
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_8069774
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069ACC
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_80698F8
+    .word sub_806A14C
+    .word sub_80698F8
+    .word sub_80698F8
+    .word sub_8069750
+    .word sub_8069750
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_8069774
+    .word sub_806979C
+    .word sub_80695EC
+    .word sub_80695EC
+    .word sub_8069774
+    .word sub_8069774
+    .word sub_8069B4C
+    .word sub_8069B4C
+    .word sub_8069B4C
+    .word sub_806A350
+    .word sub_806A14C
+    .word sub_806A14C
 
     .global gUnknown_08182D84
 gUnknown_08182D84:
-    .incbin "baserom.gba", 0x00182D84, 0x1C
+    .word sub_80692FC
+    .word sub_806937C
+    .word sub_806939C
+    .word sub_80693C4
+    .word sub_8069464
+    .word sub_8069470
+    .word sub_80694C8
 
     .global gUnknown_08182DA0
 gUnknown_08182DA0:
-    .incbin "baserom.gba", 0x00182DA0, 0x1C
+    .word sub_806AEE0
+    .word sub_806AFEC
+    .word sub_806B008
+    .word sub_806B174
+    .word sub_806B1EC
+    .word sub_806B208
+    .word sub_806B248
 
     .global gUnknown_08182DBC
 gUnknown_08182DBC:
@@ -1354,35 +2939,56 @@ gUnknown_08182DCA:
 
     .global gUnknown_08182DD8
 gUnknown_08182DD8:
-    .incbin "baserom.gba", 0x00182DD8, 0x1C
+    .word sub_806BF6C
+    .word sub_806C160
+    .word sub_806C2BC
+    .word sub_806C424
+    .word sub_806C594
+    .word sub_806C720
+    .word sub_806C87C
 
     .global gUnknown_08182DF4
 gUnknown_08182DF4:
-    .incbin "baserom.gba", 0x00182DF4, 0x10
+    .word sub_806BF9C
+    .word sub_806C004
+    .word sub_806C0B8
+    .word sub_806C154
 
     .global gUnknown_08182E04
 gUnknown_08182E04:
-    .incbin "baserom.gba", 0x00182E04, 0xC
+    .word sub_806C190
+    .word sub_806C1F4
+    .word sub_806C2B0
 
     .global gUnknown_08182E10
 gUnknown_08182E10:
-    .incbin "baserom.gba", 0x00182E10, 0xC
+    .word sub_806C2EC
+    .word sub_806C374
+    .word sub_806C418
 
     .global gUnknown_08182E1C
 gUnknown_08182E1C:
-    .incbin "baserom.gba", 0x00182E1C, 0xC
+    .word sub_806C454
+    .word sub_806C4BC
+    .word sub_806C588
 
     .global gUnknown_08182E28
 gUnknown_08182E28:
-    .incbin "baserom.gba", 0x00182E28, 0xC
+    .word sub_806C5C4
+    .word sub_806C638
+    .word sub_806C714
 
     .global gUnknown_08182E34
 gUnknown_08182E34:
-    .incbin "baserom.gba", 0x00182E34, 0xC
+    .word sub_806C750
+    .word sub_806C7B8
+    .word sub_806C870
 
     .global gUnknown_08182E40
 gUnknown_08182E40:
-    .incbin "baserom.gba", 0x00182E40, 0xC
+    .word sub_806C8AC
+    .word sub_806C914
+    .word sub_806C9B8
 
     .global gUnknown_08182E4C
 gUnknown_08182E4C:
@@ -1406,11 +3012,16 @@ gUnknown_08182EA8:
 
     .global gUnknown_08182EB0
 gUnknown_08182EB0:
-    .incbin "baserom.gba", 0x00182EB0, 0x10
+    .word sub_806CE94
+    .word sub_806CF88
+    .word sub_806D480
+    .word sub_806D21C
 
     .global gUnknown_08182EC0
 gUnknown_08182EC0:
-    .incbin "baserom.gba", 0x00182EC0, 0xC
+    .word sub_806D028
+    .word sub_806D0AC
+    .word sub_806D20C
 
     .global gUnknown_08182ECC
 gUnknown_08182ECC:
@@ -1418,51 +3029,163 @@ gUnknown_08182ECC:
 
     .global gUnknown_08182F4C
 gUnknown_08182F4C:
-    .incbin "baserom.gba", 0x00182F4C, 0xC
+    .word sub_806D2A4
+    .word sub_806D350
+    .word sub_806D420
 
     .global gUnknown_08182F58
 gUnknown_08182F58:
-    .incbin "baserom.gba", 0x00182F58, 0x80
+    .word sub_806E8F0
+    .word sub_806E930
+    .word sub_806E970
+    .word sub_806E9B4
+    .word sub_806EA40
+    .word sub_806EAC8
+    .word sub_806EB3C
+    .word sub_806EBAC
+    .word sub_806EBF0
+    .word sub_806EC04
+    .word sub_806EC90
+    .word sub_806ECEC
+    .word sub_806ED50
+    .word sub_806EDB4
+    .word sub_806EDF0
+    .word sub_806EE04
+    .word sub_806EE18
+    .word sub_806EE78
+    .word sub_806EEC0
+    .word sub_806EF0C
+    .word sub_806EF0C
+    .word sub_806EF0C
+    .word sub_806EF0C
+    .word sub_806EF0C
+    .word sub_806EF0C
+    .word sub_806EF0C
+    .word sub_806EF0C
+    .word sub_806EF0C
+    .word sub_806EF0C
+    .word sub_806EF0C
+    .word sub_806EF0C
+    .word sub_806EF0C
 
     .global gUnknown_08182FD8
 gUnknown_08182FD8:
-    .incbin "baserom.gba", 0x00182FD8, 0x80
+    .word sub_806F128
+    .word sub_806F188
+    .word sub_806F1E8
+    .word sub_806F24C
+    .word sub_806F300
+    .word sub_806F3A4
+    .word sub_806F434
+    .word sub_806F4C4
+    .word sub_806F528
+    .word sub_806FA44
+    .word sub_806F640
+    .word sub_806F6E0
+    .word sub_806F764
+    .word sub_806F7E8
+    .word sub_806F8D8
+    .word sub_806F95C
+    .word sub_806F99C
+    .word sub_806F9FC
+    .word sub_806FA44
+    .word sub_806FA44
+    .word sub_806FA44
+    .word sub_806FA44
+    .word sub_806FA44
+    .word sub_806FA44
+    .word sub_806FA44
+    .word sub_806FA44
+    .word sub_806FA44
+    .word sub_806FA44
+    .word sub_806FA44
+    .word sub_806FA44
+    .word sub_806FA44
+    .word sub_806FA64
 
     .global gUnknown_08183058
 gUnknown_08183058:
-    .incbin "baserom.gba", 0x00183058, 0x8
+    .byte 0,0x10,0x20,0x40,0x80,0,0,0
 
     .global gUnknown_08183060
 gUnknown_08183060:
-    .incbin "baserom.gba", 0x00183060, 0x30
+    .word sub_8071230
+    .word sub_8071384
+    .word sub_80714A0
+    .word sub_8071534
+    .word sub_8071534
+    .word sub_8071688
+    .word sub_8071740
+    .word sub_80717C0
+    .word sub_8071830
+    .word sub_80718C0
+    .word sub_807192C
+    .word sub_8071998
 
     .global gUnknown_08183090
 gUnknown_08183090:
-    .incbin "baserom.gba", 0x00183090, 0xC
+    .word sub_8079A78
+    .word sub_8079AC0
+    .word sub_8079AF8
 
     .global gUnknown_0818309C
 gUnknown_0818309C:
-    .incbin "baserom.gba", 0x0018309C, 0x14
+    .word sub_8076A90
+    .word sub_8076ACC
+    .word sub_8076B70
+    .word sub_8076C6C
+    .word sub_8076D30
 
     .global gUnknown_081830B0
 gUnknown_081830B0:
-    .incbin "baserom.gba", 0x001830B0, 0x14
+    .word sub_807646C
+    .word sub_80764E0
+    .word sub_807666C
+    .word sub_8076684
+    .word sub_807669C
 
     .global gUnknown_081830C4
 gUnknown_081830C4:
-    .incbin "baserom.gba", 0x001830C4, 0x20
+    .word sub_8074360
+    .word sub_807481C
+    .word sub_8076F30
+    .word sub_8074420
+    .word sub_80744A0
+    .word sub_8074540
+    .word sub_8074608
+    .word sub_80746D4
 
     .global gUnknown_081830E4
 gUnknown_081830E4:
-    .incbin "baserom.gba", 0x001830E4, 0x2C
+    .word sub_8074854
+    .word sub_8074A3C
+    .word sub_8074CF8
+    .word sub_8074DB0
+    .word sub_8076400
+    .word sub_8076438
+    .word sub_8076A58
+    .word sub_8076E50
+    .word sub_8076E60
+    .word sub_8077C48
+    .word sub_8076E74
 
     .global gUnknown_08183110
 gUnknown_08183110:
-    .incbin "baserom.gba", 0x00183110, 0x14
+    .word sub_8077DF4
+    .word sub_8077F0C
+    .word sub_80780A8
+    .word sub_80781FC
+    .word sub_8078398
 
     .global gUnknown_08183124
 gUnknown_08183124:
-    .incbin "baserom.gba", 0x00183124, 0x1C
+    .word sub_8077318
+    .word sub_8077330
+    .word sub_8077348
+    .word sub_8077360
+    .word sub_8077378
+    .word sub_8077390
+    .word sub_80773A8
 
     .global gUnknown_08183140
 gUnknown_08183140:
