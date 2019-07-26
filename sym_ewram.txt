@@ -123,6 +123,13 @@
 . = 0x00028E50; gUnknown_02028E50 = .;
 . = 0x000291C0; gUnknown_020291C0 = .;
 . = 0x00029240; gUnknown_02029240 = .;
+. = 0x000295C0; gUnknown_020295C0 = .;
+. = 0x000299C0; gUnknown_020299C0 = .;
+. = 0x00029DC0; gUnknown_02029DC0 = .;
+. = 0x0002A1C0; gUnknown_0202A1C0 = .;
+. = 0x0002A5C0; gUnknown_0202A5C0 = .;
+. = 0x0002A9C0; gUnknown_0202A9C0 = .;
+. = 0x0002ADC0; gUnknown_0202ADC0 = .;
 . = 0x0002B1C0; gUnknown_0202B1C0 = .;
 . = 0x0002D1C0; gUnknown_0202D1C0 = .;
 . = 0x0002D2C0; gUnknown_0202D2C0 = .;
