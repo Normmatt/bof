@@ -88,22 +88,6 @@ gUnknown_0817BF48:
     .global gUnknown_0817BF5C
 gUnknown_0817BF5C:
     .incbin "/graphics/intro_credits/capcom.gbapal"
-    .short 0
-    .short 0x835F
-    .short 0x873E
-    .short 0x92FA
-    .short 0x9EB6
-    .short 0xA653
-    .short 0xB610
-    .short 0x4989
-    .short 0x5D24
-    .short 0x6860
-    .short 0x7000
-    .short 0x68A0
-    .short 0x6CA0
-    .short 0x75CA
-    .short 0xFAD4
-    .short 0xFFFF
 
     .global gUnknown_0817BF7C
 gUnknown_0817BF7C:
