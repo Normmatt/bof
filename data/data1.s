@@ -87,6 +87,7 @@ gUnknown_0817BF48:
 
     .global gUnknown_0817BF5C
 gUnknown_0817BF5C:
+    .incbin "/graphics/intro_credits/capcom.gbapal"
     .short 0
     .short 0x835F
     .short 0x873E
@@ -12148,11 +12149,20 @@ gUnknown_08218A78:
 
     .global gUnknown_08218AC8
 gUnknown_08218AC8:
-    .incbin "baserom.gba", 0x00218AC8, 0x24
+    .incbin "baserom.gba", 0x00218AC8, 0x14
+
+    .global gUnknown_08218ADC
+gUnknown_08218ADC:
+    .incbin "baserom.gba", 0x00218ADC, 0x8
+
+    .global gUnknown_08218AE4
+gUnknown_08218AE4:
+    .incbin "baserom.gba", 0x00218AE4, 0x8
 
     .global gUnknown_08218AEC
 gUnknown_08218AEC:
-    .incbin "baserom.gba", 0x00218AEC, 0x8
+    .word gUnknown_08218ADC
+    .word gUnknown_08218AE4
 
     .global gUnknown_08218AF4
 gUnknown_08218AF4:
@@ -12172,7 +12182,9 @@ gUnknown_08218C9C:
 
     .global gUnknown_08218CBC
 gUnknown_08218CBC:
-    .incbin "baserom.gba", 0x00218CBC, 0x10
+    .ascii "BoF1ByCaPcOm21"
+    .byte 0
+    .byte 0
 
     .global gUnknown_08218CCC
 gUnknown_08218CCC:
@@ -12907,11 +12919,11 @@ gUnknown_0830BAA0:
 
     .global gUnknown_0830C2A0
 gUnknown_0830C2A0:
-    .incbin "baserom.gba", 0x0030C2A0, 0x5000
+    .incbin "/graphics/intro_credits/capcom.4bpp"
 
     .global gUnknown_083112A0
 gUnknown_083112A0:
-    .incbin "baserom.gba", 0x003112A0, 0x500
+    .incbin "/graphics/intro_credits/capcom_map.bin"
 
     .global gUnknown_083117A0
 gUnknown_083117A0:
