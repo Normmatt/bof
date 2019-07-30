@@ -26,9 +26,10 @@ typedef struct struct_3002410
 {
   u8 byte0;
   u8 byte1;
-  u16 word2;
-  u16 word4;
-  u16 word6;
+  u8 keyRepeatCounter;
+  u8 keyDebounceCounter;
+  u16 heldKeysRaw;
+  u16 newAndRepeatedKeys;
   struct_3002410_callback callbacks[6];
 } struct_3002410;
 
