@@ -14,12 +14,13 @@
 typedef void (*void_pointer)(void);
 typedef s32 (*result_pointer)(void);
 typedef s32 (*test3_pointer)(void *a1, void *a2);
+typedef void (*callback_pointer)(u32 a1);
 
 //Structs
 typedef struct struct_3002410_callback
 {
   u8 params[8];
-  u32 callback;
+  callback_pointer callback;
 } struct_3002410_callback;
 
 typedef struct struct_3002410
@@ -37,13 +38,16 @@ typedef struct struct_3002410
 //main.c
 extern void AgbMain();
 extern void sub_8000274(struct_3002410 *a1);
+extern void sub_8000314(u32 a1);
 extern void sub_80004B0(struct_3002410 *a1);
 extern struct_3002410_callback* sub_8000570(void_pointer cb, struct_3002410 *a2, u8 idx);
+extern void ReadKeys(struct_3002410 *a1);
 
 //sub_80007C4.c
 extern void sub_80007C4();
 
 //unknown
+extern void sub_80018D0();
 extern void sub_800198C();
 extern void sub_8002500();
 

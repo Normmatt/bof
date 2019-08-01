@@ -2,187 +2,6 @@
 
 .syntax unified
 
-	THUMB_FUNC_START sub_8000314
-sub_8000314: @ 0x08000314
-	push {r7, lr}
-	sub sp, #0x10
-	mov r7, sp
-	str r0, [r7]
-	ldr r0, _0800035C
-	ldrb r1, [r0, #1]
-	str r1, [r7, #0xc]
-	ldr r0, [r7, #0xc]
-	adds r2, r0, #0
-	lsls r1, r2, #1
-	adds r1, r1, r0
-	lsls r0, r1, #2
-	ldr r1, _08000360
-	adds r0, r1, r0
-	str r0, [r7, #4]
-	ldr r0, [r7, #4]
-	ldrb r1, [r0]
-	movs r2, #0
-	ands r1, r2
-	adds r2, r1, #0
-	movs r3, #1
-	adds r1, r2, #0
-	orrs r1, r3
-	adds r2, r1, #0
-	strb r2, [r0]
-	ldr r0, [r7, #4]
-	ldr r2, [r7]
-	adds r1, r2, #0
-	ldrb r2, [r0, #2]
-	movs r3, #0
-	ands r2, r3
-	adds r3, r2, #0
-	orrs r1, r3
-	adds r2, r1, #0
-	strb r2, [r0, #2]
-_0800035A:
-	b _08000366
-	.align 2, 0
-_0800035C: .4byte gUnknown_03002410
-_08000360: .4byte gUnknown_03002418
-_08000364:
-	.byte 0x80, 0xE0
-_08000366:
-	b _0800036A
-_08000368:
-	.byte 0x75, 0xE0
-_0800036A:
-	ldr r1, _08000390
-	ldrb r0, [r1, #1]
-	adds r2, r0, #0
-	lsls r1, r2, #1
-	adds r1, r1, r0
-	lsls r0, r1, #2
-	ldr r1, _08000394
-	adds r0, r1, r0
-	str r0, [r7, #8]
-	ldr r1, [r7, #8]
-	ldrb r0, [r1]
-	cmp r0, #4
-	bhi _0800041E
-	lsls r1, r0, #2
-	ldr r2, _08000398
-	adds r0, r1, r2
-	ldr r1, [r0]
-	mov pc, r1
-	.align 2, 0
-_08000390: .4byte gUnknown_03002410
-_08000394: .4byte gUnknown_03002418
-_08000398: .4byte _0800039C
-_0800039C: @ jump table
-	.4byte _0800041E @ case 0
-	.4byte _080003E0 @ case 1
-	.4byte _0800041E @ case 2
-	.4byte _080003B0 @ case 3
-	.4byte _080003C6 @ case 4
-_080003B0:
-	ldr r0, [r7, #8]
-	ldrb r1, [r0]
-	movs r2, #0
-	ands r1, r2
-	adds r2, r1, #0
-	movs r3, #4
-	adds r1, r2, #0
-	orrs r1, r3
-	adds r2, r1, #0
-	strb r2, [r0]
-	b _08000420
-_080003C6:
-	ldr r0, [r7, #8]
-	ldr r1, [r7, #4]
-	cmp r0, r1
-	bne _080003D2
-	b _08000468
-_080003D0:
-	.byte 0x05, 0xE0
-_080003D2:
-	ldr r0, [r7, #8]
-	ldr r1, [r7, #8]
-	ldr r2, [r0, #8]
-	adds r0, r1, #0
-	bl _call_via_r2
-	b _08000420
-_080003E0:
-	ldr r0, [r7, #8]
-	ldrb r1, [r0, #2]
-	cmp r1, #0
-	beq _0800041E
-	ldr r1, [r7, #8]
-	ldr r0, [r7, #8]
-	ldr r1, [r7, #8]
-	ldrb r2, [r1, #2]
-	subs r1, r2, #1
-	ldrb r2, [r0, #2]
-	movs r3, #0
-	ands r2, r3
-	adds r3, r2, #0
-	adds r2, r3, #0
-	orrs r2, r1
-	adds r1, r2, #0
-	strb r1, [r0, #2]
-	ldr r0, [r7, #8]
-	ldrb r1, [r0, #2]
-	cmp r1, #0
-	bne _0800041E
-	ldr r0, [r7, #8]
-	ldrb r1, [r0]
-	movs r2, #0
-	ands r1, r2
-	adds r2, r1, #0
-	movs r3, #4
-	adds r1, r2, #0
-	orrs r1, r3
-	adds r2, r1, #0
-	strb r2, [r0]
-_0800041E:
-	b _08000420
-_08000420:
-	ldr r1, _08000450
-	ldr r0, _08000450
-	ldr r1, _08000450
-	ldrb r2, [r1, #1]
-	adds r1, r2, #1
-	ldrb r2, [r0, #1]
-	movs r3, #0
-	ands r2, r3
-	adds r3, r2, #0
-	adds r2, r3, #0
-	orrs r2, r1
-	adds r1, r2, #0
-	strb r1, [r0, #1]
-	ldr r0, _08000450
-	ldrb r1, [r0, #1]
-	cmp r1, #4
-	bls _08000454
-	ldr r0, _08000450
-	ldrb r1, [r0, #1]
-	movs r2, #0
-	ands r1, r2
-	adds r2, r1, #0
-	strb r2, [r0, #1]
-	b _08000456
-	.align 2, 0
-_08000450: .4byte gUnknown_03002410
-_08000454:
-	b _08000366
-_08000456:
-	bl sub_80018D0
-	ldr r1, _08000464
-	adds r0, r1, #0
-	bl sub_8000690
-	b _0800035A
-	.align 2, 0
-_08000464: .4byte gUnknown_03002410
-_08000468:
-	add sp, #0x10
-	pop {r7}
-	pop {r0}
-	bx r0
-
 	THUMB_FUNC_START sub_8000470
 sub_8000470: @ 0x08000470
 	push {r7, lr}
@@ -312,7 +131,7 @@ _0800053E:
 _0800055A:
 	bl sub_80018D0
 	ldr r0, [r7]
-	bl sub_8000690
+	bl ReadKeys
 	b _080004B8
 _08000566:
 	.byte 0x02, 0xB0, 0x80, 0xBC, 0x01, 0xBC, 0x00, 0x47, 0x00, 0x00
@@ -474,8 +293,8 @@ _08000688:
 	pop {r1}
 	bx r1
 
-	THUMB_FUNC_START sub_8000690
-sub_8000690: @ 0x08000690
+	THUMB_FUNC_START ReadKeys
+ReadKeys: @ 0x08000690
 	push {r4, r7, lr}
 	sub sp, #8
 	mov r7, sp

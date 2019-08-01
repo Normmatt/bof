@@ -34,6 +34,56 @@ void sub_8000274(struct_3002410 *a1)
     }
 }
 
+void sub_8000314(u32 a1)
+{
+    struct_3002410_callback *v7;
+    struct_3002410_callback *v8;
+    u32 type = gUnknown_03002410.byte1;
+
+    v7 = &gUnknown_03002410.callbacks[type];
+    v7->params[0] = 1;
+    v7->params[2] = a1;
+    while ( 1 )
+    {
+        while ( 1 )
+        {
+            v8 = &gUnknown_03002410.callbacks[gUnknown_03002410.byte1];
+            switch ( v8->params[0] )
+            {
+                case 3u:
+                    v8->params[0] = 4;
+                    break;
+                case 4u:
+                    if ( v8 == v7 ) return;
+                    else v8->callback(v8);
+                    break;
+                case 1u:
+                    if ( v8->params[2] )
+                    {
+                        v8->params[2]--;
+                        if ( !v8->params[2] )
+                        {
+                            v8->params[0] = 4;
+                        }
+                    }
+                case 2:
+                case 0:
+                default:
+                    break;
+            }
+
+            ++gUnknown_03002410.byte1;
+            if ( gUnknown_03002410.byte1 > 4u )
+            {
+                gUnknown_03002410.byte1 = 0;
+                break;
+            }
+        }
+        sub_80018D0();
+        ReadKeys(&gUnknown_03002410);
+    }
+}
+
 /*int sub_8000640(struct_3002410 *a1)
 {
     u8 i;
