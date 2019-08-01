@@ -2,39 +2,6 @@
 
 .syntax unified
 
-	THUMB_FUNC_START sub_8000470
-sub_8000470: @ 0x08000470
-	push {r7, lr}
-	sub sp, #4
-	mov r7, sp
-	adds r1, r7, #0
-	strb r0, [r1]
-	ldr r1, _080004A8
-	ldrb r0, [r1, #1]
-	adds r2, r0, #0
-	lsls r1, r2, #1
-	adds r1, r1, r0
-	lsls r0, r1, #2
-	ldr r1, _080004AC
-	adds r0, r0, r1
-	adds r1, r7, #0
-	ldrb r2, [r0, #2]
-	movs r3, #0
-	ands r2, r3
-	adds r3, r2, #0
-	ldrb r1, [r1]
-	adds r2, r3, #0
-	orrs r2, r1
-	adds r1, r2, #0
-	strb r1, [r0, #2]
-	add sp, #4
-	pop {r7}
-	pop {r0}
-	bx r0
-	.align 2, 0
-_080004A8: .4byte gUnknown_03002410
-_080004AC: .4byte gUnknown_03002418
-
 	THUMB_FUNC_START sub_80004B0
 sub_80004B0: @ 0x080004B0
 	push {r7, lr}

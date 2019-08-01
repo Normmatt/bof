@@ -84,6 +84,11 @@ void sub_8000314(u32 a1)
     }
 }
 
+void sub_8000470(u8 a1)
+{
+    (&gUnknown_03002410.callbacks[gUnknown_03002410.byte1])->params[2] = a1;
+}
+
 /*int sub_8000640(struct_3002410 *a1)
 {
     u8 i;
