@@ -129,7 +129,7 @@ struct_3002410_callback *sub_8000570(callback_pointer cb, struct_3002410 *a2, u8
     return &a2->callbacks[v11];
 }
 
-int sub_8000640(struct_3002410 *a1)
+u32 sub_8000640(struct_3002410 *a1)
 {
     u8 i;
 
@@ -141,4 +141,43 @@ int sub_8000640(struct_3002410 *a1)
         i++;
     }
     return i;
+}
+
+void ReadKeys(struct_3002410 *a1)
+{
+    u16 keyInput;
+
+    keyInput = ~REG_KEYINPUT;
+    a1->newAndRepeatedKeys = keyInput & (keyInput ^ a1->heldKeysRaw);
+    a1->heldKeysRaw = keyInput;
+    if ( keyInput & DPAD_ANY )                      // When input is DPAD
+    {
+        if ( a1->keyRepeatCounter < 20 )
+        {
+            a1->keyRepeatCounter++;
+        }
+        else
+        {
+            if ( !a1->keyDebounceCounter )
+            {
+                a1->newAndRepeatedKeys &= 0xFF0F;
+                a1->newAndRepeatedKeys |= (keyInput & DPAD_ANY);
+            }
+            a1->keyDebounceCounter++;
+            if ( a1->keyDebounceCounter > 4u )
+            {
+                a1->keyDebounceCounter = 0;
+            }
+        }
+    }
+    else
+    {
+        a1->keyRepeatCounter = 0;
+        a1->keyDebounceCounter = 0;
+    }
+}
+
+void sub_80007B8()
+{
+    //empty
 }

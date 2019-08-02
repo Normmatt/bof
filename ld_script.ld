@@ -28,7 +28,6 @@ SECTIONS
 	{
         asm/crt0.o(.text);
         src/main.o(.text);                          /* rodata 0811FB18 */
-        asm/main.o(.text);                          /* rodata 0811FB18 */
         asm/sub_80007C4.o(.text);                   /* rodata 0811FB38 */
         asm/sub_8002524.o(.text);                   /* rodata 0811FEA8 */
         asm/sub_8003450.o(.text);                   /* rodata 0811FFDC */
@@ -221,8 +220,7 @@ SECTIONS
 	ALIGN(4)
     {
         /* Read Only Data */
-        /* src/main.o(.rodata);                      // rodata 08018098 */
-        /* src/sub_8000200.o(.rodata);               // rodata 0801809C */
+        src/main.o(.rodata);                          /* rodata 0811FB18 */
         data/data.o(.rodata);
         tools/agbcc/lib/libc.a:impure.o(.rodata);
         . = ALIGN(4); 

@@ -42,7 +42,7 @@ extern void sub_8000314(u32 a1);
 extern void sub_8000470(u8 a1);
 extern void sub_80004B0(struct_3002410 *a1);
 extern struct_3002410_callback* sub_8000570(callback_pointer cb, struct_3002410 *a2, u8 idx);
-extern int sub_8000640(struct_3002410 *a1);
+extern u32 sub_8000640(struct_3002410 *a1);
 extern void ReadKeys(struct_3002410 *a1);
 
 //sub_80007C4.c
