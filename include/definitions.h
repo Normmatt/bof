@@ -52,6 +52,12 @@ extern void sub_80018D0();
 extern void sub_800198C();
 extern void sub_8002500();
 
+//m4a stuff?
+extern void m4aSoundInit();
+extern void m4aSongNumStart(int id);
+extern void SoundVSync();
+extern void m4aSoundMain();
+
 //EWRAM
 
 //IWRAM

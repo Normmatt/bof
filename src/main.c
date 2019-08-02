@@ -55,7 +55,7 @@ void sub_8000314(u32 a1)
                     break;
                 case 4u:
                     if ( v8 == v7 ) return;
-                    else v8->callback(v8);
+                    else v8->callback((u32)v8);
                     break;
                 case 1u:
                     if ( v8->params[2] )
@@ -87,6 +87,29 @@ void sub_8000314(u32 a1)
 void sub_8000470(u8 a1)
 {
     (&gUnknown_03002410.callbacks[gUnknown_03002410.byte1])->params[2] = a1;
+}
+
+void sub_80004B0(struct_3002410 *a1)
+{
+    struct_3002410_callback *v6;
+
+    while (1)
+    {
+        for ( a1->byte1 = 0; a1->byte1 < 5; a1->byte1++ )
+        {
+            v6 = &a1->callbacks[a1->byte1];
+            if ( v6->params[0] == 3 )
+            {
+                v6->params[0] = 4;
+            }
+            else if ( v6->params[0] == 4 )
+            {
+                a1->callbacks[a1->byte1].callback((u32)&a1->callbacks[a1->byte1]);
+            }
+        }
+        sub_80018D0();
+        ReadKeys(a1);
+    }
 }
 
 /*int sub_8000640(struct_3002410 *a1)
