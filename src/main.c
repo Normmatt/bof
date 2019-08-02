@@ -9,8 +9,8 @@ void AgbMain()
     DmaFill32(3, 0, IWRAM_START, IWRAM_SIZE);
 
     sub_8000274(&gUnknown_03002410);
-    sub_8000570((void_pointer)sub_800198C, &gUnknown_03002410, 0xFFu);
-    sub_8000570((void_pointer)sub_8002500, &gUnknown_03002410, 3u);
+    sub_8000570((callback_pointer)sub_800198C, &gUnknown_03002410, 0xFFu);
+    sub_8000570((callback_pointer)sub_8002500, &gUnknown_03002410, 3u);
     sub_80007C4();
     m4aSoundInit();
     sub_80004B0(&gUnknown_03002410);
@@ -112,7 +112,24 @@ void sub_80004B0(struct_3002410 *a1)
     }
 }
 
-/*int sub_8000640(struct_3002410 *a1)
+struct_3002410_callback *sub_8000570(callback_pointer cb, struct_3002410 *a2, u8 idx)
+{
+    u8 v10, v11;
+
+    if ( idx != 0xFF )
+        v11 = idx;
+    else
+        v11 = sub_8000640(a2);
+    
+
+    a2->callbacks[v11].params[0] = 3;
+    a2->callbacks[v11].params[2] = 0;
+    a2->callbacks[v11].callback = cb;
+    a2->byte0++;
+    return &a2->callbacks[v11];
+}
+
+int sub_8000640(struct_3002410 *a1)
 {
     u8 i;
 
@@ -124,4 +141,4 @@ void sub_80004B0(struct_3002410 *a1)
         i++;
     }
     return i;
-}*/
+}
