@@ -1303,11 +1303,3 @@ gUnknown_08142B5C:
     .global gUnknown_08142BC8
 gUnknown_08142BC8:
     .incbin "baserom.gba", 0x00142BC8, 0x383B8
-
-    .global gUnknown_0817AF80
-gUnknown_0817AF80:
-    .incbin "baserom.gba", 0x0017AF80, 0x34
-
-    .global gUnknown_0817AFB4
-gUnknown_0817AFB4:
-    .incbin "baserom.gba", 0x0017AFB4, 0x4C
