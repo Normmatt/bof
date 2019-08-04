@@ -164,7 +164,7 @@ SECTIONS
         asm/m4a.o(.text);                           /* rodata 081423AC ends 08142684? */
         asm/svc.o(.text);                           /*  ? */
         src/libisagbprn.o(.text);                   /* rodata 0817AF80 */
-        asm/sram.o(.text);                          /* rodata 0817AFE4 */
+        src/agb_sram.o(.text);                      /* rodata 0817AFE4 */
 
         tools/agbcc/lib/libgcc.a:_call_via_rX.o(.text);
         tools/agbcc/lib/libgcc.a:_divsi3.o(.text);
@@ -223,7 +223,7 @@ SECTIONS
         src/main.o(.rodata);                          /* rodata 0811FB18 */
         data/data.o(.rodata);
         src/libisagbprn.o(.rodata);                   /* rodata 0817AF80 */
-        data/sram.rodata.o(.rodata);                  /* rodata 0817AFE4 */
+        src/agb_sram.o(.rodata);                      /* rodata 0817AFE4 */
         tools/agbcc/lib/libc.a:impure.o(.rodata);
         . = ALIGN(4); 
         tools/agbcc/lib/libc.a:bzero.o(.rodata);
