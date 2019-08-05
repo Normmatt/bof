@@ -87,7 +87,7 @@ gUnknown_0817BF48:
 
     .global gUnknown_0817BF5C
 gUnknown_0817BF5C:
-    .incbin "graphics/intro_credits/capcom.gbapal_"
+    .incbin "graphics/intro_credits/capcom.gbapal"
 
     .global gUnknown_0817BF7C
 gUnknown_0817BF7C:

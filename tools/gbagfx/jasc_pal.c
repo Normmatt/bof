@@ -146,6 +146,7 @@ void ReadJascPalette(char *path, struct Palette *palette)
         palette->colors[i].red = red;
         palette->colors[i].green = green;
         palette->colors[i].blue = blue;
+        palette->colors[i].green_lsb = ((green & 4) >> 2);
     }
 
     if (fgetc(fp) != EOF)
@@ -165,7 +166,7 @@ void WriteJascPalette(char *path, struct Palette *palette)
     for (int i = 0; i < palette->numColors; i++)
     {
         struct Color *color = &palette->colors[i];
-        fprintf(fp, "%d %d %d\r\n", color->red, color->green, color->blue);
+        fprintf(fp, "%d %d %d\r\n", color->red, color->green | (color->green_lsb<<2), color->blue);
     }
 
     fclose(fp);
