@@ -20,13 +20,12 @@
 
 #include <cstdio>
 #include <cstdarg>
-#include "preproc.h"
-#include "asm_file.h"
+#include <climits>
+#include "ramscrgen.h"
+#include "sym_file.h"
 #include "char_util.h"
-#include "utf8.h"
-#include "string_parser.h"
 
-AsmFile::AsmFile(std::string filename) : m_filename(filename)
+SymFile::SymFile(std::string filename) : m_filename(filename)
 {
     FILE *fp = std::fopen(filename.c_str(), "rb");
 
@@ -54,11 +53,12 @@ AsmFile::AsmFile(std::string filename) : m_filename(filename)
     m_pos = 0;
     m_lineNum = 1;
     m_lineStart = 0;
+    m_inLangConditional = false;
 
     RemoveComments();
 }
 
-AsmFile::AsmFile(AsmFile&& other) : m_filename(std::move(other.m_filename))
+SymFile::SymFile(SymFile&& other) : m_filename(std::move(other.m_filename))
 {
     m_buffer = other.m_buffer;
     m_pos = other.m_pos;
@@ -69,7 +69,7 @@ AsmFile::AsmFile(AsmFile&& other) : m_filename(std::move(other.m_filename))
     other.m_buffer = nullptr;
 }
 
-AsmFile::~AsmFile()
+SymFile::~SymFile()
 {
     delete[] m_buffer;
 }
@@ -78,7 +78,7 @@ AsmFile::~AsmFile()
 // It stops upon encountering a null character,
 // which may or may not be the end of file marker.
 // If it's not, the error will be caught later.
-void AsmFile::RemoveComments()
+void SymFile::RemoveComments()
 {
     long pos = 0;
     char stringChar = 0;
@@ -111,22 +111,45 @@ void AsmFile::RemoveComments()
             m_buffer[pos++] = ' ';
             m_buffer[pos++] = ' ';
 
+            char commentStringChar = 0;
+
             for (;;)
             {
                 if (m_buffer[pos] == 0)
                     return;
 
-                if (m_buffer[pos] == '*' && m_buffer[pos + 1] == '/')
+                if (commentStringChar != 0)
                 {
-                    m_buffer[pos++] = ' ';
-                    m_buffer[pos++] = ' ';
-                    break;
+                    if (m_buffer[pos] == '\\' && m_buffer[pos + 1] == commentStringChar)
+                    {
+                        m_buffer[pos++] = ' ';
+                        m_buffer[pos++] = ' ';
+                    }
+                    else
+                    {
+                        if (m_buffer[pos] == commentStringChar)
+                            commentStringChar = 0;
+                        if (m_buffer[pos] != '\n')
+                            m_buffer[pos] = ' ';
+                        pos++;
+                    }
                 }
                 else
                 {
-                    if (m_buffer[pos] != '\n')
-                        m_buffer[pos] = ' ';
-                    pos++;
+                    if (m_buffer[pos] == '*' && m_buffer[pos + 1] == '/')
+                    {
+                        m_buffer[pos++] = ' ';
+                        m_buffer[pos++] = ' ';
+                        break;
+                    }
+                    else
+                    {
+                        if (m_buffer[pos] == '"' || m_buffer[pos] == '\'')
+                            commentStringChar = m_buffer[pos];
+                        if (m_buffer[pos] != '\n')
+                            m_buffer[pos] = ' ';
+                        pos++;
+                    }
                 }
             }
         }
@@ -141,7 +164,7 @@ void AsmFile::RemoveComments()
 
 // Checks if we're at a particular directive and if so, consumes it.
 // Returns whether the directive was found.
-bool AsmFile::CheckForDirective(std::string name)
+bool SymFile::CheckForDirective(std::string name)
 {
     long i;
     long length = static_cast<long>(name.length());
@@ -160,23 +183,23 @@ bool AsmFile::CheckForDirective(std::string name)
 
 // Checks if we're at a known directive and if so, consumes it.
 // Returns which directive was found.
-Directive AsmFile::GetDirective()
+Directive SymFile::GetDirective()
 {
     SkipWhitespace();
 
     if (CheckForDirective(".include"))
         return Directive::Include;
-    else if (CheckForDirective(".string"))
-        return Directive::String;
-    else if (CheckForDirective(".braille"))
-        return Directive::Braille;
+    else if (CheckForDirective(".space"))
+        return Directive::Space;
+    else if (CheckForDirective(".align"))
+        return Directive::Align;
     else
         return Directive::Unknown;
 }
 
-// Checks if we're at label that ends with '::'.
+// Checks if we're at label.
 // Returns the name if so and an empty string if not.
-std::string AsmFile::GetGlobalLabel()
+std::string SymFile::GetLabel(bool requireColon)
 {
     long start = m_pos;
     long pos = m_pos;
@@ -189,25 +212,35 @@ std::string AsmFile::GetGlobalLabel()
             pos++;
     }
 
-    if (m_buffer[pos] == ':' && m_buffer[pos + 1] == ':')
+    if (requireColon)
     {
-        m_pos = pos + 2;
-        ExpectEmptyRestOfLine();
-        return std::string(&m_buffer[start], pos - start);
+        if (m_buffer[pos] == ':')
+        {
+            if (pos != start)
+                m_pos = pos + 1;
+        }
+        else
+        {
+            pos = start;
+        }
+    }
+    else
+    {
+        m_pos = pos;
     }
 
-    return std::string();
+    return std::string(&m_buffer[start], pos - start);
 }
 
 // Skips tabs and spaces.
-void AsmFile::SkipWhitespace()
+void SymFile::SkipWhitespace()
 {
     while (m_buffer[m_pos] == '\t' || m_buffer[m_pos] == ' ')
         m_pos++;
 }
 
 // Reads include path.
-std::string AsmFile::ReadPath()
+std::string SymFile::ReadPath()
 {
     SkipWhitespace();
 
@@ -249,128 +282,12 @@ std::string AsmFile::ReadPath()
 
     m_pos++; // Go past the right quote.
 
-    ExpectEmptyRestOfLine();
-
     return std::string(&m_buffer[startPos], length);
-}
-
-// Reads a charmap string.
-int AsmFile::ReadString(unsigned char* s)
-{
-    SkipWhitespace();
-
-    int length;
-    StringParser stringParser(m_buffer, m_size);
-
-    try
-    {
-        m_pos += stringParser.ParseString(m_pos, s, length);
-    }
-    catch (std::runtime_error& e)
-    {
-        RaiseError(e.what());
-    }
-
-    SkipWhitespace();
-
-    if (ConsumeComma())
-    {
-        SkipWhitespace();
-        int padLength = ReadPadLength();
-
-        while (length < padLength)
-        {
-            s[length++] = 0;
-        }
-    }
-
-    ExpectEmptyRestOfLine();
-
-    return length;
-}
-
-int AsmFile::ReadBraille(unsigned char* s)
-{
-    static std::map<char, unsigned char> encoding =
-    {
-        { 'A', 0x01 },
-        { 'B', 0x05 },
-        { 'C', 0x03 },
-        { 'D', 0x0B },
-        { 'E', 0x09 },
-        { 'F', 0x07 },
-        { 'G', 0x0F },
-        { 'H', 0x0D },
-        { 'I', 0x06 },
-        { 'J', 0x0E },
-        { 'K', 0x11 },
-        { 'L', 0x15 },
-        { 'M', 0x13 },
-        { 'N', 0x1B },
-        { 'O', 0x19 },
-        { 'P', 0x17 },
-        { 'Q', 0x1F },
-        { 'R', 0x1D },
-        { 'S', 0x16 },
-        { 'T', 0x1E },
-        { 'U', 0x31 },
-        { 'V', 0x35 },
-        { 'W', 0x2E },
-        { 'X', 0x33 },
-        { 'Y', 0x3B },
-        { 'Z', 0x39 },
-        { ' ', 0x00 },
-        { ',', 0x04 },
-        { '.', 0x2C },
-        { '$', 0xFF },
-    };
-
-    SkipWhitespace();
-
-    int length = 0;
-
-    if (m_buffer[m_pos] != '"')
-        RaiseError("expected braille string literal");
-
-    m_pos++;
-
-    while (m_buffer[m_pos] != '"')
-    {
-        if (length == kMaxStringLength)
-            RaiseError("mapped string longer than %d bytes", kMaxStringLength);
-
-        if (m_buffer[m_pos] == '\\' && m_buffer[m_pos + 1] == 'n')
-        {
-            s[length++] = 0xFE;
-            m_pos += 2;
-        }
-        else
-        {
-            char c = m_buffer[m_pos];
-
-            if (encoding.count(c) == 0)
-            {
-                if (IsAsciiPrintable(c))
-                    RaiseError("character '%c' not valid in braille string", m_buffer[m_pos]);
-                else
-                    RaiseError("character '\\x%02X' not valid in braille string", m_buffer[m_pos]);
-            }
-
-            s[length++] = encoding[c];
-            m_pos++;
-        }
-    }
-
-    m_pos++; // Go past the right quote.
-
-    ExpectEmptyRestOfLine();
-
-    return length;
 }
 
 // If we're at a comma, consumes it.
 // Returns whether a comma was found.
-bool AsmFile::ConsumeComma()
+bool SymFile::ConsumeComma()
 {
     if (m_buffer[m_pos] == ',')
     {
@@ -398,12 +315,15 @@ static int ConvertDigit(char c, int radix)
     return (digit < radix) ? digit : -1;
 }
 
-// Reads an integer. If the integer is greater than maxValue, it returns -1.
-int AsmFile::ReadPadLength()
+// Reads an integer.
+bool SymFile::ReadInteger(unsigned long& n)
 {
-    if (!IsAsciiDigit(m_buffer[m_pos]))
-        RaiseError("expected integer");
+    SkipWhitespace();
 
+    if (!IsAsciiDigit(m_buffer[m_pos]))
+        return false;
+
+    int startPos = m_pos;
     int radix = 10;
 
     if (m_buffer[m_pos] == '0' && m_buffer[m_pos + 1] == 'x')
@@ -412,53 +332,36 @@ int AsmFile::ReadPadLength()
         m_pos += 2;
     }
 
-    unsigned n = 0;
+    unsigned long cutoff = ULONG_MAX / radix;
+    unsigned long cutoffRemainder = ULONG_MAX % radix;
     int digit;
+
+    n = 0;
 
     while ((digit = ConvertDigit(m_buffer[m_pos], radix)) != -1)
     {
-        n = n * radix + digit;
-
-        if (n > kMaxStringLength)
-            RaiseError("pad length greater than maximum length (%d)", kMaxStringLength);
-
-        m_pos++;
-    }
-
-    return n;
-}
-
-// Outputs the current line and moves to the next one.
-void AsmFile::OutputLine()
-{
-    while (m_buffer[m_pos] != '\n' && m_buffer[m_pos] != 0)
-        m_pos++;
-
-    if (m_buffer[m_pos] == 0)
-    {
-        if (m_pos >= m_size)
+        if (n < cutoff || (n == cutoff && (unsigned long)digit <= cutoffRemainder))
         {
-            RaiseWarning("file doesn't end with newline");
-            puts(&m_buffer[m_lineStart]);
+            n = n * radix + digit;
         }
         else
         {
-            RaiseError("unexpected null character");
+            m_pos++;
+
+            while (ConvertDigit(m_buffer[m_pos], radix) != -1)
+                m_pos++;
+
+            RaiseError("integer is too large (%s)", std::string(&m_buffer[startPos], m_pos - startPos).c_str());
         }
-    }
-    else
-    {
-        m_buffer[m_pos] = 0;
-        puts(&m_buffer[m_lineStart]);
-        m_buffer[m_pos] = '\n';
+
         m_pos++;
-        m_lineStart = m_pos;
-        m_lineNum++;
     }
+
+    return true;
 }
 
 // Asserts that the rest of the line is empty and moves to the next one.
-void AsmFile::ExpectEmptyRestOfLine()
+void SymFile::ExpectEmptyRestOfLine()
 {
     SkipWhitespace();
 
@@ -485,20 +388,80 @@ void AsmFile::ExpectEmptyRestOfLine()
     }
 }
 
+
+void SymFile::SkipLine()
+{
+    while (m_buffer[m_pos] != 0 && m_buffer[m_pos] != '\n')
+        m_pos++;
+
+    if (m_buffer[m_pos] == '\n')
+        m_pos++;
+}
+
 // Checks if we're at the end of the file.
-bool AsmFile::IsAtEnd()
+bool SymFile::IsAtEnd()
 {
     return (m_pos >= m_size);
 }
 
-// Output the current location to set gas's logical file and line numbers.
-void AsmFile::OutputLocation()
+void SymFile::HandleLangConditional(std::string lang)
 {
-    std::printf("# %ld \"%s\"\n", m_lineNum, m_filename.c_str());
+    if (m_buffer[m_pos] != '#')
+        return;
+
+    m_pos++;
+
+    if (CheckForDirective("begin"))
+    {
+        if (m_inLangConditional)
+            RaiseError("already inside language conditional");
+
+        SkipWhitespace();
+
+        std::string label = GetLabel(false);
+
+        if (label.length() == 0)
+            RaiseError("no language name after #begin");
+
+        ExpectEmptyRestOfLine();
+
+        if (lang == label)
+        {
+            m_inLangConditional = true;
+        }
+        else
+        {
+            while (!IsAtEnd() && m_buffer[m_pos] != '#')
+                SkipLine();
+
+            if (m_buffer[m_pos] != '#')
+                RaiseError("unterminated language conditional");
+
+            m_pos++;
+
+            if (!CheckForDirective("end"))
+                RaiseError("expected #end");
+
+            ExpectEmptyRestOfLine();
+        }
+    }
+    else if (CheckForDirective("end"))
+    {
+        if (!m_inLangConditional)
+            RaiseError("not inside language conditional");
+
+        m_inLangConditional = false;
+
+        ExpectEmptyRestOfLine();
+    }
+    else
+    {
+        RaiseError("unknown # directive");
+    }
 }
 
 // Reports a diagnostic message.
-void AsmFile::ReportDiagnostic(const char* type, const char* format, std::va_list args)
+void SymFile::ReportDiagnostic(const char* type, const char* format, std::va_list args)
 {
     const int bufferSize = 1024;
     char buffer[bufferSize];
@@ -516,14 +479,14 @@ do                                        \
 } while (0)
 
 // Reports an error diagnostic and terminates the program.
-void AsmFile::RaiseError(const char* format, ...)
+void SymFile::RaiseError(const char* format, ...)
 {
     DO_REPORT("error");
     std::exit(1);
 }
 
 // Reports a warning diagnostic.
-void AsmFile::RaiseWarning(const char* format, ...)
+void SymFile::RaiseWarning(const char* format, ...)
 {
     DO_REPORT("warning");
 }

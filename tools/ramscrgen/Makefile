@@ -2,17 +2,17 @@ CXX := g++
 
 CXXFLAGS := -std=c++11 -O2 -Wall -Wno-switch -Werror -static-libgcc -static-libstdc++ -static
 
-SRCS := agb.cpp error.cpp main.cpp midi.cpp tables.cpp
+SRCS := main.cpp sym_file.cpp elf.cpp
 
-HEADERS := agb.h error.h main.h midi.h tables.h
+HEADERS := ramscrgen.h sym_file.h elf.h char_util.h
 
 .PHONY: all clean
 
-all: mid2agb
+all: ramscrgen
 	@:
 
-mid2agb: $(SRCS) $(HEADERS)
+ramscrgen: $(SRCS) $(HEADERS)
 	$(CXX) $(CXXFLAGS) $(SRCS) -o $@ $(LDFLAGS)
 
 clean:
-	$(RM) mid2agb mid2agb.exe
+	$(RM) ramscrgen ramscrgen.exe

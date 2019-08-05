@@ -87,7 +87,7 @@ gUnknown_0817BF48:
 
     .global gUnknown_0817BF5C
 gUnknown_0817BF5C:
-    .incbin "/graphics/intro_credits/capcom.gbapal"
+    .incbin "graphics/intro_credits/capcom.gbapal_"
 
     .global gUnknown_0817BF7C
 gUnknown_0817BF7C:
@@ -12903,11 +12903,11 @@ gUnknown_0830BAA0:
 
     .global gUnknown_0830C2A0
 gUnknown_0830C2A0:
-    .incbin "/graphics/intro_credits/capcom.4bpp"
+    .incbin "graphics/intro_credits/capcom.4bpp"
 
     .global gUnknown_083112A0
 gUnknown_083112A0:
-    .incbin "/graphics/intro_credits/capcom_map.bin"
+    .incbin "graphics/intro_credits/capcom_map.bin"
 
     .global gUnknown_083117A0
 gUnknown_083117A0:

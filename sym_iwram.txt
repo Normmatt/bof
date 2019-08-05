@@ -369,9 +369,9 @@
 . = 0x00001E30; gUnknown_03001E30 = .;
 . = 0x00001E48; gUnknown_03001E48 = .;
 . = 0x00001E60; gUnknown_03001E60 = .;
-. = 0x00001E78; tools/agbcc/lib/libc.a:syscalls.o(.bss);
-. = 0x00001F28; tools/agbcc/lib/libgcc.a:dp-bit.o(.bss);
-. = 0x00001F40; tools/agbcc/lib/libgcc.a:fp-bit.o(.bss);
+. = 0x00001E78; *libc.a:syscalls.o(.bss);
+. = 0x00001F28; *libgcc.a:dp-bit.o(.bss);
+. = 0x00001F40; *libgcc.a:fp-bit.o(.bss);
 . = 0x00001F50; gUnknown_03001F50 = .;
 . = 0x00001F51; gUnknown_03001F51 = .;
 . = 0x00002350; gUnknown_03002350 = .;
@@ -704,7 +704,7 @@
 . = 0x00006E40; gUnknown_03006E40 = .;
 . = 0x00006E58; gUnknown_03006E58 = .;
 . = 0x00006E70; gUnknown_03006E70 = .;
-. = 0x00006ED0; tools/agbcc/lib/libc.a:sbrkr.o(COMMON);
+. = 0x00006ED0; *libc.a:sbrkr.o(COMMON);
 . = 0x00006ED4; end = .;
 . = 0x00007E00; gUnknown_03007E00 = .;
 . = 0x00007FA0; gUnknown_03007FA0 = .;
