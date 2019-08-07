@@ -14,7 +14,7 @@
 
 #define SET_GBA_PAL(glsb, r, g, b) (((glsb) << 15) | ((b) << 10) | ((g) << 5) | (r))
 
-#define UPCONVERT_BIT_DEPTH(x) (((x) * 255) / 31)
+#define UPCONVERT_BIT_DEPTH(x) ((((x) * 255) / 31) & 0xF8)
 
 #define DOWNCONVERT_BIT_DEPTH(x) ((x) / 8)
 
@@ -317,7 +317,7 @@ void ReadGbaPalette(char *path, struct Palette *palette)
 		palette->colors[i].red = UPCONVERT_BIT_DEPTH(GET_GBA_PAL_RED(paletteEntry));
 		palette->colors[i].green = UPCONVERT_BIT_DEPTH(GET_GBA_PAL_GREEN(paletteEntry));
 		palette->colors[i].blue = UPCONVERT_BIT_DEPTH(GET_GBA_PAL_BLUE(paletteEntry));
-		palette->colors[i].green_lsb = ((paletteEntry & 0x8000)>>15);
+		palette->colors[i].green_lsb = ((paletteEntry & 0x8000)>>15) & 1;
 	}
 
 	free(data);
