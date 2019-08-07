@@ -13263,12 +13263,12 @@ gUnknown_0839BCBC:
 
     .global gUnknown_0839BDFC
 gUnknown_0839BDFC:
-    .incbin "baserom.gba", 0x0039BDFC, 0xA000
+    .incbin "graphics/intro_credits/ubisoft.8bpp"
 
     .global gUnknown_083A5DFC
 gUnknown_083A5DFC:
-    .incbin "baserom.gba", 0x003A5DFC, 0x100
+    .incbin "graphics/intro_credits/ubisoft.gbapal"
 
     .global gUnknown_083A5EFC
-gUnknown_083A5EFC:
-    .incbin "baserom.gba", 0x003A5EFC, 0x427E4
+gUnknown_083A5FFC:
+    .incbin "baserom.gba", 0x003A5FFC, 0x426E4
