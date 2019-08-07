@@ -12863,35 +12863,35 @@ gUnknown_082F5844:
 
     .global gUnknown_082F5AA0
 gUnknown_082F5AA0:
-    .incbin "baserom.gba", 0x002F5AA0, 0x1C00
+    .incbin "graphics/fonts/small.4bpp"
 
     .global gUnknown_082F76A0
 gUnknown_082F76A0:
-    .incbin "baserom.gba", 0x002F76A0, 0x200
-
-    .global gUnknown_082F78A0
-gUnknown_082F78A0:
-    .incbin "baserom.gba", 0x002F78A0, 0x3600
+    .incbin "graphics/fonts/large.4bpp"
 
     .global gUnknown_082FAEA0
 gUnknown_082FAEA0:
-    .incbin "baserom.gba", 0x002FAEA0, 0x20
-
-    .global gUnknown_082FAEC0
-gUnknown_082FAEC0:
-    .incbin "baserom.gba", 0x002FAEC0, 0x9FE0
+    .incbin "graphics/fonts/kanji.4bpp"
 
     .global gUnknown_08304EA0
 gUnknown_08304EA0:
-    .incbin "baserom.gba", 0x00304EA0, 0x1400
+    .incbin "graphics/icons/items.4bpp"
+
+    .global gUnknown_083056A0
+gUnknown_083056A0:
+    .incbin "graphics/misc/textbox.4bpp"
+
+    .global gUnknown_08305AA0
+gUnknown_08305AA0:
+    .incbin "graphics/portraits/small.4bpp"
 
     .global gUnknown_083062A0
 gUnknown_083062A0:
-    .incbin "baserom.gba", 0x003062A0, 0x1000
+    .incbin "graphics/portraits/medium.4bpp"
 
     .global gUnknown_083072A0
 gUnknown_083072A0:
-    .incbin "baserom.gba", 0x003072A0, 0x2000
+    .incbin "graphics/portraits/large.4bpp"
 
     .global gUnknown_083092A0
 gUnknown_083092A0:
