@@ -12911,19 +12911,19 @@ gUnknown_083112A0:
 
     .global gUnknown_083117A0
 gUnknown_083117A0:
-    .incbin "baserom.gba", 0x003117A0, 0x32000
+    .incbin "graphics/misc/flames.4bpp"
 
     .global gUnknown_083437A0
 gUnknown_083437A0:
-    .incbin "baserom.gba", 0x003437A0, 0x8000
+    .incbin "graphics/misc/title_screen.4bpp"
 
     .global gUnknown_0834B7A0
 gUnknown_0834B7A0:
-    .incbin "baserom.gba", 0x0034B7A0, 0x100
+    .incbin "graphics/misc/title_screen_fg.gbapal"
 
     .global gUnknown_0834B8A0
 gUnknown_0834B8A0:
-    .incbin "baserom.gba", 0x0034B8A0, 0x100
+    .incbin "graphics/misc/title_screen_obj_fg.gbapal"
 
     .global gUnknown_0834B9A0
 gUnknown_0834B9A0:
@@ -13051,43 +13051,31 @@ gUnknown_0837A2C0:
 
     .global gUnknown_0837A500
 gUnknown_0837A500:
-    .incbin "baserom.gba", 0x0037A500, 0xA000
+    .incbin "graphics/misc/background.8bpp"
 
     .global gUnknown_08384500
 gUnknown_08384500:
-    .incbin "baserom.gba", 0x00384500, 0x100
-
-    .global gUnknown_08384600
-gUnknown_08384600:
-    .incbin "baserom.gba", 0x00384600, 0x100
+    .incbin "graphics/misc/background.gbapal"
 
     .global gUnknown_08384700
 gUnknown_08384700:
-    .incbin "baserom.gba", 0x00384700, 0x780
+    .incbin "graphics/misc/please_wait.4bpp"
 
     .global gUnknown_08384E80
 gUnknown_08384E80:
-    .incbin "baserom.gba", 0x00384E80, 0xA000
+    .incbin "graphics/misc/end.8bpp"
 
     .global gUnknown_0838EE80
 gUnknown_0838EE80:
-    .incbin "baserom.gba", 0x0038EE80, 0x100
-
-    .global gUnknown_0838EF80
-gUnknown_0838EF80:
-    .incbin "baserom.gba", 0x0038EF80, 0x100
+    .incbin "graphics/misc/end.gbapal"
 
     .global gUnknown_0838F080
 gUnknown_0838F080:
-    .incbin "baserom.gba", 0x0038F080, 0x8000
+    .incbin "graphics/misc/to_be_continued.8bpp"
 
     .global gUnknown_08397080
 gUnknown_08397080:
-    .incbin "baserom.gba", 0x00397080, 0x100
-
-    .global gUnknown_08397180
-gUnknown_08397180:
-    .incbin "baserom.gba", 0x00397180, 0x100
+    .incbin "graphics/misc/to_be_continued.gbapal"
 
     .global gUnknown_08397280
 gUnknown_08397280:
