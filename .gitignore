@@ -1,2 +1,12 @@
 build/
 .vscode/
+baserom.gba
+*.elf
+*.gba
+bof.map
+bof.cfg
+*.sav
+*.exe
+*.gbapal
+*.4bpp
+*.8bpp
