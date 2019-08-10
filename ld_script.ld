@@ -24,7 +24,7 @@ SECTIONS
     __data_size__ = __data_end__ - __data_start__;
 
 	. = 0x08000000;
-    ROM : SUBALIGN(0)
+    .text : SUBALIGN(0)
 	{
         asm/crt0.o(.text);
         src/main.o(.text);                          /* rodata 0811FB18 */
@@ -215,13 +215,13 @@ SECTIONS
         *libgcc.a:_negdi2.o(.text);
 	} = 0
     
-    . = 0x0811FB18;
-    RODATA :
+    .rodata :
 	ALIGN(4)
     {
         /* Read Only Data */
         src/main.o(.rodata);                          /* rodata 0811FB18 */
         data/data.o(.rodata);
+        data/sound_data.o(.rodata);
         src/libisagbprn.o(.rodata);                   /* rodata 0817AF80 */
         src/agb_sram.o(.rodata);                      /* rodata 0817AFE4 */
         *libc.a:impure.o(.rodata);
@@ -258,50 +258,44 @@ SECTIONS
         *libc.a:impure.o(.data);
         *libc.a:locale.o(.data);
         *libc.a:mallocr.o(.data);
-    } = 0
-    
-    RODATA2 :
-	ALIGN(4)
-    {
-        /* Read Only Data */
-        *libc.a:memcpy.o(.rodata);
-        *libc.a:bzero.o(.rodata);
-        *libc.a:memcpy.o(.rodata);
-        *libc.a:memset.o(.rodata);
-        *libc.a:vsprintf.o(.rodata);
-        *libc.a:vfprintf.o(.rodata);
-        *libc.a:wsetup.o(.rodata);
-        *libc.a:dtoa.o(.rodata);
-        *libc.a:fflush.o(.rodata);
-        *libc.a:findfp.o(.rodata);
-        *libc.a:freer.o(.rodata);
-        *libc.a:fvwrite.o(.rodata);
-        *libc.a:fwalk.o(.rodata);
-        *libc.a:locale.o(.rodata);
-        *libc.a:makebuf.o(.rodata);
-        *libc.a:mallocr.o(.rodata);
-        *libc.a:mbtowc_r.o(.rodata);
-        *libc.a:memchr.o(.rodata);
-        *libc.a:memmove.o(.rodata);
-        *libc.a:mlock.o(.rodata);
-        *libc.a:mprec.o(.rodata);
-        *libc.a:s_isinf.o(.rodata);
-        *libc.a:s_isnan.o(.rodata);
-        *libc.a:sbrkr.o(.rodata);
-        *libc.a:stdio.o(.rodata);
-        *libc.a:strcmp.o(.rodata);
-        *libc.a:strlen.o(.rodata);
-        *libc.a:syscalls.o(.rodata);
-        *libc.a:errno.o(.rodata);
-        *libc.a:fstatr.o(.rodata);
-        *libc.a:libcfunc.o(.rodata);
-        *libc.a:lseekr.o(.rodata);
-        *libc.a:readr.o(.rodata);
-        *libgcc.a:dp-bit.o(.rodata);
-        *libgcc.a:fp-bit.o(.rodata);
-        *libgcc.a:_lshrdi3.o(.rodata);
-        *libgcc.a:_muldi3.o(.rodata);
-        *libgcc.a:_negdi2.o(.rodata);
+        *libc.a:memcpy.o(.data);
+        *libc.a:bzero.o(.data);
+        *libc.a:memcpy.o(.data);
+        *libc.a:memset.o(.data);
+        *libc.a:vsprintf.o(.data);
+        *libc.a:vfprintf.o(.data);
+        *libc.a:wsetup.o(.data);
+        *libc.a:dtoa.o(.data);
+        *libc.a:fflush.o(.data);
+        *libc.a:findfp.o(.data);
+        *libc.a:freer.o(.data);
+        *libc.a:fvwrite.o(.data);
+        *libc.a:fwalk.o(.data);
+        *libc.a:locale.o(.data);
+        *libc.a:makebuf.o(.data);
+        *libc.a:mallocr.o(.data);
+        *libc.a:mbtowc_r.o(.data);
+        *libc.a:memchr.o(.data);
+        *libc.a:memmove.o(.data);
+        *libc.a:mlock.o(.data);
+        *libc.a:mprec.o(.data);
+        *libc.a:s_isinf.o(.data);
+        *libc.a:s_isnan.o(.data);
+        *libc.a:sbrkr.o(.data);
+        *libc.a:stdio.o(.data);
+        *libc.a:strcmp.o(.data);
+        *libc.a:strlen.o(.data);
+        *libc.a:syscalls.o(.data);
+        *libc.a:errno.o(.data);
+        *libc.a:fstatr.o(.data);
+        *libc.a:libcfunc.o(.data);
+        *libc.a:lseekr.o(.data);
+        *libc.a:readr.o(.data);
+        *libgcc.a:dp-bit.o(.data);
+        *libgcc.a:fp-bit.o(.data);
+        *libgcc.a:_lshrdi3.o(.data);
+        *libgcc.a:_muldi3.o(.data);
+        *libgcc.a:_negdi2.o(.data);
     } = 0
     
     /* DWARF debug sections.

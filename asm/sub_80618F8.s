@@ -1179,6 +1179,6 @@ sub_8062170: @ 0x08062170
 	pop {r0}
 	bx r0
 	.align 2, 0
-_080621C8: .4byte gUnknown_08142B5C
-_080621CC: .4byte gUnknown_08142BC8
+_080621C8: .4byte gMPlayTable
+_080621CC: .4byte gSongTable
 _080621D0: .4byte gUnknown_0300412C

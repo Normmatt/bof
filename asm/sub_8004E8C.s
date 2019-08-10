@@ -145,8 +145,8 @@ _08004F90:
 	bx r0
 	.align 2, 0
 _08004FA4: .4byte gUnknown_0300412C
-_08004FA8: .4byte gUnknown_08142B5C
-_08004FAC: .4byte gUnknown_08142BC8
+_08004FA8: .4byte gMPlayTable
+_08004FAC: .4byte gSongTable
 
 	THUMB_FUNC_START sub_8004FB0
 sub_8004FB0: @ 0x08004FB0

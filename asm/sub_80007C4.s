@@ -1828,8 +1828,8 @@ _080016F0: .4byte gUnknown_0300241B
 _080016F4: .4byte gUnknown_030054F0
 _080016F8: .4byte gUnknown_0202DBD0
 _080016FC: .4byte 0x000002A9
-_08001700: .4byte gUnknown_08142B5C
-_08001704: .4byte gUnknown_08142BC8
+_08001700: .4byte gMPlayTable
+_08001704: .4byte gSongTable
 _08001708: .4byte gUnknown_0300412C
 _0800170C: .4byte 0x0000FFFF
 _08001710:
@@ -1927,8 +1927,8 @@ sub_800176C: @ 0x0800176C
 _080017C8: .4byte gUnknown_030054F0
 _080017CC: .4byte gUnknown_0202DBD0
 _080017D0: .4byte 0x000002A9
-_080017D4: .4byte gUnknown_08142B5C
-_080017D8: .4byte gUnknown_08142BC8
+_080017D4: .4byte gMPlayTable
+_080017D8: .4byte gSongTable
 _080017DC: .4byte gUnknown_0300412C
 _080017E0: .4byte 0x0000FFFF
 _080017E4:

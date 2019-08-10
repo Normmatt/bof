@@ -1613,7 +1613,7 @@ _08118654: .4byte gUnknown_0203E000
 _08118658: .4byte gUnknown_0203F040
 _0811865C: .4byte 0x0095F800
 _08118660: .4byte 0x00000009
-_08118664: .4byte gUnknown_08142B5C
+_08118664: .4byte gMPlayTable
 _08118668: .4byte gUnknown_0203FE40
 
 	THUMB_FUNC_START m4aSoundMain
@@ -1644,8 +1644,8 @@ m4aSongNumStart: @ 0x08118678
 	pop {r0}
 	bx r0
 	.align 2, 0
-_0811869C: .4byte gUnknown_08142B5C
-_081186A0: .4byte gUnknown_08142BC8
+_0811869C: .4byte gMPlayTable
+_081186A0: .4byte gSongTable
 
 	THUMB_FUNC_START m4aSongNumStartOrChange
 m4aSongNumStartOrChange: @ 0x081186A4
@@ -1670,8 +1670,8 @@ m4aSongNumStartOrChange: @ 0x081186A4
 	bl MPlayStart_rev01
 	b _081186EC
 	.align 2, 0
-_081186D0: .4byte gUnknown_08142B5C
-_081186D4: .4byte gUnknown_08142BC8
+_081186D0: .4byte gMPlayTable
+_081186D4: .4byte gSongTable
 _081186D8:
 	ldr r2, [r1, #4]
 	ldrh r0, [r1, #4]
@@ -1710,8 +1710,8 @@ m4aSongNumStartOrContinue: @ 0x081186F0
 	bl MPlayStart_rev01
 	b _08118740
 	.align 2, 0
-_0811871C: .4byte gUnknown_08142B5C
-_08118720: .4byte gUnknown_08142BC8
+_0811871C: .4byte gMPlayTable
+_08118720: .4byte gSongTable
 _08118724:
 	ldr r2, [r1, #4]
 	ldrh r0, [r1, #4]
@@ -1754,8 +1754,8 @@ _0811876A:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_08118770: .4byte gUnknown_08142B5C
-_08118774: .4byte gUnknown_08142BC8
+_08118770: .4byte gMPlayTable
+_08118774: .4byte gSongTable
 
 	THUMB_FUNC_START m4aSongNumContinue
 m4aSongNumContinue: @ 0x08118778
@@ -1781,8 +1781,8 @@ _0811879E:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_081187A4: .4byte gUnknown_08142B5C
-_081187A8: .4byte gUnknown_08142BC8
+_081187A4: .4byte gMPlayTable
+_081187A8: .4byte gSongTable
 
 	THUMB_FUNC_START m4aMPlayAllStop
 m4aMPlayAllStop: @ 0x081187AC
@@ -1807,7 +1807,7 @@ _081187CA:
 	bx r0
 	.align 2, 0
 _081187D0: .4byte 0x00000009
-_081187D4: .4byte gUnknown_08142B5C
+_081187D4: .4byte gMPlayTable
 
 	THUMB_FUNC_START m4aMPlayContinue
 m4aMPlayContinue: @ 0x081187D8
@@ -1840,7 +1840,7 @@ _08118802:
 	bx r0
 	.align 2, 0
 _08118808: .4byte 0x00000009
-_0811880C: .4byte gUnknown_08142B5C
+_0811880C: .4byte gMPlayTable
 
 	THUMB_FUNC_START m4aMPlayFadeOut
 m4aMPlayFadeOut: @ 0x08118810

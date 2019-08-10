@@ -1307,14 +1307,3 @@ gUnknown_08142654:
     .word ply_xleng
     .word ply_xswee
 
-    .global gUnknown_08142684
-gUnknown_08142684:
-    .incbin "baserom.gba", 0x00142684, 0x4D8
-
-    .global gUnknown_08142B5C
-gUnknown_08142B5C:
-    .incbin "baserom.gba", 0x00142B5C, 0x6C
-
-    .global gUnknown_08142BC8
-gUnknown_08142BC8:
-    .incbin "baserom.gba", 0x00142BC8, 0x383B8

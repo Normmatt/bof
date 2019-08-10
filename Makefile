@@ -148,7 +148,6 @@ clean: mostlyclean clean-tools
 #	@$(foreach tooldir,$(TOOLDIRS),$(MAKE) clean -C $(tooldir);)
 
 mostlyclean: tidy
-	rm -f sound/direct_sound_samples/*.bin
 	rm -f $(MID_SUBDIR)/*.s
 	find . \( -iname '*.1bpp' -o -iname '*.4bpp' -o -iname '*.8bpp' -o -iname '*.gbapal' -o -iname '*.lz' -o -iname '*.latfont' -o -iname '*.hwjpnfont' -o -iname '*.fwjpnfont' \) -exec rm {} +
 	rm -f $(AUTO_GEN_TARGETS)
@@ -174,8 +173,7 @@ include graphics_file_rules.mk
 %.gbapal: %.png ; $(GFX) $< $@
 %.lz: % ; $(GFX) $< $@
 %.rl: % ; $(GFX) $< $@
-sound/direct_sound_samples/cry_%.bin: sound/direct_sound_samples/cry_%.aif ; $(AIF) $< $@ --compress
-sound/%.bin: sound/%.aif ; $(AIF) $< $@
+#sound/%.bin: sound/%.aif ; $(AIF) $< $@
 
 
 ifeq ($(MODERN),0)

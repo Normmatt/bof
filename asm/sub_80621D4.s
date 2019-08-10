@@ -141,8 +141,8 @@ _080622C6:
 	strb r2, [r0]
 	b _08062276
 	.align 2, 0
-_080622D8: .4byte gUnknown_08142B5C
-_080622DC: .4byte gUnknown_08142BC8
+_080622D8: .4byte gMPlayTable
+_080622DC: .4byte gSongTable
 _080622E0: .4byte gUnknown_0300412C
 _080622E4:
 	add sp, #0x28
