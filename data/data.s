@@ -1294,7 +1294,22 @@ gUnknown_08142620:
 
     .global gUnknown_08142654
 gUnknown_08142654:
-    .incbin "baserom.gba", 0x00142654, 0x508
+    .word ply_xxx
+    .word ply_xwave
+    .word ply_xtype
+    .word ply_xxx
+    .word ply_xatta
+    .word ply_xdeca
+    .word ply_xsust
+    .word ply_xrele
+    .word ply_xiecv
+    .word ply_xiecl
+    .word ply_xleng
+    .word ply_xswee
+
+    .global gUnknown_08142684
+gUnknown_08142684:
+    .incbin "baserom.gba", 0x00142684, 0x4D8
 
     .global gUnknown_08142B5C
 gUnknown_08142B5C:
