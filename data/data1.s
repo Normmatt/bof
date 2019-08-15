@@ -1,7 +1,7 @@
 	.section .data
 
-    .global gUnknown_0817B21C
-gUnknown_0817B21C:
+    .global gUnknown_0817B219
+gUnknown_0817B219:
     .incbin "baserom.gba", 0x0017B219, 0x1E7
 
     .global gUnknown_0817B400
@@ -172,11 +172,80 @@ gUnknown_0817C04C:
 
     .global gUnknown_0817C068
 gUnknown_0817C068:
-    .incbin "baserom.gba", 0x0017C068, 0x6A4
+    .incbin "baserom.gba", 0x0017C068, 0x04
+
+    .global gUnknown_0817C06C
+gUnknown_0817C06C:
+    .incbin "baserom.gba", 0x0017C06C, 0x0E
+
+    .global gUnknown_0817C07A
+gUnknown_0817C07A:
+    .incbin "baserom.gba", 0x0017C07A, 0x0E
+
+    .global gUnknown_0817C088
+gUnknown_0817C088:
+    .incbin "baserom.gba", 0x0017C088, 0x0E
+
+    .global gUnknown_0817C096
+gUnknown_0817C096:
+    .incbin "baserom.gba", 0x0017C096, 0x0E
+
+    .global gUnknown_0817C0A4
+gUnknown_0817C0A4:
+    .incbin "baserom.gba", 0x0017C0A4, 0x0E
+
+    .global gUnknown_0817C0B2
+gUnknown_0817C0B2:
+    .incbin "baserom.gba", 0x0017C0B2, 0x1A
+
+    .global gUnknown_0817C0CC
+gUnknown_0817C0CC:
+    .incbin "baserom.gba", 0x0017C0CC, 0x08
+
+    .global gUnknown_0817C0D4
+gUnknown_0817C0D4:
+    .incbin "baserom.gba", 0x0017C0D4, 0x13A
+
+    .global gUnknown_0817C20E
+gUnknown_0817C20E:
+    .incbin "baserom.gba", 0x0017C20E, 0x16A
+
+    .global gUnknown_0817C378
+gUnknown_0817C378:
+    .incbin "baserom.gba", 0x0017C378, 0xC2
+
+    .global gUnknown_0817C43A
+gUnknown_0817C43A:
+    .incbin "baserom.gba", 0x0017C43A, 0x08
+
+    .global gUnknown_0817C442
+gUnknown_0817C442:
+    .incbin "baserom.gba", 0x0017C442, 0x122
+
+    .global gUnknown_0817C564
+gUnknown_0817C564:
+    .incbin "baserom.gba", 0x0017C564, 0x122
+
+    .global gUnknown_0817C686
+gUnknown_0817C686:
+    .incbin "baserom.gba", 0x0017C686, 0x86
 
     .global gUnknown_0817C70C
 gUnknown_0817C70C:
-    .incbin "baserom.gba", 0x0017C70C, 0x38
+    .word gUnknown_0817C06C
+    .word gUnknown_0817C07A
+    .word gUnknown_0817C088
+    .word gUnknown_0817C096
+    .word gUnknown_0817C0A4
+    .word gUnknown_0817C0B2
+    .word gUnknown_0817C0CC
+    .word gUnknown_0817C0D4
+    .word gUnknown_0817C20E
+    .word gUnknown_0817C378
+    .word gUnknown_0817C43A
+    .word gUnknown_0817C442
+    .word gUnknown_0817C564
+    .word gUnknown_0817C686
 
     .global gUnknown_0817C744
 gUnknown_0817C744:
@@ -3986,10 +4055,12 @@ gUnknown_08180630:
 gUnknown_0818068C:
     .incbin "baserom.gba", 0x0018068C, 0x38
 
+    @Pointers to level/tile data?
     .global gUnknown_081806C4
 gUnknown_081806C4:
     .incbin "baserom.gba", 0x001806C4, 0x80
 
+    @Pointers to level/tile data?
     .global gUnknown_08180744
 gUnknown_08180744:
     .incbin "baserom.gba", 0x00180744, 0x90
@@ -5040,14 +5111,17 @@ gUnknown_08181BA4:
 gUnknown_08181BE2:
     .incbin "baserom.gba", 0x00181BE2, 0x1E
 
+    @English TrapNames
     .global gUnknown_08181C00
 gUnknown_08181C00:
     .incbin "baserom.gba", 0x00181C00, 0x60
 
+    @Deutsch TrapNames
     .global gUnknown_08181C60
 gUnknown_08181C60:
     .incbin "baserom.gba", 0x00181C60, 0x60
 
+    @Francais TrapNames
     .global gUnknown_08181CC0
 gUnknown_08181CC0:
     .incbin "baserom.gba", 0x00181CC0, 0x60
@@ -9369,7 +9443,36 @@ gUnknown_08188C2C:
 
     .global gUnknown_08188C40
 gUnknown_08188C40:
-    .incbin "baserom.gba", 0x00188C40, 0x2B6
+    .word sub_80AC510
+    .word sub_80AC510
+    .word sub_80ACFA0
+    .word sub_80AD5CC
+    .word sub_80AE11C
+    .word sub_80AE160
+    .word sub_80AE170
+    .word sub_80AE348
+    .word sub_80AE54C
+    .word sub_80AEAE4
+    .word sub_80AE11C
+    .word sub_80AFE54
+    .word sub_80AFE90
+    .word sub_80AFFFC
+    .word sub_80B0EA4
+    .word sub_80B166C
+    .word sub_80B20A4
+    .word sub_80B260C
+
+    .global gUnknown_08188C88
+gUnknown_08188C88:
+    .incbin "baserom.gba", 0x00188C88, 0x60
+
+    .global gUnknown_08188CE8
+gUnknown_08188CE8:
+    .incbin "baserom.gba", 0x00188CE8, 0x8E
+
+    .global gUnknown_08188D76
+gUnknown_08188D76:
+    .incbin "baserom.gba", 0x00188D76, 0x180
 
     .global gUnknown_08188EF6
 gUnknown_08188EF6:
@@ -9387,6 +9490,7 @@ gUnknown_081BBDB8:
 gUnknown_081D7558:
     .incbin "baserom.gba", 0x001D7558, 0x2FBD4
 
+    @pointer table
     .global gUnknown_0820712C
 gUnknown_0820712C:
     .incbin "baserom.gba", 0x0020712C, 0x4000
@@ -9413,7 +9517,33 @@ gUnknown_0820B258:
 
     .global gUnknown_0820B2B8
 gUnknown_0820B2B8:
-    .incbin "baserom.gba", 0x0020B2B8, 0x6C
+    .word gUnknown_082F5AA0
+    .word 0x600AC00
+    .word 0x1C00
+    .word gUnknown_082F76A0
+    .word 0x600C800
+    .word 0x3800
+    .word gUnknown_08304EA0
+    .word 0x6017800
+    .word 0x800
+    .word gUnknown_083056A0
+    .word 0x600A800
+    .word 0x400
+    .word gUnknown_08305AA0
+    .word 0x6016000
+    .word 0x800
+    .word gUnknown_083072A0
+    .word 0x6014000
+    .word 0x2000
+    .word gUnknown_08300EA0
+    .word 0x6013800
+    .word 0x200
+    .word gUnknown_08300EA0+0x400
+    .word 0x6013C00
+    .word 0x200
+    .word gUnknown_083016A0
+    .word 0x600C800
+    .word 0x3800
 
     .global gUnknown_0820B324
 gUnknown_0820B324:
@@ -11015,7 +11145,8 @@ gUnknown_082163B8:
 
     .global gUnknown_082163F8
 gUnknown_082163F8:
-    .incbin "baserom.gba", 0x002163F8, 0xF
+    .ascii "BATTLE_DEBUG=0"
+    .byte 0
 
     .global gUnknown_08216407
 gUnknown_08216407:
@@ -12462,7 +12593,9 @@ gUnknown_082191C8:
 
     .global gUnknown_082191D0
 gUnknown_082191D0:
-    .incbin "baserom.gba", 0x002191D0, 0xC
+    .word gUnknown_08188D76
+    .word gUnknown_08188C88
+    .word gUnknown_08188CE8
 
     .global gUnknown_082191DC
 gUnknown_082191DC:
@@ -12872,6 +13005,14 @@ gUnknown_082F76A0:
     .global gUnknown_082FAEA0
 gUnknown_082FAEA0:
     .incbin "graphics/fonts/kanji.4bpp"
+
+    .global gUnknown_08300EA0
+gUnknown_08300EA0:
+    .incbin "graphics/fonts/menu.4bpp"
+
+    .global gUnknown_083016A0
+gUnknown_083016A0:
+    .incbin "graphics/fonts/large_bold.4bpp"
 
     .global gUnknown_08304EA0
 gUnknown_08304EA0:

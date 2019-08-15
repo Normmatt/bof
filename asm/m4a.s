@@ -317,7 +317,9 @@ sub_08117D66: @ 0x08117D66
 	bx r3
 	.align 2, 0
 _08117D68: .4byte 0x68736D53
-_08117D6C:
+
+	THUMB_FUNC_START SoundMainBTM
+SoundMainBTM:
 	.byte 0xA4, 0x46, 0x00, 0x21
 	.byte 0x00, 0x22, 0x00, 0x23, 0x00, 0x24, 0x1E, 0xC0, 0x1E, 0xC0, 0x1E, 0xC0, 0x1E, 0xC0, 0x64, 0x46
 	.byte 0x70, 0x47, 0x00, 0x00
@@ -344,6 +346,8 @@ _08117D9E:
 	str r1, [r0, #0x2c]
 _08117DA2:
 	bx lr
+
+	THUMB_FUNC_START ply_fine
 ply_fine:
 	push {r4, r5, lr}
 	adds r5, r1, #0
@@ -417,7 +421,8 @@ ld_r3_r2_i_sub: @ 0x08117E0A
 	str r3, [r1, #0x40]
 	ldrb r3, [r2]
 	b chk_adr_r2
-	.align 2, 0
+
+		THUMB_FUNC_START ply_goto
 ply_goto:
 	push {lr}
 _08117E16:

@@ -7754,6 +7754,8 @@ _080C5788:
 	lsrs r0, r1, #0x18
 	cmp r0, #0
 	beq _080C5822
+	@Comment above and Uncomment below to enable battle debug
+	@nop
 	adds r0, r7, #0
 	adds r0, #8
 	ldrh r1, [r0]
@@ -7761,6 +7763,8 @@ _080C5788:
 	bl sub_80EB928
 	cmp r0, #1
 	bne _080C5822
+	@Comment above and Uncomment below to enable battle debug
+	@nop
 	ldr r0, _080C5818
 	ldr r1, _080C5818
 	ldr r2, [r1]

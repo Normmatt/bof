@@ -1258,7 +1258,42 @@ gUnknown_08141DEC:
 
     .global gUnknown_081423AC
 gUnknown_081423AC:
-    .incbin "baserom.gba", 0x001423AC, 0x90
+    .word ply_fine
+    .word ply_goto
+    .word ply_patt
+    .word ply_pend
+    .word ply_rept
+    .word ply_fine
+    .word ply_fine
+    .word ply_fine
+    .word ply_fine
+    .word ply_prio
+    .word ply_tempo
+    .word ply_keysh
+    .word ply_voice
+    .word ply_vol
+    .word ply_pan
+    .word ply_bend
+    .word ply_bendr
+    .word ply_lfos_rev01
+    .word ply_lfodl
+    .word ply_mod_rev01
+    .word ply_modt
+    .word ply_fine
+    .word ply_fine
+    .word ply_tune
+    .word ply_fine
+    .word ply_fine
+    .word ply_fine
+    .word ply_port
+    .word ply_fine
+    .word ply_endtie_rev01
+    .word SampFreqSet_rev01
+    .word TrackStop_rev01
+    .word FadeOutBody_rev01
+    .word TrkVolPitSet_rev01
+    .word ClearChain
+    .word SoundMainBTM
 
     .global gUnknown_0814243C
 gUnknown_0814243C:
