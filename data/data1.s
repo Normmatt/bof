@@ -9476,19 +9476,15 @@ gUnknown_08188D76:
 
     .global gUnknown_08188EF6
 gUnknown_08188EF6:
-    .incbin "baserom.gba", 0x00188EF6, 0x16BF2
+    .incbin "baserom.gba", 0x00188EF6, 0x52
+    
+    .include "text/english/story.inc"
+    .include "text/french/story.inc"
+    .include "text/german/story.inc"
 
-    .global gUnknown_0819FAE8
-gUnknown_0819FAE8:
-    .incbin "baserom.gba", 0x0019FAE8, 0x1C2D0
-
-    .global gUnknown_081BBDB8
-gUnknown_081BBDB8:
-    .incbin "baserom.gba", 0x001BBDB8, 0x1B7A0
-
-    .global gUnknown_081D7558
-gUnknown_081D7558:
-    .incbin "baserom.gba", 0x001D7558, 0x2FBD4
+    .global gUnknown_081D9158
+gUnknown_081D9158:
+    .incbin "baserom.gba", 0x001D9158, 0x2DFD4
 
     @pointer table
     .global gUnknown_0820712C
@@ -12281,19 +12277,9 @@ gUnknown_08218AEC:
 
     .global gUnknown_08218AF4
 gUnknown_08218AF4:
-    .incbin "baserom.gba", 0x00218AF4, 0x168
+    .incbin "baserom.gba", 0x00218AF4, 0x4
 
-    .global gUnknown_08218C5C
-gUnknown_08218C5C:
-    .incbin "baserom.gba", 0x00218C5C, 0x20
-
-    .global gUnknown_08218C7C
-gUnknown_08218C7C:
-    .incbin "baserom.gba", 0x00218C7C, 0x20
-
-    .global gUnknown_08218C9C
-gUnknown_08218C9C:
-    .incbin "baserom.gba", 0x00218C9C, 0x20
+    .include "text/multiple/phase_transitions.inc"
 
     .global gUnknown_08218CBC
 gUnknown_08218CBC:
