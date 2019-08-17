@@ -10489,47 +10489,22 @@ gUnknown_082110C0:
 
     .global gUnknown_082116D4
 gUnknown_082116D4:
-    .incbin "baserom.gba", 0x002116D4, 0x700
+    .incbin "baserom.gba", 0x002116D4, 0x140
 
-    .global gUnknown_08211DD4
-gUnknown_08211DD4:
-    .incbin "baserom.gba", 0x00211DD4, 0x50
+    .include "text/english/fullscreen_cutscenes.inc"
 
     .global gUnknown_08211E24
 gUnknown_08211E24:
-    .incbin "baserom.gba", 0x00211E24, 0x390
+    .incbin "baserom.gba", 0x00211E24, 0x28
 
-    .global gUnknown_082121B4
-gUnknown_082121B4:
-    .incbin "baserom.gba", 0x002121B4, 0x8F0
-
-    .global gUnknown_08212AA4
-gUnknown_08212AA4:
-    .incbin "baserom.gba", 0x00212AA4, 0x3A8
-
-    .global gUnknown_08212E4C
-gUnknown_08212E4C:
-    .incbin "baserom.gba", 0x00212E4C, 0x41C
-
-    .global gUnknown_08213268
-gUnknown_08213268:
-    .incbin "baserom.gba", 0x00213268, 0x4A0
-
-    .global gUnknown_08213708
-gUnknown_08213708:
-    .incbin "baserom.gba", 0x00213708, 0x580
-
-    .global gUnknown_08213C88
-gUnknown_08213C88:
-    .incbin "baserom.gba", 0x00213C88, 0x2EC
-
-    .global gUnknown_08213F74
-gUnknown_08213F74:
-    .incbin "baserom.gba", 0x00213F74, 0x22C
-
-    .global gUnknown_082141A0
-gUnknown_082141A0:
-    .incbin "baserom.gba", 0x002141A0, 0x140
+    .include "text/english/enemy_names.inc"
+    .include "text/english/spell_descriptions.inc"
+    .include "text/english/location_names.inc"
+    .include "text/english/item_names.inc"
+    .include "text/english/weapon_names.inc"
+    .include "text/english/defensive_item_names.inc"
+    .include "text/english/city_names.inc"
+    .include "text/english/magic_names.inc"
 
     .global gUnknown_082142E0
 gUnknown_082142E0:
