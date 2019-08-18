@@ -134,16 +134,7 @@ gUnknown_08211DAF:
     .string "The Light Dragons must\n"
     .string "fight back!{END}"
 
-    @Unreferenced string
-    .global gUnknown_08211DD2
-gUnknown_08211DD2:
-    .string "{END}"
-
-    @Unreferenced string
-    .global gUnknown_08211DD3
-gUnknown_08211DD3:
-    .string "{END}"
-
+    .align 2
     .global gUnknown_08211DD4
 gUnknown_08211DD4:
     .word gUnknown_08211814 @ 0 / 0x0

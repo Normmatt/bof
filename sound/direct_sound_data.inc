@@ -89,6 +89,3 @@ gUnknown_0815CBA8:
 	.align 2
 gUnknown_0815D72C:
 	.incbin "sound/direct_sound_samples/0815D72C.bin"
-	
-	@why does this cause a random LOAD section when its a .align 4
-	.byte 0,0,0

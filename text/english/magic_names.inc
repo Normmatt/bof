@@ -318,21 +318,7 @@ gUnknown_08214191:
 gUnknown_08214197:
     .string "???21{END}"
 
-    @Unreferenced string
-    .global gUnknown_0821419D
-gUnknown_0821419D:
-    .string "{END}"
-
-    @Unreferenced string
-    .global gUnknown_0821419E
-gUnknown_0821419E:
-    .string "{END}"
-
-    @Unreferenced string
-    .global gUnknown_0821419F
-gUnknown_0821419F:
-    .string "{END}"
-
+    .align 2
     .global gUnknown_082141A0
 gUnknown_082141A0:
     .word gUnknown_08213FE8 @ 0 / 0x0

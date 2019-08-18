@@ -99,6 +99,7 @@ gUnknown_08218C51:
 gUnknown_08218C5B:
     .string "{END}"
 
+    .align 2
     .global gUnknown_08218C5C
 gUnknown_08218C5C:
     .word gUnknown_08218AF8 @ 0 / 0x0
@@ -110,6 +111,7 @@ gUnknown_08218C5C:
     .word gUnknown_08218C1C @ 6 / 0x6
     .word gUnknown_08218C3E @ 7 / 0x7
     
+    .align 2
     .global gUnknown_08218C7C
 gUnknown_08218C7C:
     .word gUnknown_08218B0E @ 0 / 0x0
@@ -121,6 +123,7 @@ gUnknown_08218C7C:
     .word gUnknown_08218C26 @ 6 / 0x6
     .word gUnknown_08218C47 @ 7 / 0x7
     
+    .align 2
     .global gUnknown_08218C9C
 gUnknown_08218C9C:
     .word gUnknown_08218B22 @ 0 / 0x0

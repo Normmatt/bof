@@ -9892,6 +9892,7 @@ gUnknown_0819FABA:
 gUnknown_0819FAD1:
     .string " You receive the {COLOR}{ITEM 0x74}{COLOR}.{END}"
 
+    .align 2
     .global gUnknown_0819FAE8
 gUnknown_0819FAE8:
     .word gUnknown_08188F4C @ 0 / 0x0

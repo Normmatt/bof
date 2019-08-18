@@ -124,6 +124,7 @@ gUnknown_08213F72:
 gUnknown_08213F73:
     .string "{END}"
 
+    .align 2
     .global gUnknown_08213F74
 gUnknown_08213F74:
     .word gUnknown_08213EC0 @ 0 / 0x0

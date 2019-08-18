@@ -10299,6 +10299,7 @@ gUnknown_081D7530:
 gUnknown_081D7544:
     .string " Du erhältst: {COLOR}{ITEM 0x74}{COLOR}.{END}"
 
+    .align 2
     .global gUnknown_081D7558
 gUnknown_081D7558:
     .word gUnknown_081BD9BC @ 0 / 0x0

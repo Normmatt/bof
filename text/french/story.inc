@@ -10546,16 +10546,7 @@ gUnknown_081BBD88:
 gUnknown_081BBD9F:
     .string " Vous recevez le {COLOR}{ITEM 0x74}{COLOR}.{END}"
 
-    @Unreferenced string
-    .global gUnknown_081BBDB6
-gUnknown_081BBDB6:
-    .string "{END}"
-
-    @Unreferenced string
-    .global gUnknown_081BBDB7
-gUnknown_081BBDB7:
-    .string "{END}"
-
+    .align 2
     .global gUnknown_081BBDB8
 gUnknown_081BBDB8:
     .word gUnknown_081A170C @ 0 / 0x0

@@ -515,6 +515,7 @@ gUnknown_0821325E:
 gUnknown_08213267:
     .string "{END}"
 
+    .align 2
     .global gUnknown_08213268
 gUnknown_08213268:
     .word gUnknown_08212F4C @ 0 / 0x0

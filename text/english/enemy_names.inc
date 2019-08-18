@@ -510,6 +510,7 @@ gUnknown_082121A4:
 gUnknown_082121AB:
     .string "D.Knight{END}"
 
+    .align 2
     .global gUnknown_082121B4
 gUnknown_082121B4:
     .word gUnknown_08211E4C @ 0 / 0x0

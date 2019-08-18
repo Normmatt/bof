@@ -350,21 +350,7 @@ gUnknown_08212A6F:
 gUnknown_08212A8A:
     .string "Returns to human form.{END}"
 
-    @Unreferenced string
-    .global gUnknown_08212AA1
-gUnknown_08212AA1:
-    .string "{END}"
-
-    @Unreferenced string
-    .global gUnknown_08212AA2
-gUnknown_08212AA2:
-    .string "{END}"
-
-    @Unreferenced string
-    .global gUnknown_08212AA3
-gUnknown_08212AA3:
-    .string "{END}"
-
+    .align 2
     .global gUnknown_08212AA4
 gUnknown_08212AA4:
     .word gUnknown_082123B4 @ 0 / 0x0

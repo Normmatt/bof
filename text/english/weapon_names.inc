@@ -382,16 +382,7 @@ gUnknown_082136F8:
 gUnknown_082136FD:
     .string "Tri-Rang{END}"
 
-    @Unreferenced string
-    .global gUnknown_08213706
-gUnknown_08213706:
-    .string "{END}"
-
-    @Unreferenced string
-    .global gUnknown_08213707
-gUnknown_08213707:
-    .string "{END}"
-
+    .align 2
     .global gUnknown_08213708
 gUnknown_08213708:
     .word gUnknown_08213468 @ 0 / 0x0

@@ -566,6 +566,7 @@ gUnknown_08213C78:
 gUnknown_08213C80:
     .string "DreamRG{END}"
 
+    .align 2
     .global gUnknown_08213C88
 gUnknown_08213C88:
     .word gUnknown_08213888 @ 0 / 0x0

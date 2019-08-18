@@ -1,5 +1,7 @@
 	.section .rodata
 
+    .align 2
+
     .global gUnknown_0811FB38
 gUnknown_0811FB38:
     .incbin "baserom.gba", 0x0011FB38, 0x370
@@ -1256,6 +1258,7 @@ gUnknown_08141DE4:
 gUnknown_08141DEC:
     .incbin "baserom.gba", 0x00141DEC, 0x5C0
 
+    .align 2
     .global gUnknown_081423AC
 gUnknown_081423AC:
     .word ply_fine
@@ -1327,6 +1330,7 @@ gUnknown_08142610:
 gUnknown_08142620:
     .incbin "baserom.gba", 0x00142620, 0x34
 
+    .align 2
     .global gUnknown_08142654
 gUnknown_08142654:
     .word ply_xxx

@@ -254,6 +254,7 @@ gUnknown_08212E34:
 gUnknown_08212E40:
     .string "Hidden Room{END}"
 
+    .align 2
     .global gUnknown_08212E4C
 gUnknown_08212E4C:
     .word gUnknown_08212C04 @ 0 / 0x0

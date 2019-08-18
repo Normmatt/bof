@@ -1,9 +1,9 @@
 	.section .data
 
-    .global gUnknown_0817B219
-gUnknown_0817B219:
-    .incbin "baserom.gba", 0x0017B219, 0x1E7
+    .align 2
+    .fill 0x1E4, 1, 0
 
+    .align 2
     .global gUnknown_0817B400
 gUnknown_0817B400:
     .word sub_800190C
@@ -13,6 +13,7 @@ gUnknown_0817B400:
 gUnknown_0817B408:
     .incbin "baserom.gba", 0x0017B408, 0x8C0
 
+    .align 2
     .global gUnknown_0817BCC8
 gUnknown_0817BCC8:
     .word sub_8001D38
@@ -20,6 +21,7 @@ gUnknown_0817BCC8:
     .word sub_800198C
     .word sub_8001B98
 
+    .align 2
     .global gUnknown_0817BCD8
 gUnknown_0817BCD8:
     .word sub_8004BE8
@@ -31,6 +33,7 @@ gUnknown_0817BCD8:
     .word sub_8004E8C
     .word sub_8004E98
 
+    .align 2
     .global gUnknown_0817BCF8
 gUnknown_0817BCF8:
     .word sub_8003AF0
@@ -46,6 +49,7 @@ gUnknown_0817BD08:
 gUnknown_0817BE08:
     .incbin "baserom.gba", 0x0017BE08, 0xC0
 
+    .align 2
     .global gUnknown_0817BEC8
 gUnknown_0817BEC8:
     .word 0x180
@@ -85,6 +89,7 @@ gUnknown_0817BEC8:
 gUnknown_0817BF48:
     .incbin "baserom.gba", 0x0017BF48, 0x14
 
+    .align 2
     .global gUnknown_0817BF5C
 gUnknown_0817BF5C:
     .incbin "graphics/intro_credits/capcom.gbapal"
@@ -93,6 +98,7 @@ gUnknown_0817BF5C:
 gUnknown_0817BF7C:
     .incbin "baserom.gba", 0x0017BF7C, 0x18
 
+    .align 2
     .global gUnknown_0817BF94
 gUnknown_0817BF94:
     .word sub_80067DC
@@ -100,6 +106,7 @@ gUnknown_0817BF94:
     .word sub_80068EC
     .word sub_80069A8
 
+    .align 2
     .global gUnknown_0817BFA4
 gUnknown_0817BFA4:
     .word sub_800939C
@@ -110,6 +117,7 @@ gUnknown_0817BFA4:
     .word sub_8030548
     .word sub_8035BC8
 
+    .align 2
     .global gUnknown_0817BFC0
 gUnknown_0817BFC0:
     .word sub_8009210
@@ -120,6 +128,7 @@ gUnknown_0817BFC0:
     .word sub_80303A8
     .word sub_8035B78
 
+    .align 2
     .global gUnknown_0817BFDC
 gUnknown_0817BFDC:
     .word sub_800DBA8
@@ -130,6 +139,7 @@ gUnknown_0817BFDC:
     .word sub_8035024
     .word sub_803864C
 
+    .align 2
     .global gUnknown_0817BFF8
 gUnknown_0817BFF8:
     .word sub_800DF74
@@ -140,6 +150,7 @@ gUnknown_0817BFF8:
     .word sub_801B9EC
     .word sub_801B9EC
 
+    .align 2
     .global gUnknown_0817C014
 gUnknown_0817C014:
     .word sub_801046C
@@ -150,6 +161,7 @@ gUnknown_0817C014:
     .word sub_80353E4
     .word sub_8038688
 
+    .align 2
     .global gUnknown_0817C030
 gUnknown_0817C030:
     .word sub_8010254
@@ -160,6 +172,7 @@ gUnknown_0817C030:
     .word sub_803557C
     .word sub_80386B0
 
+    .align 2
     .global gUnknown_0817C04C
 gUnknown_0817C04C:
     .word sub_8010FF4
@@ -230,6 +243,7 @@ gUnknown_0817C564:
 gUnknown_0817C686:
     .incbin "baserom.gba", 0x0017C686, 0x86
 
+    .align 2
     .global gUnknown_0817C70C
 gUnknown_0817C70C:
     .word gUnknown_0817C06C
@@ -267,6 +281,7 @@ gUnknown_0817CC98:
 gUnknown_0817CCE0:
     .incbin "baserom.gba", 0x0017CCE0, 0x48
 
+    .align 2
     .global gUnknown_0817CD28
 gUnknown_0817CD28:
     .word sub_8007B34
@@ -282,6 +297,7 @@ gUnknown_0817CD28:
     .word sub_80088B8
     .word sub_8008A0C
 
+    .align 2
     .global gUnknown_0817CD58
 gUnknown_0817CD58:
     .word 5
@@ -295,6 +311,7 @@ gUnknown_0817CD58:
     .word 0xFFFF
     .word 0
 
+    .align 2
     .global gUnknown_0817CD80
 gUnknown_0817CD80:
     .word sub_8009400
@@ -315,6 +332,7 @@ gUnknown_0817CD80:
     .word sub_800D9C8
     .word sub_800DA5C
 
+    .align 2
     .global gUnknown_0817CDC4
 gUnknown_0817CDC4:
     .word sub_800942C
@@ -335,6 +353,7 @@ gUnknown_0817CDC4:
     .word sub_8009AF4
     .word sub_8009268
 
+    .align 2
     .global gUnknown_0817CE08
 gUnknown_0817CE08:
     .word sub_8009B40
@@ -420,6 +439,7 @@ gUnknown_0817CE08:
     .word sub_800B59C
     .word sub_8009268
 
+    .align 2
     .global gUnknown_0817CF50
 gUnknown_0817CF50:
     .word sub_800B93C
@@ -432,6 +452,7 @@ gUnknown_0817CF50:
     .word sub_800B9FC
     .word sub_8009268
 
+    .align 2
     .global gUnknown_0817CF74
 gUnknown_0817CF74:
     .word sub_800BA6C
@@ -444,6 +465,7 @@ gUnknown_0817CF74:
     .word sub_800BBDC
     .word sub_800BC40
 
+    .align 2
     .global gUnknown_0817CF98
 gUnknown_0817CF98:
     .word sub_800BCC4
@@ -467,6 +489,7 @@ gUnknown_0817CF98:
     .word sub_800C258
     .word sub_800C2D0
 
+    .align 2
     .global gUnknown_0817CFE8
 gUnknown_0817CFE8:
     .short 0xFFF8
@@ -486,6 +509,7 @@ gUnknown_0817CFE8:
     .short 0xFFF8
     .short    0
 
+    .align 2
     .global gUnknown_0817D008
 gUnknown_0817D008:
     .word sub_8009268
@@ -493,6 +517,7 @@ gUnknown_0817D008:
     .word sub_800C460
     .word sub_8009268
 
+    .align 2
     .global gUnknown_0817D018
 gUnknown_0817D018:
     .word sub_800C4CC
@@ -501,6 +526,7 @@ gUnknown_0817D018:
     .word sub_8009268
     .word sub_8009268
 
+    .align 2
     .global gUnknown_0817D02C
 gUnknown_0817D02C:
     .word sub_800C528
@@ -508,6 +534,7 @@ gUnknown_0817D02C:
     .word sub_800C5AC
     .word sub_8009268
 
+    .align 2
     .global gUnknown_0817D03C
 gUnknown_0817D03C:
     .word sub_800C65C
@@ -546,6 +573,7 @@ gUnknown_0817D03C:
     .word sub_800D064
     .word sub_8009268
 
+    .align 2
     .global gUnknown_0817D0C8
 gUnknown_0817D0C8:
     .word sub_8009268
@@ -568,11 +596,13 @@ gUnknown_0817D0C8:
     .word sub_800D398
     .word sub_8009268
 
+    .align 2
     .global gUnknown_0817D114
 gUnknown_0817D114:
     .word sub_800D46C
     .word sub_8009268
 
+    .align 2
     .global gUnknown_0817D11C
 gUnknown_0817D11C:
     .word sub_800D4E4
@@ -596,6 +626,7 @@ gUnknown_0817D11C:
     .word sub_800D97C
     .word sub_8009268
 
+    .align 2
     .global gUnknown_0817D16C
 gUnknown_0817D16C:
     .word sub_800D9F4
@@ -603,6 +634,7 @@ gUnknown_0817D16C:
     .word sub_800DA28
     .word sub_8009268
 
+    .align 2
     .global gUnknown_0817D17C
 gUnknown_0817D17C:
     .word sub_800DA88
@@ -612,6 +644,7 @@ gUnknown_0817D17C:
     .word sub_800DB74
     .word sub_8009268
 
+    .align 2
     .global gUnknown_0817D194
 gUnknown_0817D194:
     .word sub_8009268
@@ -631,6 +664,7 @@ gUnknown_0817D194:
     .word sub_800DF00
     .word sub_800DF18
 
+    .align 2
     .global gUnknown_0817D1D4
 gUnknown_0817D1D4:
     .word sub_8009274
@@ -791,6 +825,7 @@ gUnknown_0817D1D4:
     .word sub_800FFE0
     .word sub_800FFF8
 
+    .align 2
     .global gUnknown_0817D448
 gUnknown_0817D448:
     .word 0x92
@@ -800,6 +835,7 @@ gUnknown_0817D448:
     .word 0xFFFF
     .word 0
 
+    .align 2
     .global gUnknown_0817D460
 gUnknown_0817D460:
     .word 0
@@ -825,6 +861,7 @@ gUnknown_0817D460:
     .word 0xFFFF
     .word 0
 
+    .align 2
     .global gUnknown_0817D4B8
 gUnknown_0817D4B8:
     .word sub_8017944
@@ -845,6 +882,7 @@ gUnknown_0817D4B8:
     .word sub_80155F0
     .word sub_80156B0
 
+    .align 2
     .global gUnknown_0817D4FC
 gUnknown_0817D4FC:
     .word sub_801124C
@@ -852,6 +890,7 @@ gUnknown_0817D4FC:
     .word sub_80112B0
     .word sub_801132C
 
+    .align 2
     .global gUnknown_0817D50C
 gUnknown_0817D50C:
     .word sub_8011408
@@ -862,6 +901,7 @@ gUnknown_0817D50C:
     .word sub_8024DF8
     .word sub_8011510
 
+    .align 2
     .global gUnknown_0817D528
 gUnknown_0817D528:
     .word sub_8011654
@@ -870,6 +910,7 @@ gUnknown_0817D528:
     .word sub_80117D4
     .word sub_8017944
 
+    .align 2
     .global gUnknown_0817D53C
 gUnknown_0817D53C:
     .word sub_8011898
@@ -878,6 +919,7 @@ gUnknown_0817D53C:
     .word sub_8017944
     .word sub_80119A8
 
+    .align 2
     .global gUnknown_0817D550
 gUnknown_0817D550:
     .word sub_8011A14
@@ -892,6 +934,7 @@ gUnknown_0817D550:
     .word sub_8017944
     .word sub_8011FA8
 
+    .align 2
     .global gUnknown_0817D57C
 gUnknown_0817D57C:
     .word sub_8012070
@@ -910,6 +953,7 @@ gUnknown_0817D57C:
     .word sub_8012508
     .word sub_8017944
 
+    .align 2
     .global gUnknown_0817D5B8
 gUnknown_0817D5B8:
     .short 0xFE8
@@ -929,6 +973,7 @@ gUnknown_0817D5B8:
     .short 0xF88
     .short 0x5C8
 
+    .align 2
     .global gUnknown_0817D5D8
 gUnknown_0817D5D8:
     .word sub_80126B0
@@ -959,6 +1004,7 @@ gUnknown_0817D5D8:
     .word sub_8017944
     .word sub_8012E84
 
+    .align 2
     .global gUnknown_0817D644
 gUnknown_0817D644:
     .word sub_80130A4
@@ -978,6 +1024,7 @@ gUnknown_0817D644:
     .word sub_8017944
     .word sub_8013530
 
+    .align 2
     .global gUnknown_0817D684
 gUnknown_0817D684:
     .word sub_80136C8
@@ -995,6 +1042,7 @@ gUnknown_0817D684:
     .word sub_8017944
     .word sub_8013A18
 
+    .align 2
     .global gUnknown_0817D6BC
 gUnknown_0817D6BC:
     .word sub_8013A70
@@ -1025,6 +1073,7 @@ gUnknown_0817D6BC:
     .word sub_80142FC
     .word sub_8014354
 
+    .align 2
     .global gUnknown_0817D728
 gUnknown_0817D728:
     .word sub_8017944
@@ -1071,6 +1120,7 @@ gUnknown_0817D728:
     .word sub_80155B4
     .word sub_80159C0
 
+    .align 2
     .global gUnknown_0817D7D4
 gUnknown_0817D7D4:
     .word sub_80156E0
@@ -1078,6 +1128,7 @@ gUnknown_0817D7D4:
     .word sub_80157C0
     .word sub_80158EC
 
+    .align 2
     .global gUnknown_0817D7E4
 gUnknown_0817D7E4:
     .word sub_8015A6C
@@ -1093,6 +1144,7 @@ gUnknown_0817D7E4:
     .word sub_8015DB0
     .word sub_8015E28
 
+    .align 2
     .global gUnknown_0817D814
 gUnknown_0817D814:
     .word sub_8015EB8
@@ -1125,6 +1177,7 @@ gUnknown_0817D814:
     .word sub_802E384
     .word sub_8016750
 
+    .align 2
     .global gUnknown_0817D888
 gUnknown_0817D888:
     .word 0
@@ -1144,6 +1197,7 @@ gUnknown_0817D888:
     .word 0x8000
     .word 0
 
+    .align 2
     .global gUnknown_0817D8C8
 gUnknown_0817D8C8:
     .word 0xB8
@@ -1155,6 +1209,7 @@ gUnknown_0817D8C8:
     .word 0x8000
     .word 0
 
+    .align 2
     .global gUnknown_0817D8E8
 gUnknown_0817D8E8:
     .word sub_801DF10
@@ -1180,6 +1235,7 @@ gUnknown_0817D8E8:
     .word sub_801B36C
     .word sub_801B4CC
 
+    .align 2
     .global gUnknown_0817D940
 gUnknown_0817D940:
     .word sub_8017B44
@@ -1189,6 +1245,7 @@ gUnknown_0817D940:
     .word sub_8017D04
     .word sub_8017D90
 
+    .align 2
     .global gUnknown_0817D958
 gUnknown_0817D958:
     .word sub_8017E28
@@ -1200,6 +1257,7 @@ gUnknown_0817D958:
     .word sub_8017F48
     .word sub_801DF10
 
+    .align 2
     .global gUnknown_0817D978
 gUnknown_0817D978:
     .word sub_8017FE8
@@ -1207,6 +1265,7 @@ gUnknown_0817D978:
     .word sub_80180E8
     .word sub_8017D90
 
+    .align 2
     .global gUnknown_0817D988
 gUnknown_0817D988:
     .word sub_8017A64
@@ -1220,11 +1279,13 @@ gUnknown_0817D988:
     .word sub_8018258
     .word sub_80182B4
 
+    .align 2
     .global gUnknown_0817D9B0
 gUnknown_0817D9B0:
     .word sub_8018348
     .word sub_8018380
 
+    .align 2
     .global gUnknown_0817D9B8
 gUnknown_0817D9B8:
     .word sub_8017A64
@@ -1232,6 +1293,7 @@ gUnknown_0817D9B8:
     .word sub_801844C
     .word sub_8017D90
 
+    .align 2
     .global gUnknown_0817D9C8
 gUnknown_0817D9C8:
     .word sub_80184F8
@@ -1244,6 +1306,7 @@ gUnknown_0817D9C8:
     .word sub_8017ABC
     .word sub_801886C
 
+    .align 2
     .global gUnknown_0817D9EC
 gUnknown_0817D9EC:
     .word sub_80188D0
@@ -1259,6 +1322,7 @@ gUnknown_0817D9EC:
     .word sub_8018E84
     .word sub_8018F60
 
+    .align 2
     .global gUnknown_0817DA1C
 gUnknown_0817DA1C:
     .word sub_8018FFC
@@ -1268,6 +1332,7 @@ gUnknown_0817DA1C:
     .word sub_80191E8
     .word sub_8019280
 
+    .align 2
     .global gUnknown_0817DA34
 gUnknown_0817DA34:
     .word sub_8019324
@@ -1277,24 +1342,28 @@ gUnknown_0817DA34:
     .word sub_80194DC
     .word sub_80194F0
 
+    .align 2
     .global gUnknown_0817DA4C
 gUnknown_0817DA4C:
     .word sub_8019578
     .word sub_80195B8
     .word sub_8019648
 
+    .align 2
     .global gUnknown_0817DA58
 gUnknown_0817DA58:
     .word sub_8019704
     .word sub_8019744
     .word sub_8019648
 
+    .align 2
     .global gUnknown_0817DA64
 gUnknown_0817DA64:
     .word sub_8019804
     .word sub_8019844
     .word sub_8019648
 
+    .align 2
     .global gUnknown_0817DA70
 gUnknown_0817DA70:
     .word sub_8019904
@@ -1303,6 +1372,7 @@ gUnknown_0817DA70:
     .word sub_8019984
     .word sub_80199C4
 
+    .align 2
     .global gUnknown_0817DA84
 gUnknown_0817DA84:
     .word sub_8019A74
@@ -1324,6 +1394,7 @@ gUnknown_0817DA84:
     .word sub_801A1A4
     .word sub_801A1F8
 
+    .align 2
     .global gUnknown_0817DACC
 gUnknown_0817DACC:
     .word sub_801A288
@@ -1351,6 +1422,7 @@ gUnknown_0817DACC:
     .word sub_801DF10
     .word sub_801DF10
 
+    .align 2
     .global gUnknown_0817DB2C
 gUnknown_0817DB2C:
     .word sub_801AA90
@@ -1367,6 +1439,7 @@ gUnknown_0817DB2C:
     .word sub_801B080
     .word sub_801B0C4
 
+    .align 2
     .global gUnknown_0817DB60
 gUnknown_0817DB60:
     .word sub_801DF10
@@ -1394,6 +1467,7 @@ gUnknown_0817DB60:
     .word sub_801B970
     .word sub_801B9AC
 
+    .align 2
     .global gUnknown_0817DBC0
 gUnknown_0817DBC0:
     .word sub_801BA1C
@@ -1464,6 +1538,7 @@ gUnknown_0817DBC0:
     .word sub_801D5E8
     .word sub_801BAE4
 
+    .align 2
     .global gUnknown_0817DCCC
 gUnknown_0817DCCC:
     .word 0xC6
@@ -1479,6 +1554,7 @@ gUnknown_0817DCCC:
     .word 0x8000
     .word 0
 
+    .align 2
     .global gUnknown_0817DCFC
 gUnknown_0817DCFC:
     .word 0x10C
@@ -1490,6 +1566,7 @@ gUnknown_0817DCFC:
     .word 0x8000
     .word 0
 
+    .align 2
     .global gUnknown_0817DD1C
 gUnknown_0817DD1C:
     .word 0
@@ -1511,6 +1588,7 @@ gUnknown_0817DD1C:
     .word 0xFFFF
     .word 0
 
+    .align 2
     .global gUnknown_0817DD64
 gUnknown_0817DD64:
     .word sub_8024830
@@ -1531,6 +1609,7 @@ gUnknown_0817DD64:
     .word sub_8020DE8
     .word sub_80215DC
 
+    .align 2
     .global gUnknown_0817DDA8
 gUnknown_0817DDA8:
     .word sub_801E450
@@ -1538,6 +1617,7 @@ gUnknown_0817DDA8:
     .word sub_801E54C
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817DDB8
 gUnknown_0817DDB8:
     .word sub_801E628
@@ -1569,11 +1649,13 @@ gUnknown_0817DDB8:
     .word sub_801E7E0
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817DE28
 gUnknown_0817DE28:
     .word sub_801E830
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817DE30
 gUnknown_0817DE30:
     .word sub_801E8AC
@@ -1613,6 +1695,7 @@ gUnknown_0817DE30:
     .word sub_801EF30
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817DEC0
 gUnknown_0817DEC0:
     .word sub_801EFC0
@@ -1620,6 +1703,7 @@ gUnknown_0817DEC0:
     .word sub_801EFE4
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817DED0
 gUnknown_0817DED0:
     .word sub_801F140
@@ -1636,6 +1720,7 @@ gUnknown_0817DED0:
     .word sub_801F31C
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817DF04
 gUnknown_0817DF04:
     .word sub_801F37C
@@ -1649,6 +1734,7 @@ gUnknown_0817DF04:
     .word sub_801F394
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817DF2C
 gUnknown_0817DF2C:
     .word sub_801F490
@@ -1659,12 +1745,14 @@ gUnknown_0817DF2C:
     .word sub_801F5D4
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817DF48
 gUnknown_0817DF48:
     .word sub_801F680
     .word sub_801F700
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817DF54
 gUnknown_0817DF54:
     .word sub_801F7A0
@@ -1696,6 +1784,7 @@ gUnknown_0817DF54:
     .word sub_801FBF8
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817DFC4
 gUnknown_0817DFC4:
     .word sub_801FC68
@@ -1723,6 +1812,7 @@ gUnknown_0817DFC4:
     .word sub_8020014
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817E024
 gUnknown_0817E024:
     .word sub_80200AC
@@ -1732,6 +1822,7 @@ gUnknown_0817E024:
     .word sub_80201C4
     .word sub_8020214
 
+    .align 2
     .global gUnknown_0817E03C
 gUnknown_0817E03C:
     .word sub_8024830
@@ -1767,6 +1858,7 @@ gUnknown_0817E03C:
     .word sub_8024830
     .word sub_80205DC
 
+    .align 2
     .global gUnknown_0817E0BC
 gUnknown_0817E0BC:
     .word sub_8020660
@@ -1819,6 +1911,7 @@ gUnknown_0817E0BC:
     .word sub_8020D70
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817E180
 gUnknown_0817E180:
     .word sub_8020E14
@@ -1863,6 +1956,7 @@ gUnknown_0817E180:
     .word sub_802154C
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817E224
 gUnknown_0817E224:
     .word sub_8024830
@@ -1872,6 +1966,7 @@ gUnknown_0817E224:
     .word sub_8021678
     .word sub_8024830
 
+    .align 2
     .global gUnknown_0817E23C
 gUnknown_0817E23C:
     .word sub_8021EE4
@@ -1889,6 +1984,7 @@ gUnknown_0817E23C:
     .word sub_80222D4
     .word sub_80222EC
 
+    .align 2
     .global gUnknown_0817E274
 gUnknown_0817E274:
     .word sub_802483C
@@ -1996,6 +2092,7 @@ gUnknown_0817E274:
     .word sub_802375C
     .word sub_8023778
 
+    .align 2
     .global gUnknown_0817E414
 gUnknown_0817E414:
     .word 0
@@ -2019,6 +2116,7 @@ gUnknown_0817E414:
     .word 0xFFFF
     .word 0
 
+    .align 2
     .global gUnknown_0817E464
 gUnknown_0817E464:
     .word 0
@@ -2030,6 +2128,7 @@ gUnknown_0817E464:
     .word 0xFFFF
     .word 0
 
+    .align 2
     .global gUnknown_0817E484
 gUnknown_0817E484:
     .word 0
@@ -2067,6 +2166,7 @@ gUnknown_0817E484:
     .word 0x8000
     .word 0
 
+    .align 2
     .global gUnknown_0817E50C
 gUnknown_0817E50C:
     .word sub_8030370
@@ -2109,11 +2209,13 @@ gUnknown_0817E50C:
     .word sub_802D40C
     .word sub_802D590
 
+    .align 2
     .global gUnknown_0817E5A8
 gUnknown_0817E5A8:
     .word sub_8026EF4
     .word sub_8026F48
 
+    .align 2
     .global gUnknown_0817E5B0
 gUnknown_0817E5B0:
     .word sub_8030370
@@ -2127,6 +2229,7 @@ gUnknown_0817E5B0:
     .word sub_8030370
     .word sub_8025320
 
+    .align 2
     .global gUnknown_0817E5D8
 gUnknown_0817E5D8:
     .short 0x8C68
@@ -2148,6 +2251,7 @@ gUnknown_0817E5D8:
     .short 0x8C78
     .short 0x978C
 
+    .align 2
     .global gUnknown_0817E5FC
 gUnknown_0817E5FC:
     .word sub_8030370
@@ -2165,6 +2269,7 @@ gUnknown_0817E5FC:
     .word sub_8024DF8
     .word sub_8025AB0
 
+    .align 2
     .global gUnknown_0817E634
 gUnknown_0817E634:
     .word sub_8030370
@@ -2186,6 +2291,7 @@ gUnknown_0817E634:
     .word sub_8030370
     .word sub_8026164
 
+    .align 2
     .global gUnknown_0817E67C
 gUnknown_0817E67C:
     .word sub_8030370
@@ -2199,6 +2305,7 @@ gUnknown_0817E67C:
     .word sub_8030370
     .word sub_8026414
 
+    .align 2
     .global gUnknown_0817E6A4
 gUnknown_0817E6A4:
     .word sub_80264AC
@@ -2219,6 +2326,7 @@ gUnknown_0817E6A4:
     .word sub_80268B4
     .word sub_8026954
 
+    .align 2
     .global gUnknown_0817E6E8
 gUnknown_0817E6E8:
     .word sub_80269B8
@@ -2231,6 +2339,7 @@ gUnknown_0817E6E8:
     .word sub_8030370
     .word sub_8026BA4
 
+    .align 2
     .global gUnknown_0817E70C
 gUnknown_0817E70C:
     .word sub_8026BEC
@@ -2239,6 +2348,7 @@ gUnknown_0817E70C:
     .word sub_8030370
     .word sub_8026CC4
 
+    .align 2
     .global gUnknown_0817E720
 gUnknown_0817E720:
     .word sub_8026D38
@@ -2247,6 +2357,7 @@ gUnknown_0817E720:
     .word sub_8030370
     .word sub_8026E10
 
+    .align 2
     .global gUnknown_0817E734
 gUnknown_0817E734:
     .word sub_8030370
@@ -2288,6 +2399,7 @@ gUnknown_0817E734:
     .word sub_8030370
     .word sub_8027A94
 
+    .align 2
     .global gUnknown_0817E7CC
 gUnknown_0817E7CC:
     .word sub_8024DF8
@@ -2308,6 +2420,7 @@ gUnknown_0817E7CC:
     .word sub_8030370
     .word sub_8028068
 
+    .align 2
     .global gUnknown_0817E810
 gUnknown_0817E810:
     .word sub_8030370
@@ -2315,6 +2428,7 @@ gUnknown_0817E810:
     .word sub_8024DF8
     .word sub_8028138
 
+    .align 2
     .global gUnknown_0817E820
 gUnknown_0817E820:
     .word sub_80281B0
@@ -2324,6 +2438,7 @@ gUnknown_0817E820:
     .word sub_8024DF8
     .word sub_8028288
 
+    .align 2
     .global gUnknown_0817E838
 gUnknown_0817E838:
     .word sub_8030370
@@ -2343,6 +2458,7 @@ gUnknown_0817E838:
     .word sub_8030370
     .word sub_80285AC
 
+    .align 2
     .global gUnknown_0817E878
 gUnknown_0817E878:
     .word sub_802865C
@@ -2367,6 +2483,7 @@ gUnknown_0817E878:
     .word sub_8030370
     .word sub_8028920
 
+    .align 2
     .global gUnknown_0817E8CC
 gUnknown_0817E8CC:
     .word sub_8028A08
@@ -2405,6 +2522,7 @@ gUnknown_0817E8CC:
     .word sub_8024DF8
     .word sub_8029100
 
+    .align 2
     .global gUnknown_0817E958
 gUnknown_0817E958:
     .word sub_8024DF8
@@ -2428,6 +2546,7 @@ gUnknown_0817E958:
     .word sub_8029538
 
 
+    .align 2
     .global gUnknown_0817E9A4
 gUnknown_0817E9A4:
     .word sub_80295C8
@@ -2438,6 +2557,7 @@ gUnknown_0817E9A4:
     .word sub_802970C
 
 
+    .align 2
     .global gUnknown_0817E9BC
 gUnknown_0817E9BC:
     .word sub_80297A0
@@ -2479,6 +2599,7 @@ gUnknown_0817E9BC:
     .word sub_802A42C
 
 
+    .align 2
     .global gUnknown_0817EA50
 gUnknown_0817EA50:
     .byte 0
@@ -2490,6 +2611,7 @@ gUnknown_0817EA50:
     .byte 0xC
     .byte 0
 
+    .align 2
     .global gUnknown_0817EA58
 gUnknown_0817EA58:
     .word sub_802A6F8
@@ -2500,6 +2622,7 @@ gUnknown_0817EA58:
     .word sub_802A840
 
 
+    .align 2
     .global gUnknown_0817EA70
 gUnknown_0817EA70:
     .word sub_802A93C
@@ -2534,6 +2657,7 @@ gUnknown_0817EA70:
     .word sub_802B360
 
 
+    .align 2
     .global gUnknown_0817EAE8
 gUnknown_0817EAE8:
     .word sub_8030370
@@ -2552,6 +2676,7 @@ gUnknown_0817EAE8:
     .word sub_802B6B4
 
 
+    .align 2
     .global gUnknown_0817EB20
 gUnknown_0817EB20:
     .word sub_8030370
@@ -2604,12 +2729,14 @@ gUnknown_0817EB20:
     .word sub_802BEF4
 
 
+    .align 2
     .global gUnknown_0817EBE0
 gUnknown_0817EBE0:
     .word sub_802BFAC
     .word sub_802C000
 
 
+    .align 2
     .global gUnknown_0817EBE8
 gUnknown_0817EBE8:
     .word sub_8030370
@@ -2617,6 +2744,7 @@ gUnknown_0817EBE8:
     .word sub_802C07C
 
 
+    .align 2
     .global gUnknown_0817EBF4
 gUnknown_0817EBF4:
     .word sub_802C108
@@ -2664,6 +2792,7 @@ gUnknown_0817EBF4:
     .word sub_8030370
 
 
+    .align 2
     .global gUnknown_0817ECA0
 gUnknown_0817ECA0:
     .word sub_802DA10
@@ -2690,6 +2819,7 @@ gUnknown_0817ECA0:
     .word sub_802DF48
 
 
+    .align 2
     .global gUnknown_0817ECF8
 gUnknown_0817ECF8:
     .word sub_802DFE0
@@ -2714,6 +2844,7 @@ gUnknown_0817ECF8:
     .word sub_802E454
 
 
+    .align 2
     .global gUnknown_0817ED48
 gUnknown_0817ED48:
     .word 0
@@ -2753,6 +2884,7 @@ gUnknown_0817ED48:
     .word 0x8000
     .word 0
 
+    .align 2
     .global gUnknown_0817EDD8
 gUnknown_0817EDD8:
     .word 0x978C0C58
@@ -2774,6 +2906,7 @@ gUnknown_0817EDD8:
     .word 0x8000
     .word 0
 
+    .align 2
     .global gUnknown_0817EE20
 gUnknown_0817EE20:
     .word 0x888C1B28
@@ -2793,6 +2926,7 @@ gUnknown_0817EE20:
     .word 0x8000
     .word 0
 
+    .align 2
     .global gUnknown_0817EE60
 gUnknown_0817EE60:
     .word 0
@@ -2822,6 +2956,7 @@ gUnknown_0817EE60:
 gUnknown_0817EEB8:
     .incbin "baserom.gba", 0x0017EEB8, 0x400
 
+    .align 2
     .global gUnknown_0817F2B8
 gUnknown_0817F2B8:
     .word 0x1B3
@@ -2843,6 +2978,7 @@ gUnknown_0817F2B8:
     .word 0x8000
     .word 0
 
+    .align 2
     .global gUnknown_0817F300
 gUnknown_0817F300:
     .word sub_8035B6C
@@ -2876,6 +3012,7 @@ gUnknown_0817F300:
     .word sub_80346B8
 
 
+    .align 2
     .global gUnknown_0817F374
 gUnknown_0817F374:
     .word sub_80305B4
@@ -2887,6 +3024,7 @@ gUnknown_0817F374:
     .word sub_8030858
 
 
+    .align 2
     .global gUnknown_0817F390
 gUnknown_0817F390:
     .word sub_803091C
@@ -2896,6 +3034,7 @@ gUnknown_0817F390:
     .word sub_8030A38
 
 
+    .align 2
     .global gUnknown_0817F3A4
 gUnknown_0817F3A4:
     .word sub_8030B50
@@ -2913,6 +3052,7 @@ gUnknown_0817F3A4:
     .word sub_80310AC
 
 
+    .align 2
     .global gUnknown_0817F3D8
 gUnknown_0817F3D8:
     .word sub_8031130
@@ -2926,6 +3066,7 @@ gUnknown_0817F3D8:
     .word sub_8031674
 
 
+    .align 2
     .global gUnknown_0817F3FC
 gUnknown_0817F3FC:
     .word sub_80316E4
@@ -2936,6 +3077,7 @@ gUnknown_0817F3FC:
     .word sub_80318A8
 
 
+    .align 2
     .global gUnknown_0817F414
 gUnknown_0817F414:
     .word sub_803195C
@@ -2945,6 +3087,7 @@ gUnknown_0817F414:
     .word sub_80319DC
 
 
+    .align 2
     .global gUnknown_0817F428
 gUnknown_0817F428:
     .word sub_8031A5C
@@ -2954,12 +3097,14 @@ gUnknown_0817F428:
     .word sub_8031BF0
 
 
+    .align 2
     .global gUnknown_0817F43C
 gUnknown_0817F43C:
     .word sub_8031CAC
     .word sub_8031D04
 
 
+    .align 2
     .global gUnknown_0817F444
 gUnknown_0817F444:
     .word sub_8031D8C
@@ -2971,6 +3116,7 @@ gUnknown_0817F444:
     .word sub_801DF1C
 
 
+    .align 2
     .global gUnknown_0817F460
 gUnknown_0817F460:
     .word sub_8035B6C
@@ -2978,6 +3124,7 @@ gUnknown_0817F460:
     .word sub_8032128
 
 
+    .align 2
     .global gUnknown_0817F46C
 gUnknown_0817F46C:
     .word sub_80321B0
@@ -2988,6 +3135,7 @@ gUnknown_0817F46C:
     .word sub_803239C
 
 
+    .align 2
     .global gUnknown_0817F484
 gUnknown_0817F484:
     .word sub_803246C
@@ -3000,6 +3148,7 @@ gUnknown_0817F484:
     .word sub_8032724
 
 
+    .align 2
     .global gUnknown_0817F4A4
 gUnknown_0817F4A4:
     .word sub_8032778
@@ -3009,6 +3158,7 @@ gUnknown_0817F4A4:
     .word sub_8032878
 
 
+    .align 2
     .global gUnknown_0817F4B8
 gUnknown_0817F4B8:
     .word sub_803290C
@@ -3016,6 +3166,7 @@ gUnknown_0817F4B8:
     .word sub_803299C
 
 
+    .align 2
     .global gUnknown_0817F4C4
 gUnknown_0817F4C4:
     .word sub_8032A5C
@@ -3029,6 +3180,7 @@ gUnknown_0817F4C4:
     .word sub_8032DE8
 
 
+    .align 2
     .global gUnknown_0817F4E8
 gUnknown_0817F4E8:
     .word sub_8032F50
@@ -3053,6 +3205,7 @@ gUnknown_0817F4E8:
     .word sub_8033700
 
 
+    .align 2
     .global gUnknown_0817F538
 gUnknown_0817F538:
     .word sub_80337FC
@@ -3066,6 +3219,7 @@ gUnknown_0817F538:
     .word sub_8033A2C
 
 
+    .align 2
     .global gUnknown_0817F55C
 gUnknown_0817F55C:
     .word sub_8033AA4
@@ -3073,6 +3227,7 @@ gUnknown_0817F55C:
     .word sub_8033B88
 
 
+    .align 2
     .global gUnknown_0817F568
 gUnknown_0817F568:
     .word sub_8033C00
@@ -3082,6 +3237,7 @@ gUnknown_0817F568:
     .word sub_8033D34
 
 
+    .align 2
     .global gUnknown_0817F57C
 gUnknown_0817F57C:
     .word sub_8033DD8
@@ -3089,6 +3245,7 @@ gUnknown_0817F57C:
     .word sub_8033E6C
 
 
+    .align 2
     .global gUnknown_0817F588
 gUnknown_0817F588:
     .word sub_8033EE4
@@ -3099,6 +3256,7 @@ gUnknown_0817F588:
     .word sub_8034084
 
 
+    .align 2
     .global gUnknown_0817F5A0
 gUnknown_0817F5A0:
     .word sub_80341D0
@@ -3106,6 +3264,7 @@ gUnknown_0817F5A0:
     .word sub_803428C
 
 
+    .align 2
     .global gUnknown_0817F5AC
 gUnknown_0817F5AC:
     .word sub_8034304
@@ -3115,6 +3274,7 @@ gUnknown_0817F5AC:
     .word sub_8034498
 
 
+    .align 2
     .global gUnknown_0817F5C0
 gUnknown_0817F5C0:
     .word sub_8034510
@@ -3124,6 +3284,7 @@ gUnknown_0817F5C0:
     .word sub_803467C
 
 
+    .align 2
     .global gUnknown_0817F5D4
 gUnknown_0817F5D4:
     .word sub_80346F4
@@ -3148,6 +3309,7 @@ gUnknown_0817F5D4:
     .word sub_8034FEC
 
 
+    .align 2
     .global gUnknown_0817F624
 gUnknown_0817F624:
     .word sub_803506C
@@ -3163,6 +3325,7 @@ gUnknown_0817F624:
     .word sub_8035100
 
 
+    .align 2
     .global gUnknown_0817F650
 gUnknown_0817F650:
     .word 0x198
@@ -3172,6 +3335,7 @@ gUnknown_0817F650:
     .word 0x8000
     .word 0
 
+    .align 2
     .global gUnknown_0817F668
 gUnknown_0817F668:
     .word 0x188
@@ -3189,6 +3353,7 @@ gUnknown_0817F680:
 gUnknown_0817F690:
     .incbin "baserom.gba", 0x0017F690, 0x420
 
+    .align 2
     .global gUnknown_0817FAB0
 gUnknown_0817FAB0:
     .word sub_8035D3C
@@ -3203,6 +3368,7 @@ gUnknown_0817FAB0:
     .word sub_80382FC
 
 
+    .align 2
     .global gUnknown_0817FAD8
 gUnknown_0817FAD8:
     .word sub_8035D6C
@@ -3228,6 +3394,7 @@ gUnknown_0817FAD8:
     .word sub_8036E44
 
 
+    .align 2
     .global gUnknown_0817FB2C
 gUnknown_0817FB2C:
     .word sub_8036EC0
@@ -3237,6 +3404,7 @@ gUnknown_0817FB2C:
     .word sub_8037048
 
 
+    .align 2
     .global gUnknown_0817FB40
 gUnknown_0817FB40:
     .word sub_80370C8
@@ -3249,6 +3417,7 @@ gUnknown_0817FB40:
     .word sub_8037528
 
 
+    .align 2
     .global gUnknown_0817FB60
 gUnknown_0817FB60:
     .word sub_80375A0
@@ -3262,6 +3431,7 @@ gUnknown_0817FB60:
     .word sub_80378B0
 
 
+    .align 2
     .global gUnknown_0817FB84
 gUnknown_0817FB84:
     .word sub_8037928
@@ -3270,6 +3440,7 @@ gUnknown_0817FB84:
     .word sub_8037A38
 
 
+    .align 2
     .global gUnknown_0817FB94
 gUnknown_0817FB94:
     .word sub_8037AB0
@@ -3283,6 +3454,7 @@ gUnknown_0817FB94:
     .word sub_8037BB8
 
 
+    .align 2
     .global gUnknown_0817FBB8
 gUnknown_0817FBB8:
     .word sub_8037C30
@@ -3295,6 +3467,7 @@ gUnknown_0817FBB8:
     .word sub_8037EDC
 
 
+    .align 2
     .global gUnknown_0817FBD8
 gUnknown_0817FBD8:
     .word sub_8037F54
@@ -3305,6 +3478,7 @@ gUnknown_0817FBD8:
     .word sub_8038110
 
 
+    .align 2
     .global gUnknown_0817FBF0
 gUnknown_0817FBF0:
     .word sub_8038188
@@ -3453,6 +3627,7 @@ gUnknown_0817FE8A:
 gUnknown_0817FE92:
     .incbin "baserom.gba", 0x0017FE92, 0xA
 
+    .align 2
     .global gUnknown_0817FE9C
 gUnknown_0817FE9C:
     .word sub_8038B4C
@@ -3496,6 +3671,7 @@ gUnknown_0817FE9C:
     .word sub_803DFA4
 
 
+    .align 2
     .global gUnknown_0817FF38
 gUnknown_0817FF38:
     .word sub_803DFB0
@@ -3530,6 +3706,7 @@ gUnknown_0817FF38:
     .word sub_803E5F0
 
 
+    .align 2
     .global gUnknown_0817FFB0
 gUnknown_0817FFB0:
     .word sub_803E684
@@ -3615,6 +3792,7 @@ gUnknown_0817FFB0:
     .word sub_80404BC
 
 
+    .align 2
     .global gUnknown_081800F4
 gUnknown_081800F4:
     .word sub_8038C6C
@@ -3623,6 +3801,7 @@ gUnknown_081800F4:
     .word sub_8039074
 
 
+    .align 2
     .global gUnknown_08180104
 gUnknown_08180104:
     .word sub_8039130
@@ -3636,6 +3815,7 @@ gUnknown_08180104:
     .word sub_8039500
 
 
+    .align 2
     .global gUnknown_08180128
 gUnknown_08180128:
     .word sub_8039618
@@ -3646,6 +3826,7 @@ gUnknown_08180128:
     .word sub_80398F8
 
 
+    .align 2
     .global gUnknown_08180140
 gUnknown_08180140:
     .word sub_8039A60
@@ -3654,6 +3835,7 @@ gUnknown_08180140:
     .word sub_8039BFC
 
 
+    .align 2
     .global gUnknown_08180150
 gUnknown_08180150:
     .word sub_8039DB8
@@ -3667,6 +3849,7 @@ gUnknown_08180150:
     .word sub_803A04C
 
 
+    .align 2
     .global gUnknown_08180174
 gUnknown_08180174:
     .word sub_803A440
@@ -3679,6 +3862,7 @@ gUnknown_08180174:
     .word sub_803A654
 
 
+    .align 2
     .global gUnknown_08180194
 gUnknown_08180194:
     .word sub_803A6B0
@@ -3691,6 +3875,7 @@ gUnknown_08180194:
     .word sub_803AA7C
 
 
+    .align 2
     .global gUnknown_081801B4
 gUnknown_081801B4:
     .word sub_803AB08
@@ -3705,6 +3890,7 @@ gUnknown_081801B4:
     .word sub_803AFF0
 
 
+    .align 2
     .global gUnknown_081801DC
 gUnknown_081801DC:
     .word sub_803B0E0
@@ -3714,6 +3900,7 @@ gUnknown_081801DC:
     .word sub_803B288
 
 
+    .align 2
     .global gUnknown_081801F0
 gUnknown_081801F0:
     .word sub_803B2E0
@@ -3724,6 +3911,7 @@ gUnknown_081801F0:
     .word sub_803B520
 
 
+    .align 2
     .global gUnknown_08180208
 gUnknown_08180208:
     .word sub_803B6A8
@@ -3731,6 +3919,7 @@ gUnknown_08180208:
     .word sub_803B73C
 
 
+    .align 2
     .global gUnknown_08180214
 gUnknown_08180214:
     .word sub_803B7C8
@@ -3738,6 +3927,7 @@ gUnknown_08180214:
     .word sub_803B73C
 
 
+    .align 2
     .global gUnknown_08180220
 gUnknown_08180220:
     .word sub_803B838
@@ -3746,12 +3936,14 @@ gUnknown_08180220:
     .word sub_803B8F4
 
 
+    .align 2
     .global gUnknown_08180230
 gUnknown_08180230:
     .word sub_803B950
     .word sub_803B95C
 
 
+    .align 2
     .global gUnknown_08180238
 gUnknown_08180238:
     .word sub_803B990
@@ -3759,6 +3951,7 @@ gUnknown_08180238:
     .word sub_803BA50
 
 
+    .align 2
     .global gUnknown_08180244
 gUnknown_08180244:
     .word sub_803BAF8
@@ -3774,6 +3967,7 @@ gUnknown_08180244:
     .word sub_803BEB8
 
 
+    .align 2
     .global gUnknown_08180270
 gUnknown_08180270:
     .word sub_803BF8C
@@ -3785,6 +3979,7 @@ gUnknown_08180270:
     .word sub_803C0A8
 
 
+    .align 2
     .global gUnknown_0818028C
 gUnknown_0818028C:
     .word sub_803C118
@@ -3802,6 +3997,7 @@ gUnknown_0818028C:
     .word sub_803C3C0
 
 
+    .align 2
     .global gUnknown_081802C0
 gUnknown_081802C0:
     .word sub_803C534
@@ -3816,6 +4012,7 @@ gUnknown_081802C0:
     .word sub_803C808
 
 
+    .align 2
     .global gUnknown_081802E8
 gUnknown_081802E8:
     .word sub_803C924
@@ -3837,6 +4034,7 @@ gUnknown_081802E8:
     .word sub_803CF20
 
 
+    .align 2
     .global gUnknown_0818032C
 gUnknown_0818032C:
     .word sub_803CF54
@@ -3856,6 +4054,7 @@ gUnknown_0818032C:
     .word sub_803D514
 
 
+    .align 2
     .global gUnknown_08180368
 gUnknown_08180368:
     .word sub_803D8E8
@@ -3866,6 +4065,7 @@ gUnknown_08180368:
     .word sub_803DBEC
 
 
+    .align 2
     .global gUnknown_08180380
 gUnknown_08180380:
     .word 0
@@ -3965,6 +4165,7 @@ gUnknown_08180380:
     .word 0x8000
     .word 0
 
+    .align 2
     .global gUnknown_08180500
 gUnknown_08180500:
     .word 0
@@ -4022,6 +4223,7 @@ gUnknown_08180500:
     .word 0x8000
     .word 0
 
+    .align 2
     .global gUnknown_081805D8
 gUnknown_081805D8:
     .word 0
@@ -4097,6 +4299,7 @@ gUnknown_08180C3C:
 gUnknown_08180C48:
     .incbin "baserom.gba", 0x00180C48, 0xC
 
+    .align 2
     .global gUnknown_08180C54
 gUnknown_08180C54:
     .word gUnknown_08180C38
@@ -4119,6 +4322,7 @@ gUnknown_08180CCC:
 gUnknown_08180CCF:
     .incbin "baserom.gba", 0x00180CCF, 0x9
 
+    .align 2
     .global gUnknown_08180CD8
 gUnknown_08180CD8:
     .word sub_80482D8
@@ -4135,6 +4339,7 @@ gUnknown_08180CD8:
     .word sub_804871C
 
 
+    .align 2
     .global gUnknown_08180D08
 gUnknown_08180D08:
     .word sub_8049EB4
@@ -4148,6 +4353,7 @@ gUnknown_08180D08:
     .word sub_804A320
 
 
+    .align 2
     .global gUnknown_08180D2C
 gUnknown_08180D2C:
     .byte    0
@@ -4174,6 +4380,7 @@ gUnknown_08180D35:
     .byte    0
     .byte    0
 
+    .align 2
     .global gUnknown_08180D40
 gUnknown_08180D40:
     .word sub_804A94C
@@ -4185,6 +4392,7 @@ gUnknown_08180D40:
     .word sub_804A9AC
 
 
+    .align 2
     .global gUnknown_08180D5C
 gUnknown_08180D5C:
     .word sub_804B2F0
@@ -4697,6 +4905,7 @@ gUnknown_0818155C:
 gUnknown_0818174C:
     .incbin "baserom.gba", 0x0018174C, 0x14
 
+    .align 2
     .global gUnknown_08181760
 gUnknown_08181760:
     .word sub_804DC7C
@@ -4709,6 +4918,7 @@ gUnknown_08181760:
     .word sub_8054FC8
 
 
+    .align 2
     .global gUnknown_08181780
 gUnknown_08181780:
     .word sub_80552EC
@@ -4792,6 +5002,7 @@ gUnknown_08181780:
     .word 0
     .word 0
 
+    .align 2
     .global gUnknown_081818C0
 gUnknown_081818C0:
     .word sub_804E184
@@ -4812,6 +5023,7 @@ gUnknown_081818C0:
     .word sub_8053250
 
 
+    .align 2
     .global gUnknown_08181900
 gUnknown_08181900:
     .word sub_805339C
@@ -4822,6 +5034,7 @@ gUnknown_08181900:
     .word sub_8054190
 
 
+    .align 2
     .global gUnknown_08181918
 gUnknown_08181918:
     .word sub_805446C
@@ -4829,6 +5042,7 @@ gUnknown_08181918:
     .word sub_8054570
 
 
+    .align 2
     .global gUnknown_08181924
 gUnknown_08181924:
     .word sub_8054624
@@ -4836,6 +5050,7 @@ gUnknown_08181924:
     .word sub_8054818
 
 
+    .align 2
     .global gUnknown_08181930
 gUnknown_08181930:
     .word sub_805491C
@@ -4848,6 +5063,7 @@ gUnknown_08181930:
     .word sub_8054ECC
 
 
+    .align 2
     .global gUnknown_08181950
 gUnknown_08181950:
     .word sub_8055054
@@ -4855,6 +5071,7 @@ gUnknown_08181950:
     .word sub_805510C
 
 
+    .align 2
     .global gUnknown_0818195C
 gUnknown_0818195C:
     .word sub_8056128
@@ -4863,6 +5080,7 @@ gUnknown_0818195C:
     .word sub_8056200
 
 
+    .align 2
     .global gUnknown_0818196C
 gUnknown_0818196C:
     .word sub_8052E7C
@@ -4870,6 +5088,7 @@ gUnknown_0818196C:
     .word sub_8052F4C
 
 
+    .align 2
     .global gUnknown_08181978
 gUnknown_08181978:
     .word sub_8051F60
@@ -4877,6 +5096,7 @@ gUnknown_08181978:
     .word sub_8051FF0
 
 
+    .align 2
     .global gUnknown_08181984
 gUnknown_08181984:
     .word sub_8052090
@@ -4884,12 +5104,14 @@ gUnknown_08181984:
     .word sub_8052124
 
 
+    .align 2
     .global gUnknown_08181990
 gUnknown_08181990:
     .word sub_80521C4
     .word sub_805224C
 
 
+    .align 2
     .global gUnknown_08181998
 gUnknown_08181998:
     .word sub_80533F8
@@ -4910,6 +5132,7 @@ gUnknown_08181998:
     .word sub_8053D44
 
 
+    .align 2
     .global gUnknown_081819D8
 gUnknown_081819D8:
     .word sub_8053AB0
@@ -4922,6 +5145,7 @@ gUnknown_081819D8:
     .word sub_8053C04
 
 
+    .align 2
     .global gUnknown_081819F8
 gUnknown_081819F8:
     .word sub_80541C8
@@ -4929,6 +5153,7 @@ gUnknown_081819F8:
     .word sub_80542DC
 
 
+    .align 2
     .global gUnknown_08181A04
 gUnknown_08181A04:
     .word sub_804E6D4
@@ -4944,6 +5169,7 @@ gUnknown_08181A04:
     .word sub_8050EB8
 
 
+    .align 2
     .global gUnknown_08181A30
 gUnknown_08181A30:
     .word sub_804E708
@@ -4954,6 +5180,7 @@ gUnknown_08181A30:
     .word sub_804EE80
 
 
+    .align 2
     .global gUnknown_08181A48
 gUnknown_08181A48:
     .word sub_804EEE4
@@ -4963,6 +5190,7 @@ gUnknown_08181A48:
     .word sub_804F0A4
 
 
+    .align 2
     .global gUnknown_08181A5C
 gUnknown_08181A5C:
     .word sub_804F108
@@ -4980,6 +5208,7 @@ gUnknown_08181A5C:
     .word sub_804FADC
 
 
+    .align 2
     .global gUnknown_08181A90
 gUnknown_08181A90:
     .word sub_804FB9C
@@ -4989,6 +5218,7 @@ gUnknown_08181A90:
     .word sub_804FEFC
 
 
+    .align 2
     .global gUnknown_08181AA4
 gUnknown_08181AA4:
     .word sub_8052DAC
@@ -4999,6 +5229,7 @@ gUnknown_08181AA4:
     .word sub_8052E28
 
 
+    .align 2
     .global gUnknown_08181ABC
 gUnknown_08181ABC:
     .word sub_80528F4
@@ -5008,6 +5239,7 @@ gUnknown_08181ABC:
     .word sub_8052B94
 
 
+    .align 2
     .global gUnknown_08181AD0
 gUnknown_08181AD0:
     .word sub_804FFDC
@@ -5022,6 +5254,7 @@ gUnknown_08181AD0:
     .word sub_8050490
 
 
+    .align 2
     .global gUnknown_08181AF8
 gUnknown_08181AF8:
     .word sub_805068C
@@ -5029,6 +5262,7 @@ gUnknown_08181AF8:
     .word sub_805073C
 
 
+    .align 2
     .global gUnknown_08181B04
 gUnknown_08181B04:
     .word sub_80507F4
@@ -5040,6 +5274,7 @@ gUnknown_08181B04:
     .word sub_8050B68
 
 
+    .align 2
     .global gUnknown_08181B20
 gUnknown_08181B20:
     .word sub_80519E4
@@ -5051,6 +5286,7 @@ gUnknown_08181B20:
     .word sub_8051E5C
 
 
+    .align 2
     .global gUnknown_08181B3C
 gUnknown_08181B3C:
     .word sub_80530A4
@@ -5058,12 +5294,14 @@ gUnknown_08181B3C:
     .word sub_80531F0
 
 
+    .align 2
     .global gUnknown_08181B48
 gUnknown_08181B48:
     .word sub_8052FC4
     .word sub_8053008
 
 
+    .align 2
     .global gUnknown_08181B50
 gUnknown_08181B50:
     .word sub_8052314
@@ -5071,6 +5309,7 @@ gUnknown_08181B50:
     .word sub_80523CC
 
 
+    .align 2
     .global gUnknown_08181B5C
 gUnknown_08181B5C:
     .word sub_805247C
@@ -5080,6 +5319,7 @@ gUnknown_08181B5C:
     .word sub_80526D4
 
 
+    .align 2
     .global gUnknown_08181B70
 gUnknown_08181B70:
     .word sub_8057E18
@@ -5126,6 +5366,7 @@ gUnknown_08181C60:
 gUnknown_08181CC0:
     .incbin "baserom.gba", 0x00181CC0, 0x60
 
+    .align 2
     .global gUnknown_08181D20
 gUnknown_08181D20:
     .word sub_8051908
@@ -5143,6 +5384,7 @@ gUnknown_08181D20:
     .word sub_8051694
     .word sub_80516FC
 
+    .align 2
     .global gUnknown_08181D58
 gUnknown_08181D58:
     .word sub_805A088
@@ -5173,6 +5415,7 @@ gUnknown_08181D58:
     .word sub_805AE0C
     .word sub_805AF20
 
+    .align 2
     .global gUnknown_08181DC4
 gUnknown_08181DC4:
     .word sub_805B4B4
@@ -5271,10 +5514,12 @@ gUnknown_08181DC4:
     .word sub_805D780
     .word sub_805D7AC
 
+    .align 2
     .global gUnknown_08181F40
 gUnknown_08181F40:
     .word 1
 
+    .align 2
     .global gUnknown_08181F44
 gUnknown_08181F44:
     .word sub_805E2D0
@@ -5288,6 +5533,7 @@ gUnknown_08181F44:
     .word sub_805E470
     .word sub_805E48C
 
+    .align 2
     .global gUnknown_08181F6C
 gUnknown_08181F6C:
     .word sub_805E920
@@ -5327,6 +5573,7 @@ gUnknown_08182008:
 gUnknown_08182010:
     .incbin "baserom.gba", 0x00182010, 0x8
 
+    .align 2
     .global gUnknown_08182018
 gUnknown_08182018:
     .word 0
@@ -5339,12 +5586,14 @@ gUnknown_08182018:
 gUnknown_0818202C: @BUG: Written to from 0805EF28
     .byte 0,0,0,0
 
+    .align 2
     .global gUnknown_08182030
 gUnknown_08182030:
     .word sub_805DBD0
     .word sub_805DD3C
     .word sub_805DD0C
 
+    .align 2
     .global gUnknown_0818203C
 gUnknown_0818203C:
     .word sub_8060C1C
@@ -5367,6 +5616,7 @@ gUnknown_0818203C:
     .word sub_8060C1C
     .word sub_8060C1C
 
+    .align 2
     .global gUnknown_08182088
 gUnknown_08182088:
     .word sub_8060EEC
@@ -5389,6 +5639,7 @@ gUnknown_08182088:
     .word sub_8060EEC
     .word sub_8060EEC
 
+    .align 2
     .global gUnknown_081820D4
 gUnknown_081820D4:
     .word sub_80610C0
@@ -5411,6 +5662,7 @@ gUnknown_081820D4:
     .word sub_80610C0
     .word sub_80610C0
 
+    .align 2
     .global gUnknown_08182120
 gUnknown_08182120:
     .word sub_8061234
@@ -5433,6 +5685,7 @@ gUnknown_08182120:
     .word sub_8061234
     .word sub_80613B0
 
+    .align 2
     .global gUnknown_0818216C
 gUnknown_0818216C:
     .word sub_8060DE8
@@ -5455,6 +5708,7 @@ gUnknown_0818216C:
     .word sub_8060DE8
     .word sub_8060DE8
 
+    .align 2
     .global gUnknown_081821B8
 gUnknown_081821B8:
     .word sub_8060FE0
@@ -5477,6 +5731,7 @@ gUnknown_081821B8:
     .word sub_8060FE0
     .word sub_8060FE0
 
+    .align 2
     .global gUnknown_08182204
 gUnknown_08182204:
     .word sub_8061148
@@ -5499,6 +5754,7 @@ gUnknown_08182204:
     .word sub_8061148
     .word sub_8061148
 
+    .align 2
     .global gUnknown_08182250
 gUnknown_08182250:
     .word sub_8061418
@@ -5521,6 +5777,7 @@ gUnknown_08182250:
     .word sub_8061418
     .word sub_8061418
 
+    .align 2
     .global gUnknown_0818229C
 gUnknown_0818229C:
     .word gUnknown_0818203C
@@ -5570,6 +5827,7 @@ gUnknown_08182560:
 gUnknown_081825BC:
     .incbin "baserom.gba", 0x001825BC, 0x8
 
+    .align 2
     .global gUnknown_081825C4
 gUnknown_081825C4:
     .word sub_806929C
