@@ -10739,7 +10739,30 @@ gUnknown_0820C947:
 
     .global gUnknown_0820C94C
 gUnknown_0820C94C:
-    .incbin "baserom.gba", 0x0020C94C, 0x4774
+    .incbin "baserom.gba", 0x0020C94C, 0x8C
+
+    .include "text/french/fullscreen_cutscenes.inc"
+    .include "text/french/enemy_names.inc"
+    .include "text/french/spell_descriptions.inc"
+    .include "text/french/location_names.inc"
+    .include "text/french/item_names.inc"
+    .include "text/french/weapon_names.inc"
+    .include "text/french/defensive_item_names.inc"
+    .include "text/french/city_names.inc"
+    .include "text/french/magic_names.inc"
+    .include "text/german/fullscreen_cutscenes.inc"
+    .include "text/german/enemy_names.inc"
+    .include "text/german/spell_descriptions.inc"
+    .include "text/german/location_names.inc"
+    .include "text/german/item_names.inc"
+    .include "text/german/weapon_names.inc"
+    .include "text/german/defensive_item_names.inc"
+    .include "text/german/city_names.inc"
+    .include "text/german/magic_names.inc"
+
+     .global gUnknown_082109D6
+gUnknown_082109D6:
+    .incbin "baserom.gba", 0x002109D6, 0x6EA
 
     .global gUnknown_082110C0
 gUnknown_082110C0:
@@ -10764,77 +10787,24 @@ gUnknown_08211E24:
     .include "text/english/city_names.inc"
     .include "text/english/magic_names.inc"
 
-    .global gUnknown_082142E0
-gUnknown_082142E0:
-    .incbin "baserom.gba", 0x002142E0, 0x50
-
-    .global gUnknown_08214330
-gUnknown_08214330:
-    .incbin "baserom.gba", 0x00214330, 0x50
-
-    .global gUnknown_08214380
-gUnknown_08214380:
-    .incbin "baserom.gba", 0x00214380, 0x200
-
-    .global gUnknown_08214580
-gUnknown_08214580:
-    .incbin "baserom.gba", 0x00214580, 0x200
-
-    .global gUnknown_08214780
-gUnknown_08214780:
-    .incbin "baserom.gba", 0x00214780, 0x160
-
-    .global gUnknown_082148E0
-gUnknown_082148E0:
-    .incbin "baserom.gba", 0x002148E0, 0x160
-
-    .global gUnknown_08214A40
-gUnknown_08214A40:
-    .incbin "baserom.gba", 0x00214A40, 0x100
-
-    .global gUnknown_08214B40
-gUnknown_08214B40:
-    .incbin "baserom.gba", 0x00214B40, 0x100
-
-    .global gUnknown_08214C40
-gUnknown_08214C40:
-    .incbin "baserom.gba", 0x00214C40, 0x200
-
-    .global gUnknown_08214E40
-gUnknown_08214E40:
-    .incbin "baserom.gba", 0x00214E40, 0x200
-
-    .global gUnknown_08215040
-gUnknown_08215040:
-    .incbin "baserom.gba", 0x00215040, 0x180
-
-    .global gUnknown_082151C0
-gUnknown_082151C0:
-    .incbin "baserom.gba", 0x002151C0, 0x180
-
-    .global gUnknown_08215340
-gUnknown_08215340:
-    .incbin "baserom.gba", 0x00215340, 0x238
-
-    .global gUnknown_08215578
-gUnknown_08215578:
-    .incbin "baserom.gba", 0x00215578, 0x238
-
-    .global gUnknown_082157B0
-gUnknown_082157B0:
-    .incbin "baserom.gba", 0x002157B0, 0x74
-
-    .global gUnknown_08215824
-gUnknown_08215824:
-    .incbin "baserom.gba", 0x00215824, 0x74
-
-    .global gUnknown_08215898
-gUnknown_08215898:
-    .incbin "baserom.gba", 0x00215898, 0x140
-
-    .global gUnknown_082159D8
-gUnknown_082159D8:
-    .incbin "baserom.gba", 0x002159D8, 0x140
+    .include "text/french/fullscreen_cutscenes_pointers.inc"
+    .include "text/german/fullscreen_cutscenes_pointers.inc"
+    .include "text/french/enemy_names_pointers.inc"
+    .include "text/german/enemy_names_pointers.inc"
+    .include "text/french/spell_descriptions_pointers.inc"
+    .include "text/german/spell_descriptions_pointers.inc"
+    .include "text/french/location_names_pointers.inc"
+    .include "text/german/location_names_pointers.inc"
+    .include "text/french/item_names_pointers.inc"
+    .include "text/german/item_names_pointers.inc"
+    .include "text/french/weapon_names_pointers.inc"
+    .include "text/german/weapon_names_pointers.inc"
+    .include "text/french/defensive_item_names_pointers.inc"
+    .include "text/german/defensive_item_names_pointers.inc"
+    .include "text/french/city_names_pointers.inc"
+    .include "text/german/city_names_pointers.inc"
+    .include "text/french/magic_names_pointers.inc"
+    .include "text/german/magic_names_pointers.inc"
 
     .global gUnknown_08215B18
 gUnknown_08215B18:
