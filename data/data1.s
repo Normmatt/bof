@@ -10760,24 +10760,37 @@ gUnknown_0820C94C:
     .include "text/german/city_names.inc"
     .include "text/german/magic_names.inc"
 
-     .global gUnknown_082109D6
-gUnknown_082109D6:
-    .incbin "baserom.gba", 0x002109D6, 0x6EA
-
-    .global gUnknown_082110C0
-gUnknown_082110C0:
-    .incbin "baserom.gba", 0x002110C0, 0x614
-
-    .global gUnknown_082116D4
-gUnknown_082116D4:
-    .incbin "baserom.gba", 0x002116D4, 0x140
+    @left over japanese for item names before weapons/defense were split?
+    @both of these go unused even in japanese version
+    .include "text/japanese/item_names.inc"
+    .include "text/japanese/city_names.inc"
 
     .include "text/english/fullscreen_cutscenes.inc"
 
+    @seems to be some sort of co-ordinates for the full screen cutscene text
     .global gUnknown_08211E24
 gUnknown_08211E24:
-    .incbin "baserom.gba", 0x00211E24, 0x28
-
+    .short 0xC2
+    .short 0xE2
+    .short 0xE2
+    .short 0x162
+    .short 0x1A2
+    .short 0x1E2
+    .short 0x202
+    .short 0x1E2
+    .short 0x1A2
+    .short 0x222
+    .short 0x162
+    .short 0x222
+    .short 0x202
+    .short 0x1C2
+    .short 0x162
+    .short 0x162
+    .short 0x222
+    .short 0x222
+    .short 0x222
+    .short 0x223
+    
     .include "text/english/enemy_names.inc"
     .include "text/english/spell_descriptions.inc"
     .include "text/english/location_names.inc"
