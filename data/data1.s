@@ -5885,15 +5885,133 @@ gUnknown_08182474:
 
     .global gUnknown_08182494
 gUnknown_08182494:
-    .incbin "baserom.gba", 0x00182494, 0xCC
+    .incbin "baserom.gba", 0x00182494, 0x38
 
+    .global gUnknown_081824CC
+gUnknown_081824CC:
+    .incbin "baserom.gba", 0x001824CC, 0x12
+
+    .global gUnknown_081824DE
+gUnknown_081824DE:
+    .incbin "baserom.gba", 0x001824DE, 0x8
+
+    .global gUnknown_081824E6
+gUnknown_081824E6:
+    .incbin "baserom.gba", 0x001824E6, 0x6
+
+    .global gUnknown_081824EC
+gUnknown_081824EC:
+    .incbin "baserom.gba", 0x001824EC, 0x6
+
+    .global gUnknown_081824F2
+gUnknown_081824F2:
+    .incbin "baserom.gba", 0x001824F2, 0x6
+
+    .global gUnknown_081824F8
+gUnknown_081824F8:
+    .incbin "baserom.gba", 0x001824F8, 0x6
+
+    .global gUnknown_081824FE
+gUnknown_081824FE:
+    .incbin "baserom.gba", 0x001824FE, 0x6
+
+    .global gUnknown_08182504
+gUnknown_08182504:
+    .incbin "baserom.gba", 0x00182504, 0x6
+
+    .global gUnknown_0818250A
+gUnknown_0818250A:
+    .incbin "baserom.gba", 0x0018250A, 0x6
+
+    .global gUnknown_08182510
+gUnknown_08182510:
+    .incbin "baserom.gba", 0x00182510, 0x6
+
+    .global gUnknown_08182516
+gUnknown_08182516:
+    .incbin "baserom.gba", 0x00182516, 0x6
+
+    .global gUnknown_0818251C
+gUnknown_0818251C:
+    .incbin "baserom.gba", 0x0018251C, 0x6
+
+    .global gUnknown_08182522
+gUnknown_08182522:
+    .incbin "baserom.gba", 0x00182522, 0x6
+
+    .global gUnknown_08182528
+gUnknown_08182528:
+    .incbin "baserom.gba", 0x00182528, 0x6
+
+    .global gUnknown_0818252E
+gUnknown_0818252E:
+    .incbin "baserom.gba", 0x0018252E, 0x6
+
+    .global gUnknown_08182534
+gUnknown_08182534:
+    .incbin "baserom.gba", 0x00182534, 0x6
+
+    .global gUnknown_0818253A
+gUnknown_0818253A:
+    .incbin "baserom.gba", 0x0018253A, 0x6
+
+    .global gUnknown_08182540
+gUnknown_08182540:
+    .incbin "baserom.gba", 0x00182540, 0x6
+
+    .global gUnknown_08182546
+gUnknown_08182546:
+    .incbin "baserom.gba", 0x00182546, 0x6
+
+    .global gUnknown_0818254C
+gUnknown_0818254C:
+    .incbin "baserom.gba", 0x0018254C, 0x6
+
+    .global gUnknown_08182552
+gUnknown_08182552:
+    .incbin "baserom.gba", 0x00182552, 0x6
+
+    .global gUnknown_08182558
+gUnknown_08182558:
+    .incbin "baserom.gba", 0x00182558, 0x8
+
+    .align 2
     .global gUnknown_08182560
 gUnknown_08182560:
-    .incbin "baserom.gba", 0x00182560, 0x5C
+    .word gUnknown_081824CC @ 0 / 0x0
+    .word gUnknown_081824DE @ 1 / 0x1
+    .word gUnknown_081824E6 @ 2 / 0x2
+    .word gUnknown_081824EC @ 3 / 0x3
+    .word gUnknown_081824F2 @ 4 / 0x4
+    .word gUnknown_081824F8 @ 5 / 0x5
+    .word gUnknown_081824FE @ 6 / 0x6
+    .word gUnknown_08182504 @ 7 / 0x7
+    .word gUnknown_0818250A @ 8 / 0x8
+    .word gUnknown_08182510 @ 9 / 0x9
+    .word gUnknown_08182516 @ 10 / 0xA
+    .word gUnknown_0818251C @ 11 / 0xB
+    .word gUnknown_08182522 @ 12 / 0xC
+    .word gUnknown_08182528 @ 13 / 0xD
+    .word gUnknown_0818252E @ 14 / 0xE
+    .word gUnknown_08182534 @ 15 / 0xF
+    .word gUnknown_0818253A @ 16 / 0x10
+    .word gUnknown_08182540 @ 17 / 0x11
+    .word gUnknown_08182546 @ 18 / 0x12
+    .word gUnknown_0818254C @ 19 / 0x13
+    .word gUnknown_08182552 @ 20 / 0x14
+    .word gUnknown_08182558 @ 21 / 0x15
+    .word 0 @ 22 / 0x16
 
     .global gUnknown_081825BC
 gUnknown_081825BC:
-    .incbin "baserom.gba", 0x001825BC, 0x8
+    .byte    1
+    .byte    2
+    .byte    4
+    .byte    8
+    .byte 0x10
+    .byte 0x20
+    .byte 0x40
+    .byte 0x80
 
     .align 2
     .global gUnknown_081825C4
@@ -6673,458 +6791,8 @@ gUnknown_08183124:
     .word sub_8077390
     .word sub_80773A8
 
-    .global gUnknown_08183140
-gUnknown_08183140:
-    .string "LANGUAGE\0"
-
-    .global gUnknown_08183149
-gUnknown_08183149:
-    .string "LANGUE\0"
-
-    .global gUnknown_08183150
-gUnknown_08183150:
-    .incbin "baserom.gba", 0x00183150, 0x8
-
-    .global gUnknown_08183158
-gUnknown_08183158:
-    .incbin "baserom.gba", 0x00183158, 0x8
-
-    .global gUnknown_08183160
-gUnknown_08183160:
-    .incbin "baserom.gba", 0x00183160, 0x9
-
-    .global gUnknown_08183169
-gUnknown_08183169:
-    .incbin "baserom.gba", 0x00183169, 0x8
-
-    .global gUnknown_08183171
-gUnknown_08183171:
-    .incbin "baserom.gba", 0x00183171, 0x16
-
-    .global gUnknown_08183187
-gUnknown_08183187:
-    .incbin "baserom.gba", 0x00183187, 0x2
-
-    .global gUnknown_08183189
-gUnknown_08183189:
-    .incbin "baserom.gba", 0x00183189, 0x8
-
-    .global gUnknown_08183191
-gUnknown_08183191:
-    .incbin "baserom.gba", 0x00183191, 0x4
-
-    .global gUnknown_08183195
-gUnknown_08183195:
-    .incbin "baserom.gba", 0x00183195, 0xB
-
-    .global gUnknown_081831A0
-gUnknown_081831A0:
-    .incbin "baserom.gba", 0x001831A0, 0x9
-
-    .global gUnknown_081831A9
-gUnknown_081831A9:
-    .incbin "baserom.gba", 0x001831A9, 0x13
-
-    .global gUnknown_081831BC
-gUnknown_081831BC:
-    .incbin "baserom.gba", 0x001831BC, 0x11
-
-    .global gUnknown_081831CD
-gUnknown_081831CD:
-    .incbin "baserom.gba", 0x001831CD, 0x16
-
-    .global gUnknown_081831E3
-gUnknown_081831E3:
-    .incbin "baserom.gba", 0x001831E3, 0x19
-
-    .global gUnknown_081831FC
-gUnknown_081831FC:
-    .incbin "baserom.gba", 0x001831FC, 0x16
-
-    .global gUnknown_08183212
-gUnknown_08183212:
-    .incbin "baserom.gba", 0x00183212, 0x6
-
-    .global gUnknown_08183218
-gUnknown_08183218:
-    .incbin "baserom.gba", 0x00183218, 0x18
-
-    .global gUnknown_08183230
-gUnknown_08183230:
-    .incbin "baserom.gba", 0x00183230, 0x12
-
-    .global gUnknown_08183242
-gUnknown_08183242:
-    .incbin "baserom.gba", 0x00183242, 0x1
-
-    .global gUnknown_08183243
-gUnknown_08183243:
-    .incbin "baserom.gba", 0x00183243, 0x19
-
-    .global gUnknown_0818325C
-gUnknown_0818325C:
-    .incbin "baserom.gba", 0x0018325C, 0x16
-
-    .global gUnknown_08183272
-gUnknown_08183272:
-    .incbin "baserom.gba", 0x00183272, 0x9
-
-    .global gUnknown_0818327B
-gUnknown_0818327B:
-    .incbin "baserom.gba", 0x0018327B, 0xB
-
-    .global gUnknown_08183286
-gUnknown_08183286:
-    .incbin "baserom.gba", 0x00183286, 0x9
-
-    .global gUnknown_0818328F
-gUnknown_0818328F:
-    .incbin "baserom.gba", 0x0018328F, 0x5
-
-    .global gUnknown_08183294
-gUnknown_08183294:
-    .incbin "baserom.gba", 0x00183294, 0x6
-
-    .global gUnknown_0818329A
-gUnknown_0818329A:
-    .incbin "baserom.gba", 0x0018329A, 0x4
-
-    .global gUnknown_0818329E
-gUnknown_0818329E:
-    .incbin "baserom.gba", 0x0018329E, 0x6
-
-    .global gUnknown_081832A4
-gUnknown_081832A4:
-    .incbin "baserom.gba", 0x001832A4, 0xB
-
-    .global gUnknown_081832AF
-gUnknown_081832AF:
-    .incbin "baserom.gba", 0x001832AF, 0x5
-
-    .global gUnknown_081832B4
-gUnknown_081832B4:
-    .incbin "baserom.gba", 0x001832B4, 0x5
-
-    .global gUnknown_081832B9
-gUnknown_081832B9:
-    .incbin "baserom.gba", 0x001832B9, 0x6
-
-    .global gUnknown_081832BF
-gUnknown_081832BF:
-    .incbin "baserom.gba", 0x001832BF, 0x4
-
-    .global gUnknown_081832C3
-gUnknown_081832C3:
-    .incbin "baserom.gba", 0x001832C3, 0x5
-
-    .global gUnknown_081832C8
-gUnknown_081832C8:
-    .incbin "baserom.gba", 0x001832C8, 0x5
-
-    .global gUnknown_081832CD
-gUnknown_081832CD:
-    .incbin "baserom.gba", 0x001832CD, 0x5
-
-    .global gUnknown_081832D2
-gUnknown_081832D2:
-    .incbin "baserom.gba", 0x001832D2, 0x5
-
-    .global gUnknown_081832D7
-gUnknown_081832D7:
-    .incbin "baserom.gba", 0x001832D7, 0xF
-
-    .global gUnknown_081832E6
-gUnknown_081832E6:
-    .incbin "baserom.gba", 0x001832E6, 0x3
-
-    .global gUnknown_081832E9
-gUnknown_081832E9:
-    .incbin "baserom.gba", 0x001832E9, 0x4
-
-    .global gUnknown_081832ED
-gUnknown_081832ED:
-    .incbin "baserom.gba", 0x001832ED, 0x20
-
-    .global gUnknown_0818330D
-gUnknown_0818330D:
-    .incbin "baserom.gba", 0x0018330D, 0x12
-
-    .global gUnknown_0818331F
-gUnknown_0818331F:
-    .incbin "baserom.gba", 0x0018331F, 0x2
-
-    .global gUnknown_08183321
-gUnknown_08183321:
-    .incbin "baserom.gba", 0x00183321, 0x8
-
-    .global gUnknown_08183329
-gUnknown_08183329:
-    .incbin "baserom.gba", 0x00183329, 0x3
-
-    .global gUnknown_0818332C
-gUnknown_0818332C:
-    .incbin "baserom.gba", 0x0018332C, 0x5
-
-    .global gUnknown_08183331
-gUnknown_08183331:
-    .incbin "baserom.gba", 0x00183331, 0xA
-
-    .global gUnknown_0818333B
-gUnknown_0818333B:
-    .incbin "baserom.gba", 0x0018333B, 0x10
-
-    .global gUnknown_0818334B
-gUnknown_0818334B:
-    .incbin "baserom.gba", 0x0018334B, 0x14
-
-    .global gUnknown_0818335F
-gUnknown_0818335F:
-    .incbin "baserom.gba", 0x0018335F, 0xE
-
-    .global gUnknown_0818336D
-gUnknown_0818336D:
-    .incbin "baserom.gba", 0x0018336D, 0xD
-
-    .global gUnknown_0818337A
-gUnknown_0818337A:
-    .incbin "baserom.gba", 0x0018337A, 0xA
-
-    .global gUnknown_08183384
-gUnknown_08183384:
-    .incbin "baserom.gba", 0x00183384, 0x1
-
-    .global gUnknown_08183385
-gUnknown_08183385:
-    .incbin "baserom.gba", 0x00183385, 0xB
-
-    .global gUnknown_08183390
-gUnknown_08183390:
-    .incbin "baserom.gba", 0x00183390, 0x9
-
-    .global gUnknown_08183399
-gUnknown_08183399:
-    .incbin "baserom.gba", 0x00183399, 0x1
-
-    .global gUnknown_0818339A
-gUnknown_0818339A:
-    .incbin "baserom.gba", 0x0018339A, 0x18
-
-    .global gUnknown_081833B2
-gUnknown_081833B2:
-    .incbin "baserom.gba", 0x001833B2, 0x10
-
-    .global gUnknown_081833C2
-gUnknown_081833C2:
-    .incbin "baserom.gba", 0x001833C2, 0x9
-
-    .global gUnknown_081833CB
-gUnknown_081833CB:
-    .incbin "baserom.gba", 0x001833CB, 0xB
-
-    .global gUnknown_081833D6
-gUnknown_081833D6:
-    .incbin "baserom.gba", 0x001833D6, 0xC
-
-    .global gUnknown_081833E2
-gUnknown_081833E2:
-    .incbin "baserom.gba", 0x001833E2, 0x6
-
-    .global gUnknown_081833E8
-gUnknown_081833E8:
-    .incbin "baserom.gba", 0x001833E8, 0x8
-
-    .global gUnknown_081833F0
-gUnknown_081833F0:
-    .incbin "baserom.gba", 0x001833F0, 0x4
-
-    .global gUnknown_081833F4
-gUnknown_081833F4:
-    .incbin "baserom.gba", 0x001833F4, 0x5
-
-    .global gUnknown_081833F9
-gUnknown_081833F9:
-    .incbin "baserom.gba", 0x001833F9, 0xA
-
-    .global gUnknown_08183403
-gUnknown_08183403:
-    .incbin "baserom.gba", 0x00183403, 0x5
-
-    .global gUnknown_08183408
-gUnknown_08183408:
-    .incbin "baserom.gba", 0x00183408, 0x6
-
-    .global gUnknown_0818340E
-gUnknown_0818340E:
-    .incbin "baserom.gba", 0x0018340E, 0x5
-
-    .global gUnknown_08183413
-gUnknown_08183413:
-    .incbin "baserom.gba", 0x00183413, 0x5
-
-    .global gUnknown_08183418
-gUnknown_08183418:
-    .incbin "baserom.gba", 0x00183418, 0x5
-
-    .global gUnknown_0818341D
-gUnknown_0818341D:
-    .incbin "baserom.gba", 0x0018341D, 0x5
-
-    .global gUnknown_08183422
-gUnknown_08183422:
-    .incbin "baserom.gba", 0x00183422, 0x5
-
-    .global gUnknown_08183427
-gUnknown_08183427:
-    .incbin "baserom.gba", 0x00183427, 0x5
-
-    .global gUnknown_0818342C
-gUnknown_0818342C:
-    .incbin "baserom.gba", 0x0018342C, 0x3
-
-    .global gUnknown_0818342F
-gUnknown_0818342F:
-    .incbin "baserom.gba", 0x0018342F, 0x4
-
-    .global gUnknown_08183433
-gUnknown_08183433:
-    .incbin "baserom.gba", 0x00183433, 0x10
-
-    .global gUnknown_08183443
-gUnknown_08183443:
-    .incbin "baserom.gba", 0x00183443, 0x2
-
-    .global gUnknown_08183445
-gUnknown_08183445:
-    .incbin "baserom.gba", 0x00183445, 0x9
-
-    .global gUnknown_0818344E
-gUnknown_0818344E:
-    .incbin "baserom.gba", 0x0018344E, 0x4
-
-    .global gUnknown_08183452
-gUnknown_08183452:
-    .incbin "baserom.gba", 0x00183452, 0x4
-
-    .global gUnknown_08183456
-gUnknown_08183456:
-    .incbin "baserom.gba", 0x00183456, 0x9
-
-    .global gUnknown_0818345F
-gUnknown_0818345F:
-    .incbin "baserom.gba", 0x0018345F, 0x1E
-
-    .global gUnknown_0818347D
-gUnknown_0818347D:
-    .incbin "baserom.gba", 0x0018347D, 0x10
-
-    .global gUnknown_0818348D
-gUnknown_0818348D:
-    .incbin "baserom.gba", 0x0018348D, 0x19
-
-    .global gUnknown_081834A6
-gUnknown_081834A6:
-    .incbin "baserom.gba", 0x001834A6, 0x13
-
-    .global gUnknown_081834B9
-gUnknown_081834B9:
-    .incbin "baserom.gba", 0x001834B9, 0x16
-
-    .global gUnknown_081834CF
-gUnknown_081834CF:
-    .incbin "baserom.gba", 0x001834CF, 0x16
-
-    .global gUnknown_081834E5
-gUnknown_081834E5:
-    .incbin "baserom.gba", 0x001834E5, 0x16
-
-    .global gUnknown_081834FB
-gUnknown_081834FB:
-    .incbin "baserom.gba", 0x001834FB, 0x14
-
-    .global gUnknown_0818350F
-gUnknown_0818350F:
-    .incbin "baserom.gba", 0x0018350F, 0x14
-
-    .global gUnknown_08183523
-gUnknown_08183523:
-    .incbin "baserom.gba", 0x00183523, 0x13
-
-    .global gUnknown_08183536
-gUnknown_08183536:
-    .incbin "baserom.gba", 0x00183536, 0x1F
-
-    .global gUnknown_08183555
-gUnknown_08183555:
-    .incbin "baserom.gba", 0x00183555, 0x9
-
-    .global gUnknown_0818355E
-gUnknown_0818355E:
-    .incbin "baserom.gba", 0x0018355E, 0xB
-
-    .global gUnknown_08183569
-gUnknown_08183569:
-    .incbin "baserom.gba", 0x00183569, 0xC
-
-    .global gUnknown_08183575
-gUnknown_08183575:
-    .incbin "baserom.gba", 0x00183575, 0x7
-
-    .global gUnknown_0818357C
-gUnknown_0818357C:
-    .incbin "baserom.gba", 0x0018357C, 0x8
-
-    .global gUnknown_08183584
-gUnknown_08183584:
-    .incbin "baserom.gba", 0x00183584, 0x4
-
-    .global gUnknown_08183588
-gUnknown_08183588:
-    .incbin "baserom.gba", 0x00183588, 0x5
-
-    .global gUnknown_0818358D
-gUnknown_0818358D:
-    .incbin "baserom.gba", 0x0018358D, 0x6
-
-    .global gUnknown_08183593
-gUnknown_08183593:
-    .incbin "baserom.gba", 0x00183593, 0x7
-
-    .global gUnknown_0818359A
-gUnknown_0818359A:
-    .incbin "baserom.gba", 0x0018359A, 0x8
-
-    .global gUnknown_081835A2
-gUnknown_081835A2:
-    .incbin "baserom.gba", 0x001835A2, 0x4
-
-    .global gUnknown_081835A6
-gUnknown_081835A6:
-    .incbin "baserom.gba", 0x001835A6, 0x5
-
-    .global gUnknown_081835AB
-gUnknown_081835AB:
-    .incbin "baserom.gba", 0x001835AB, 0x5
-
-    .global gUnknown_081835B0
-gUnknown_081835B0:
-    .incbin "baserom.gba", 0x001835B0, 0x5
-
-    .global gUnknown_081835B5
-gUnknown_081835B5:
-    .incbin "baserom.gba", 0x001835B5, 0x5
-
-    .global gUnknown_081835BA
-gUnknown_081835BA:
-    .incbin "baserom.gba", 0x001835BA, 0x5
-
-    .global gUnknown_081835BF
-gUnknown_081835BF:
-    .incbin "baserom.gba", 0x001835BF, 0x4
-
-    .global gUnknown_081835C3
-gUnknown_081835C3:
-    .incbin "baserom.gba", 0x001835C3, 0x4
-
+    .include "text/multiple/title_menu.inc"
+    
     .global gUnknown_081835C7
 gUnknown_081835C7:
     .incbin "baserom.gba", 0x001835C7, 0x9
@@ -7135,26 +6803,30 @@ gUnknown_081835D0:
 
     .global gUnknown_081835EC
 gUnknown_081835EC:
-    .incbin "baserom.gba", 0x001835EC, 0xC
+   .word gUnknown_03000BF0
+   .word gUnknown_03000BF8
+   .word gUnknown_03000C00
 
     .global gUnknown_081835F8
 gUnknown_081835F8:
-    .incbin "baserom.gba", 0x001835F8, 0x8
+   .word gUnknown_03000C08
+   .word gUnknown_03000C10
 
     .global gUnknown_08183600
 gUnknown_08183600:
-    .incbin "baserom.gba", 0x00183600, 0x8
+   .word gUnknown_081832DC
+   .word gUnknown_081832E1
 
     .global gUnknown_08183608
 gUnknown_08183608:
-    .incbin "baserom.gba", 0x00183608, 0x8
+   .word gUnknown_03000C18
+   .word gUnknown_03000C20
 
     .global gUnknown_08183610
 gUnknown_08183610:
     .word sub_8075FBC
     .word sub_8076078
     .word sub_80761E4
-
 
     .global gUnknown_0818361C
 gUnknown_0818361C:
@@ -7170,6 +6842,9 @@ gUnknown_0818361C:
     .word sub_807631C
     .word sub_80763E0
     .word sub_80763F0
+
+    .global gUnknown_0818364C
+gUnknown_0818364C:
     .word sub_807A140
     .word sub_807A140
     .word sub_807A1AC
@@ -7180,6 +6855,9 @@ gUnknown_0818361C:
     .word sub_807A3A4
     .word sub_807A140
     .word sub_807A140
+
+    .global gUnknown_08183674
+gUnknown_08183674:
     .word sub_807B364
     .word sub_807A400
     .word sub_807AF44
@@ -7196,6 +6874,9 @@ gUnknown_0818361C:
     .word sub_807A8EC
     .word sub_807A97C
     .word sub_807A9B0
+
+    .global gUnknown_081836B4
+gUnknown_081836B4:
     .word sub_807A140
     .word sub_807A140
     .word sub_807A1AC
@@ -7207,6 +6888,9 @@ gUnknown_0818361C:
     .word sub_807AAD8
     .word sub_807AB3C
     .word sub_807AC58
+
+    .global gUnknown_081836E0
+gUnknown_081836E0:
     .word sub_807A140
     .word sub_807A140
     .word sub_807A1AC
@@ -7216,6 +6900,9 @@ gUnknown_0818361C:
     .word sub_807A370
     .word sub_807A3A4
     .word sub_807ADB0
+
+    .global gUnknown_08183704
+gUnknown_08183704:
     .word sub_807A140
     .word sub_807A140
     .word sub_807A1AC
@@ -7232,6 +6919,9 @@ gUnknown_0818361C:
     .word sub_807ACA4
     .word sub_807AD48
     .word sub_807AD7C
+
+    .global gUnknown_08183744
+gUnknown_08183744:
     .word sub_807AE30
     .word sub_807AF08
     .word sub_807AF44
@@ -7239,17 +6929,524 @@ gUnknown_0818361C:
     .word sub_807AF80
     .word sub_807AFBC
     .word sub_807AFF8
+
+    .global gUnknown_08183760
+gUnknown_08183760:
     .word sub_807B034
+
+    .global gUnknown_08183764
+gUnknown_08183764:
     .word sub_807B1C0
+
+    .global gUnknown_08183768
+gUnknown_08183768:
     .word sub_807B364
     .word sub_807B398
+
+    .global gUnknown_08183770
+gUnknown_08183770:
     .word sub_807B450
     .word sub_807B4C8
 
 
     .global gUnknown_08183778
 gUnknown_08183778:
-    .incbin "baserom.gba", 0x00183778, 0x7C0
+   .word gUnknown_08183760
+   .word 0
+   .word 0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_08183674
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_0818364C
+   .word    0
+   .word gUnknown_08183768
+   .word gUnknown_08183674
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_081836B4
+   .word gUnknown_081836B4
+   .word gUnknown_081836B4
+   .word gUnknown_081836B4
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_081836E0
+   .word gUnknown_0818364C
+   .word gUnknown_081836E0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_08183704
+   .word gUnknown_0818364C
+   .word gUnknown_081836E0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_081836B4
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_081836B4
+   .word    0
+   .word gUnknown_0818364C
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_081836B4
+   .word    0
+   .word gUnknown_0818364C
+   .word    0
+   .word gUnknown_081836B4
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183704
+   .word gUnknown_08183704
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_081836B4
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_0818364C
+   .word    0
+   .word gUnknown_081836B4
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word gUnknown_08183674
+   .word gUnknown_08183704
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183744
+   .word    0
+   .word    0
+   .word gUnknown_08183744
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_081836B4
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183744
+   .word gUnknown_08183674
+   .word gUnknown_08183744
+   .word    0
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183744
+   .word gUnknown_08183744
+   .word    0
+   .word gUnknown_08183770
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_08183674
+   .word gUnknown_08183744
+   .word    0
+   .word gUnknown_08183674
+   .word gUnknown_08183744
+   .word gUnknown_08183744
+   .word gUnknown_08183744
+   .word gUnknown_08183744
+   .word gUnknown_08183744
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_08183674
+   .word gUnknown_081836B4
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_081836B4
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183704
+   .word gUnknown_0818364C
+   .word    0
+   .word gUnknown_0818364C
+   .word    0
+   .word gUnknown_0818364C
+   .word    0
+   .word gUnknown_0818364C
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word    0
+   .word gUnknown_0818364C
+   .word    0
+   .word gUnknown_081836B4
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_081836B4
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_081836B4
+   .word gUnknown_0818364C
+   .word gUnknown_081836E0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_081836E0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_081836B4
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_081836B4
+   .word    0
+   .word    0
+   .word gUnknown_081836B4
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183744
+   .word gUnknown_081836B4
+   .word gUnknown_081836B4
+   .word gUnknown_0818364C
+   .word gUnknown_081836E0
+   .word gUnknown_0818364C
+   .word gUnknown_081836E0
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_081836B4
+   .word gUnknown_081836B4
+   .word gUnknown_0818364C
+   .word gUnknown_081836E0
+   .word gUnknown_081836E0
+   .word gUnknown_081836E0
+   .word gUnknown_081836E0
+   .word gUnknown_0818364C
+   .word 0
+   .word 0
+   .word gUnknown_081836B4
+   .word gUnknown_081836B4
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183764
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word gUnknown_0818364C
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_08183674
+   .word    0
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word    0
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word    0
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word    0
+   .word gUnknown_08183744
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word    0
+   .word gUnknown_0818364C
+   .word gUnknown_08183744
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word 0
+   .word gUnknown_0818364C
+   .word 0
+   .word 0
+   .word gUnknown_08183704
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_081836B4
+   .word 0
+   .word 0
+   .word 0
+   .word 0
+   .word 0
+   .word 0
+   .word 0
+   .word 0
+   .word 0
+   .word 0
+   .word gUnknown_08183674
+   .word 0
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word 0
+   .word 0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_081836B4
+   .word 0
+   .word gUnknown_0818364C
+   .word gUnknown_0818364C
+   .word gUnknown_081836B4
+   .word gUnknown_081836B4
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
+   .word gUnknown_08183674
 
     .global gUnknown_08183F38
 gUnknown_08183F38:
