@@ -7997,15 +7997,15 @@ gUnknown_08184F80:
 
     .global gUnknown_08184F90
 gUnknown_08184F90:
-    .incbin "baserom.gba", 0x00184F90, 0x5D3
+    .incbin "baserom.gba", 0x00184F90, 0x408
+
+    .include "text/multiple/credits.inc"
 
     .global gUnknown_08185563
 gUnknown_08185563:
     .incbin "baserom.gba", 0x00185563, 0x99
 
-    .global gUnknown_081855FC
-gUnknown_081855FC:
-    .incbin "baserom.gba", 0x001855FC, 0xC8
+    .include "text/multiple/credits_pointers.inc"
 
     .global gUnknown_081856C4
 gUnknown_081856C4:
@@ -8152,39 +8152,827 @@ gUnknown_081859E8:
     .word sub_809C02C
     .word sub_809C050
     .word sub_809C074
+
+    .align 2
+    .global gUnknown_08185A04
+gUnknown_08185A04:
     .word sub_807D618
     .word sub_809CD28
+
+    .align 2
+    .global gUnknown_08185A0C
+gUnknown_08185A0C:
     .word sub_807B89C
     .word sub_809CDF4
+
+    .align 2
+    .global gUnknown_08185A14
+gUnknown_08185A14:
     .word sub_807D618
     .word sub_809CD28
+
+    .align 2
+    .global gUnknown_08185A1C
+gUnknown_08185A1C:
     .word sub_809CF24
     .word sub_809CFB0
+
+    .align 2
+    .global gUnknown_08185A24
+gUnknown_08185A24:
     .word sub_809CFCC
     .word sub_809D134
+
+    .align 2
+    .global gUnknown_08185A2C
+gUnknown_08185A2C:
     .word sub_809D020
     .word sub_809D090
+
+    .align 2
+    .global gUnknown_08185A34
+gUnknown_08185A34:
     .word sub_809CF24
     .word sub_809CFB0
+
+    .align 2
+    .global gUnknown_08185A3C
+gUnknown_08185A3C:
     .word sub_809CF24
     .word sub_809CFB0
+
+    .align 2
+    .global gUnknown_08185A44
+gUnknown_08185A44:
     .word sub_809D150
     .word sub_809CFB0
+
+    .align 2
+    .global gUnknown_08185A4C
+gUnknown_08185A4C:
     .word sub_809D1DC
     .word sub_809D46C
+
+    .align 2
+    .global gUnknown_08185A54
+gUnknown_08185A54:
     .word sub_809D4F8
     .word sub_809D5E8
+
+    .align 2
+    .global gUnknown_08185A5C
+gUnknown_08185A5C:
     .word sub_809CEB0
     .word sub_809CE80
+
+    .align 2
+    .global gUnknown_08185A64
+gUnknown_08185A64:
     .word sub_809D2D4
     .word sub_809D444
+
+    .align 2
+    .global gUnknown_08185A6C
+gUnknown_08185A6C:
     .word sub_809D648
     .word sub_809D72C
 
-
+    .align 2
     .global gUnknown_08185A74
 gUnknown_08185A74:
-    .incbin "baserom.gba", 0x00185A74, 0xA84
+    .word gUnknown_08185A04
+    .word gUnknown_08185A04
+    .word gUnknown_08185A0C
+    .word gUnknown_08185A04
+    .word gUnknown_08185A14
+    .word gUnknown_08185A14
+    .word gUnknown_08185A04
+    .word gUnknown_08185A14
+    .word gUnknown_08185A1C
+    .word gUnknown_08185A14
+    .word gUnknown_08185A24
+    .word gUnknown_08185A2C
+    .word gUnknown_08185A04
+    .word gUnknown_08185A34
+    .word gUnknown_08185A34
+    .word gUnknown_08185A34
+    .word gUnknown_08185A04
+    .word gUnknown_08185A04
+    .word gUnknown_08185A14
+    .word gUnknown_08185A14
+    .word gUnknown_08185A0C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A04
+    .word gUnknown_08185A04
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A24
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A44
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A14
+    .word gUnknown_08185A4C
+    .word gUnknown_08185A14
+    .word gUnknown_08185A04
+    .word gUnknown_08185A04
+    .word gUnknown_08185A24
+    .word gUnknown_08185A24
+    .word gUnknown_08185A24
+    .word gUnknown_08185A24
+    .word gUnknown_08185A24
+    .word gUnknown_08185A04
+    .word gUnknown_08185A04
+    .word gUnknown_08185A04
+    .word gUnknown_08185A4C
+    .word gUnknown_08185A4C
+    .word gUnknown_08185A4C
+    .word gUnknown_08185A4C
+    .word gUnknown_08185A4C
+    .word gUnknown_08185A4C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A24
+    .word gUnknown_08185A24
+    .word gUnknown_08185A24
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A44
+    .word gUnknown_08185A4C
+    .word gUnknown_08185A54
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word gUnknown_08185A3C
+    .word 0
+    .word gUnknown_08185A24
+    .word gUnknown_08185A24
+    .word gUnknown_08185A24
+    .word gUnknown_08185A24
+    .word gUnknown_08185A5C
+    .word gUnknown_08185A5C
+    .word 0
+    .word gUnknown_08185A24
+    .word gUnknown_08185A24
+    .word gUnknown_08185A24
+    .word gUnknown_08185A0C
+    .word gUnknown_08185A34
+    .word gUnknown_08185A34
+    .word gUnknown_08185A64
+    .word gUnknown_08185A4C
+    .word gUnknown_08185A24
+    .word gUnknown_08185A04
+    .word gUnknown_08185A6C
+    .word gUnknown_08185A6C
+    .word gUnknown_08185A6C
+
+    .global gUnknown_08185BEC
+gUnknown_08185BEC:
+    .word sub_8082360
+    .word sub_8082360
+    .word sub_8082360
+    .word sub_80823A4
+
+    .global gUnknown_08185BFC
+gUnknown_08185BFC:
+    .word sub_8082680
+    .word sub_8082800
+    .word sub_8082840
+    .word sub_80828A8
+    .word sub_808291C
+    .word sub_8082800
+    .word sub_80829D4
+
+    .global gUnknown_08185C18
+gUnknown_08185C18:
+    .word sub_8082A48
+    .word sub_8082A48
+    .word sub_8082A48
+
+    .global gUnknown_08185C24
+gUnknown_08185C24:
+    .word sub_8082A8C
+    .word sub_8082AB8
+    .word sub_8082AD0
+    .word sub_8082AE8
+    .word sub_8082B00
+
+    .global gUnknown_08185C38
+gUnknown_08185C38:
+    .word sub_8082B7C
+    .word sub_8082B7C
+    .word sub_8082B7C
+    .word sub_8082B7C
+    .word sub_8082B7C
+    .word sub_8082BD0
+
+    .global gUnknown_08185C50
+gUnknown_08185C50:
+    .word sub_8082C3C
+    .word sub_8082C68
+    .word sub_8082C80
+    .word sub_8082C98
+    .word sub_8082CB0
+
+    .global gUnknown_08185C64
+gUnknown_08185C64:
+    .word sub_8082CDC
+
+    .global gUnknown_08185C68
+gUnknown_08185C68:
+    .word sub_8082D28
+
+    .global gUnknown_08185C6C
+gUnknown_08185C6C:
+    .word sub_8082D54
+    .word sub_8082DE0
+    .word sub_8082E2C
+    .word sub_8082E2C
+    .word sub_8082E2C
+
+    .global gUnknown_08185C80
+gUnknown_08185C80:
+    .word sub_8082F20
+    .word sub_8082F68
+    .word sub_8082FC4
+    .word sub_8082FC4
+    .word sub_8082FC4
+
+    .global gUnknown_08185C94
+gUnknown_08185C94:
+    .word sub_8082FF0
+    .word sub_8083120
+
+    .global gUnknown_08185C9C
+gUnknown_08185C9C:
+    .word sub_8083200
+    .word sub_8082CDC
+    .word sub_8083234
+    .word sub_8083234
+    .word sub_8083234
+    .word sub_8083278
+
+    .global gUnknown_08185CB4
+gUnknown_08185CB4:
+    .word sub_8083278
+    .word sub_8083348
+    .word sub_80833C0
+    .word sub_8083278
+    .word sub_8083348
+    .word sub_8083420
+
+    .global gUnknown_08185CCC
+gUnknown_08185CCC:
+    .word sub_8083478
+    .word sub_80834B4
+    .word sub_8083544
+    .word sub_8083594
+
+    .global gUnknown_08185CDC
+gUnknown_08185CDC:
+    .word sub_8082BD0
+    .word sub_808362C
+
+    .global gUnknown_08185CE4
+gUnknown_08185CE4:
+    .word sub_80836F4
+    .word sub_80837FC
+    .word sub_80838E4
+
+    .global gUnknown_08185CF0
+gUnknown_08185CF0:
+    .word sub_8083910
+    .word sub_8083998
+    .word sub_80839E0
+
+    .global gUnknown_08185CFC
+gUnknown_08185CFC:
+    .word sub_8083A28
+    .word sub_8083AC0
+
+    .global gUnknown_08185D04
+gUnknown_08185D04:
+    .word sub_8083B6C
+    .word sub_8083BC4
+    .word sub_8083C08
+    .word sub_8083C70
+    .word sub_8083CB4
+    .word sub_8083CB4
+    .word sub_8083F84
+
+    .global gUnknown_08185D20
+gUnknown_08185D20:
+    .word sub_8083FC8
+    .word sub_808400C
+    .word sub_8084140
+    .word sub_8084234
+    .word sub_8084264
+    .word sub_8083278
+    .word gUnknown_08185BEC
+    .word gUnknown_08185BFC
+    .word gUnknown_08185BFC
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C18
+    .word    0
+    .word gUnknown_08185C24
+    .word gUnknown_08185BFC
+    .word gUnknown_08185C38
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C38
+    .word gUnknown_08185C18
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C50
+    .word gUnknown_08185C50
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C64
+    .word gUnknown_08185C64
+    .word    0
+    .word    0
+    .word gUnknown_08185C68
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C6C
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C38
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185BFC
+    .word gUnknown_08185BFC
+    .word gUnknown_08185BFC
+    .word gUnknown_08185BFC
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C80
+    .word gUnknown_08185C38
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C94
+    .word gUnknown_08185C50
+    .word gUnknown_08185C24
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C9C
+    .word    0
+    .word gUnknown_08185C9C
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C64
+    .word gUnknown_08185C64
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C9C
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C9C
+    .word gUnknown_08185CB4
+    .word gUnknown_08185C9C
+    .word gUnknown_08185C9C
+    .word gUnknown_08185C9C
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C38
+    .word gUnknown_08185C38
+    .word gUnknown_08185C38
+    .word gUnknown_08185C38
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C38
+    .word gUnknown_08185C18
+    .word    0
+    .word gUnknown_08185C38
+    .word    0
+    .word    0
+    .word gUnknown_08185CCC
+    .word gUnknown_08185C38
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C38
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185BFC
+    .word    0
+    .word gUnknown_08185C24
+    .word gUnknown_08185BFC
+    .word gUnknown_08185C18
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185CDC
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C80
+    .word gUnknown_08185C80
+    .word gUnknown_08185C80
+    .word gUnknown_08185C80
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185CE4
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185CB4
+    .word    0
+    .word gUnknown_08185CF0
+    .word gUnknown_08185CFC
+    .word gUnknown_08185BFC
+    .word    0
+    .word gUnknown_08185C38
+    .word gUnknown_08185C80
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C18
+    .word    0
+    .word    0
+    .word gUnknown_08185CDC
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185CFC
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185BFC
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185D04
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C9C
+    .word gUnknown_08185C9C
+    .word gUnknown_08185C9C
+    .word gUnknown_08185C9C
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C9C
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185CDC
+    .word    0
+    .word gUnknown_08185C9C
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C6C
+    .word gUnknown_08185C6C
+    .word gUnknown_08185C9C
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185C64
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word gUnknown_08185D20
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
+    .word    0
 
     .global gUnknown_081864F8
 gUnknown_081864F8:
