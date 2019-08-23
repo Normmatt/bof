@@ -31390,10 +31390,14 @@ gUnknown_08219228:
 gUnknown_08219280:
     .incbin "baserom.gba", 0x00219280, 0x34
 
+    @tileset graphical data
+    .align 2
     .global gUnknown_082192B4
 gUnknown_082192B4:
     .incbin "baserom.gba", 0x002192B4, 0x4A704
 
+    @tileset related
+    .align 2
     .global gUnknown_082639B8
 gUnknown_082639B8:
     .incbin "baserom.gba", 0x002639B8, 0x5D8
@@ -31404,11 +31408,19 @@ gUnknown_08263F90:
 
     .global gUnknown_08264180
 gUnknown_08264180:
-    .incbin "baserom.gba", 0x00264180, 0x1260
+    .incbin "baserom.gba", 0x00264180, 0x6C
+
+    .global gUnknown_082641EC
+gUnknown_082641EC:
+    .incbin "baserom.gba", 0x002641EC, 0x11F4
 
     .global gUnknown_082653E0
 gUnknown_082653E0:
-    .incbin "baserom.gba", 0x002653E0, 0x63C
+    .incbin "baserom.gba", 0x002653E0, 0x25C
+
+    .global gUnknown_0826563C
+gUnknown_0826563C:
+    .incbin "baserom.gba", 0x0026563C, 0x3E0
 
     .global gUnknown_08265A1C
 gUnknown_08265A1C:
@@ -31664,7 +31676,23 @@ gUnknown_082721EC:
 
     .global gUnknown_08272340
 gUnknown_08272340:
-    .incbin "baserom.gba", 0x00272340, 0x337E0
+    .incbin "baserom.gba", 0x00272340, 0x339C
+
+    .global gUnknown_082756DC
+gUnknown_082756DC:
+    .incbin "baserom.gba", 0x002756DC, 0x43A4
+
+    .global gUnknown_08279A80
+gUnknown_08279A80:
+    .incbin "baserom.gba", 0x00279A80, 0x44
+
+    .global gUnknown_08279AC4
+gUnknown_08279AC4:
+    .incbin "baserom.gba", 0x00279AC4, 0x2BDC4
+
+    .global gUnknown_082A5888
+gUnknown_082A5888:
+    .incbin "baserom.gba", 0x002A5888, 0x298
 
     .global gUnknown_082A5B20
 gUnknown_082A5B20:
