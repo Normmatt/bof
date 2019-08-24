@@ -1,29 +1,29 @@
 	@********************** Voicegroup **********************@
-
+	.align 2
 gUnknown_08142684:	@ 0x08142684
-	voice_directsound 60, 0, 0x081438F4, 255, 0, 255, 0	@08142684
-	voice_directsound 60, 0, 0x081495C8, 255, 0, 255, 0	@08142690
-	voice_directsound 60, 0, 0x08149FCC, 255, 0, 255, 0	@0814269C
-	voice_directsound 60, 0, 0x0814A050, 255, 0, 255, 0	@081426A8
-	voice_directsound 60, 0, 0x0814AA34, 255, 0, 255, 0	@081426B4
-	voice_directsound 60, 0, 0x0814B228, 255, 0, 255, 0	@081426C0
-	voice_directsound 60, 0, 0x0814C94C, 255, 0, 255, 0	@081426CC
-	voice_directsound 60, 0, 0x0814FBE0, 255, 252, 0, 0	@081426D8
-	voice_directsound 60, 0, 0x08153AE4, 255, 0, 255, 0	@081426E4
-	voice_directsound 60, 0, 0x081541C8, 255, 0, 255, 0	@081426F0
-	voice_directsound 60, 0, 0x0815568C, 255, 252, 0, 0	@081426FC
-	voice_directsound 60, 0, 0x08155C10, 255, 246, 0, 0	@08142708
-	voice_directsound 60, 0, 0x08157464, 255, 249, 0, 0	@08142714
-	voice_directsound 60, 0, 0x08159468, 255, 0, 255, 0	@08142720
-	voice_directsound 60, 0, 0x0815A01C, 255, 0, 255, 0	@0814272C
-	voice_directsound 60, 0, 0x0815A0A0, 255, 0, 255, 0	@08142738
-	voice_directsound 60, 0, 0x0815A124, 255, 0, 255, 0	@08142744
-	voice_directsound 60, 0, 0x0815A488, 255, 0, 255, 0	@08142750
-	voice_directsound 60, 0, 0x0815A9BC, 255, 0, 255, 0	@0814275C
-	voice_directsound 60, 0, 0x0815BB70, 255, 250, 0, 0	@08142768
-	voice_directsound 60, 0, 0x0815BBF4, 255, 239, 0, 0	@08142774
-	voice_directsound 60, 0, 0x0815CBA8, 255, 243, 0, 0	@08142780
-	voice_directsound 60, 0, 0x0815D72C, 255, 246, 0, 0	@0814278C
+	voice_directsound 60, 0, gUnknown_081438F4, 255, 0, 255, 0	@08142684
+	voice_directsound 60, 0, gUnknown_081495C8, 255, 0, 255, 0	@08142690
+	voice_directsound 60, 0, gUnknown_08149FCC, 255, 0, 255, 0	@0814269C
+	voice_directsound 60, 0, gUnknown_0814A050, 255, 0, 255, 0	@081426A8
+	voice_directsound 60, 0, gUnknown_0814AA34, 255, 0, 255, 0	@081426B4
+	voice_directsound 60, 0, gUnknown_0814B228, 255, 0, 255, 0	@081426C0
+	voice_directsound 60, 0, gUnknown_0814C94C, 255, 0, 255, 0	@081426CC
+	voice_directsound 60, 0, gUnknown_0814FBE0, 255, 252, 0, 0	@081426D8
+	voice_directsound 60, 0, gUnknown_08153AE4, 255, 0, 255, 0	@081426E4
+	voice_directsound 60, 0, gUnknown_081541C8, 255, 0, 255, 0	@081426F0
+	voice_directsound 60, 0, gUnknown_0815568C, 255, 252, 0, 0	@081426FC
+	voice_directsound 60, 0, gUnknown_08155C10, 255, 246, 0, 0	@08142708
+	voice_directsound 60, 0, gUnknown_08157464, 255, 249, 0, 0	@08142714
+	voice_directsound 60, 0, gUnknown_08159468, 255, 0, 255, 0	@08142720
+	voice_directsound 60, 0, gUnknown_0815A01C, 255, 0, 255, 0	@0814272C
+	voice_directsound 60, 0, gUnknown_0815A0A0, 255, 0, 255, 0	@08142738
+	voice_directsound 60, 0, gUnknown_0815A124, 255, 0, 255, 0	@08142744
+	voice_directsound 60, 0, gUnknown_0815A488, 255, 0, 255, 0	@08142750
+	voice_directsound 60, 0, gUnknown_0815A9BC, 255, 0, 255, 0	@0814275C
+	voice_directsound 60, 0, gUnknown_0815BB70, 255, 250, 0, 0	@08142768
+	voice_directsound 60, 0, gUnknown_0815BBF4, 255, 239, 0, 0	@08142774
+	voice_directsound 60, 0, gUnknown_0815CBA8, 255, 243, 0, 0	@08142780
+	voice_directsound 60, 0, gUnknown_0815D72C, 255, 246, 0, 0	@0814278C
 	voice_square_1 0, 0, 0, 0, 15, 0	@08142798
 	voice_square_1 0, 0, 0, 6, 0, 0	@081427A4
 	voice_square_1 0, 0, 0, 3, 0, 0	@081427B0
