@@ -798,7 +798,7 @@ sub_81137C8: @ 0x081137C8
 	str r2, [r0]
 	ldr r0, _081137F0
 	ldr r1, _081137F4
-	bl sub_81172D4
+	bl MultiSioMain
 	ldr r1, _081137EC
 	str r0, [r1]
 	pop {r7}
@@ -1676,7 +1676,7 @@ _08113FBE:
 	movs r2, #1
 	movs r3, #0
 	bl sub_80BC91C
-	bl sub_8117104
+	bl MultiSioInit
 	movs r0, #0
 	str r0, [r7]
 _08113FE8:
@@ -1781,7 +1781,7 @@ sub_81140A0: @ 0x081140A0
 	push {r7, lr}
 	sub sp, #4
 	add r7, sp, #4
-	bl sub_8117268
+	bl MultiSioStop
 	ldr r0, _08114118
 	ldrb r1, [r0]
 	cmp r1, #0x13
@@ -1953,7 +1953,7 @@ sub_8114228: @ 0x08114228
 	push {r7, lr}
 	sub sp, #4
 	mov r7, sp
-	bl sub_811723C
+	bl MultiSioStart
 	movs r0, #0
 	str r0, [r7]
 _08114236:
@@ -7445,7 +7445,7 @@ _08116F0C: .4byte gUnknown_030051B0
 sub_8116F10: @ 0x08116F10
 	push {r7, lr}
 	mov r7, sp
-	bl sub_8117268
+	bl MultiSioStop
 	ldr r0, _08116F48
 	ldrb r1, [r0, #0xc]
 	movs r2, #0
@@ -7695,8 +7695,8 @@ _081170FC:
 	pop {r1}
 	bx r1
 
-	THUMB_FUNC_START sub_8117104
-sub_8117104: @ 0x08117104
+	THUMB_FUNC_START MultiSioInit
+MultiSioInit: @ 0x08117104
 	push {r7, lr}
 	sub sp, #8
 	mov r7, sp
@@ -7841,8 +7841,8 @@ _08117210:
 _08117234: .4byte 0x04000208
 _08117238: .4byte 0x04000200
 
-	THUMB_FUNC_START sub_811723C
-sub_811723C: @ 0x0811723C
+	THUMB_FUNC_START MultiSioStart
+MultiSioStart: @ 0x0811723C
 	push {r7, lr}
 	mov r7, sp
 	ldr r0, _08117264
@@ -7866,8 +7866,8 @@ _0811725C:
 	.align 2, 0
 _08117264: .4byte gUnknown_03006DB0
 
-	THUMB_FUNC_START sub_8117268
-sub_8117268: @ 0x08117268
+	THUMB_FUNC_START MultiSioStop
+MultiSioStop: @ 0x08117268
 	push {r7, lr}
 	mov r7, sp
 	ldr r0, _081172B0
@@ -7914,8 +7914,8 @@ _081172C8: .4byte 0x0000B1FC
 _081172CC: .4byte 0x04000202
 _081172D0: .4byte gUnknown_03006DB0
 
-	THUMB_FUNC_START sub_81172D4
-sub_81172D4: @ 0x081172D4
+	THUMB_FUNC_START MultiSioMain
+MultiSioMain: @ 0x081172D4
 	push {r4, r5, r6, r7, lr}
 	mov r7, r8
 	push {r7}
@@ -8048,9 +8048,9 @@ _081173BE:
 _081173D2:
 	ldr r1, [r7, #4]
 	adds r0, r1, #0
-	bl sub_8117570
+	bl MultiSioRecvDataCheck
 	ldr r0, [r7]
-	bl sub_8117484
+	bl MultiSioSendDataSet
 	b _08117404
 	.align 2, 0
 _081173E4: .4byte gUnknown_03006DB0
@@ -8131,8 +8131,8 @@ _08117478:
 	pop {r1}
 	bx r1
 
-	THUMB_FUNC_START sub_8117484
-sub_8117484: @ 0x08117484
+	THUMB_FUNC_START MultiSioSendDataSet
+MultiSioSendDataSet: @ 0x08117484
 	push {r7, lr}
 	sub sp, #0xc
 	mov r7, sp
@@ -8252,8 +8252,8 @@ _0811755E:
 _08117568: .4byte gUnknown_03006DB0
 _0811756C: .4byte 0x0400010E
 
-	THUMB_FUNC_START sub_8117570
-sub_8117570: @ 0x08117570
+	THUMB_FUNC_START MultiSioRecvDataCheck
+MultiSioRecvDataCheck: @ 0x08117570
 	push {r7, lr}
 	sub sp, #0x24
 	mov r7, sp
@@ -8465,8 +8465,8 @@ _08117708:
 	pop {r1}
 	bx r1
 
-	THUMB_FUNC_START sub_8117710
-sub_8117710: @ 0x08117710
+	THUMB_FUNC_START MultiSioIntr
+MultiSioIntr: @ 0x08117710
 	push {r7, lr}
 	sub sp, #0x14
 	mov r7, sp

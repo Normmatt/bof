@@ -84,4 +84,4 @@ _080001AC:
 	.align 2, 0
 _080001C0: .4byte gUnknown_03007FFC
 _080001C4: .4byte AgbMain+1
-_080001C8: .4byte gUnknown_03002460
+_080001C8: .4byte IntrTable

@@ -40,7 +40,7 @@ _080007DA:
 	strb r2, [r0]
 	b _080007D0
 	.align 2, 0
-_08000808: .4byte gUnknown_03002460
+_08000808: .4byte IntrTable
 _0800080C: .4byte gUnknown_0811FB38
 _08000810:
 	ldr r0, _08000864
@@ -97,8 +97,8 @@ _08000880: .4byte 0x00002001
 _08000884: .4byte 0x04000004
 _08000888: .4byte gUnknown_0300249C
 _0800088C: .4byte gUnknown_0817B400
-_08000890: .4byte gUnknown_03002460
-_08000894: .4byte sub_8000D68+1
+_08000890: .4byte IntrTable
+_08000894: .4byte VBlankIntr+1
 
 	THUMB_FUNC_START sub_8000898
 sub_8000898: @ 0x08000898
@@ -627,8 +627,8 @@ _08000D5C: .4byte 0x80000070
 _08000D60: .4byte gUnknown_0202D2C0
 _08000D64: .4byte gUnknown_03005350
 
-	THUMB_FUNC_START sub_8000D68
-sub_8000D68: @ 0x08000D68
+	THUMB_FUNC_START VBlankIntr
+VBlankIntr: @ 0x08000D68
 	push {r7, lr}
 	mov r7, sp
 	ldr r0, _08000DBC
@@ -672,8 +672,8 @@ _08000DBC: .4byte gUnknown_03007FF8
 _08000DC0: .4byte gUnknown_030024A8
 _08000DC4: .4byte gUnknown_03005350
 
-	THUMB_FUNC_START sub_8000DC8
-sub_8000DC8: @ 0x08000DC8
+	THUMB_FUNC_START VBlankIntr_NoSound
+VBlankIntr_NoSound: @ 0x08000DC8
 	push {r7, lr}
 	mov r7, sp
 	ldr r0, _08000E18
@@ -878,8 +878,8 @@ _08000F68: .4byte gUnknown_0201B7C0
 _08000F6C: .4byte 0x06001800
 _08000F70: .4byte 0xFFF7FFFF
 
-	THUMB_FUNC_START sub_8000F74
-sub_8000F74: @ 0x08000F74
+	THUMB_FUNC_START HBlankIntr
+HBlankIntr: @ 0x08000F74
 	push {r7, lr}
 	sub sp, #4
 	mov r7, sp
@@ -980,8 +980,8 @@ _08001038: .4byte gUnknown_03005C3C
 _0800103C: .4byte 0xFFFFFBFF
 _08001040: .4byte gUnknown_03007FF8
 
-	THUMB_FUNC_START sub_8001044
-sub_8001044: @ 0x08001044
+	THUMB_FUNC_START IntrDammy
+IntrDammy: @ 0x08001044
 	push {r7, lr}
 	mov r7, sp
 	pop {r7}
@@ -2135,8 +2135,8 @@ sub_8001938: @ 0x08001938
 	.align 2, 0
 _08001964: .4byte gUnknown_0300249C
 _08001968: .4byte gUnknown_0817B400
-_0800196C: .4byte gUnknown_03002460
-_08001970: .4byte sub_8000D68+1
+_0800196C: .4byte IntrTable
+_08001970: .4byte VBlankIntr+1
 _08001974:
 	ldr r0, _08001984
 	ldr r1, _08001988
@@ -2147,8 +2147,8 @@ _0800197A:
 	pop {r0}
 	bx r0
 	.align 2, 0
-_08001984: .4byte gUnknown_03002460
-_08001988: .4byte sub_8000DC8+1
+_08001984: .4byte IntrTable
+_08001988: .4byte VBlankIntr_NoSound+1
 
 	THUMB_FUNC_START sub_800198C
 sub_800198C: @ 0x0800198C

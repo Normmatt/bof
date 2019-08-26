@@ -412,7 +412,7 @@
 . = 0x00002410; gUnknown_03002410 = .;
 . = 0x00002418; gUnknown_03002418 = .;
 . = 0x0000241B; gUnknown_0300241B = .;
-. = 0x00002460; gUnknown_03002460 = .;
+. = 0x00002460; IntrTable = .;
 . = 0x0000249C; gUnknown_0300249C = .;
 . = 0x000024A0; gUnknown_030024A0 = .;
 . = 0x000024A8; gUnknown_030024A8 = .;
@@ -712,4 +712,3 @@
 . = 0x00007FF8; gUnknown_03007FF8 = .;
 . = 0x00007FFA; gUnknown_03007FFA = .;
 . = 0x00007FFC; gUnknown_03007FFC = .;
-. = 0x00FF03FF; gUnknown_03FF03FF = .;

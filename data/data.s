@@ -3,28 +3,28 @@
     .align 2
     .global gUnknown_0811FB38
 gUnknown_0811FB38:
-    .word sub_8000D68
-    .word sub_8000F74
-    .word sub_8001044
-    .word sub_8001044
-    .word sub_8001044
-    .word sub_8001044
-    .word sub_8117710
-    .word sub_8117710
-    .word sub_8001044
-    .word sub_8001044
-    .word sub_8001044
-    .word sub_8001044
-    .word sub_8001044
-    .word sub_8001044
-    .word sub_8001044
-    .word gUnknown_03002460
+    .word VBlankIntr
+    .word HBlankIntr
+    .word IntrDammy
+    .word IntrDammy
+    .word IntrDammy
+    .word IntrDammy
+    .word MultiSioIntr
+    .word MultiSioIntr
+    .word IntrDammy
+    .word IntrDammy
+    .word IntrDammy
+    .word IntrDammy
+    .word IntrDammy
+    .word IntrDammy
+    .word IntrDammy
+    .word IntrTable
     .word gUnknown_0811FB38
     .word sub_80000FC
     .word gUnknown_03000000
     .word gUnknown_0300249C
     .word gUnknown_0817B400
-    .word sub_8000D68
+    .word VBlankIntr
     .word gUnknown_030024A8
     .word gUnknown_03004ED8
     .word gUnknown_03002594
@@ -132,9 +132,9 @@ gUnknown_0811FB38:
     .word sub_8001920
     .word gUnknown_0300249C
     .word gUnknown_0817B400
-    .word gUnknown_03002460
-    .word sub_8000D68
-    .word sub_8000DC8
+    .word IntrTable
+    .word VBlankIntr
+    .word VBlankIntr_NoSound
     .word gUnknown_03004EC0
     .word gUnknown_02005810
     .word gUnknown_02020FC0
