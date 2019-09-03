@@ -32385,13 +32385,13 @@ gUnknown_082E4450:
 gUnknown_082E49B4:
     .incbin "baserom.gba", 0x002E49B4, 0xD00
 
-    .global gUnknown_082E56B4
-gUnknown_082E56B4:
-    .incbin "baserom.gba", 0x002E56B4, 0xA00
+    .include "constants/items/defensive_item_data.inc"
 
-    .global gUnknown_082E60B4
-gUnknown_082E60B4:
-    .incbin "baserom.gba", 0x002E60B4, 0x700
+    .global gUnknown_082E5F94
+gUnknown_082E5F94:
+    .incbin "baserom.gba", 0x002E5F94, 0x120
+
+    .include "constants/items/general_item_data.inc"
 
     .global gUnknown_082E67B4
 gUnknown_082E67B4:
@@ -32409,9 +32409,7 @@ gUnknown_082E69F3:
 gUnknown_082E69F4:
     .incbin "baserom.gba", 0x002E69F4, 0x140
 
-    .global gUnknown_082E6B34
-gUnknown_082E6B34:
-    .incbin "baserom.gba", 0x002E6B34, 0x600
+    .include "constants/items/offensive_item_data.inc"
 
     .global gUnknown_082E7134
 gUnknown_082E7134:
