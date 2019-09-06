@@ -1,6 +1,7 @@
 	.section .data
 
     .include "include/gba.inc"
+    .include "constants/items_constants.inc"
 
     .align 2
     .fill 0x1E4, 1, 0

@@ -7,8 +7,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  70	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 001 / 0x001 - 150GP
     .string "150ゼニ-"	@name
@@ -16,8 +16,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  150	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 002 / 0x002 - 300GP
     .string "300ゼニ-"	@name
@@ -25,8 +25,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  300	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 003 / 0x003 - 650GP
     .string "650ゼニ-"	@name
@@ -34,8 +34,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  650	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 004 / 0x004 - 900GP
     .string "900ゼニ-"	@name
@@ -43,8 +43,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  0	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 005 / 0x005 - 1200GP
     .string "1200ゼニ-"	@name
@@ -52,8 +52,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  1200	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 006 / 0x006 - 2000GP
     .string "2000ゼニ-"	@name
@@ -61,8 +61,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  2000	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 007 / 0x007 - 3000GP
     .string "3000ゼニ-"	@name
@@ -70,8 +70,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  3000	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 008 / 0x008 - Herb
     .string "やくそう"	@name
@@ -79,8 +79,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  10	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 009 / 0x009 - Cure
     .string "リフルエキス"	@name
@@ -88,8 +88,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  2000	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 010 / 0x00A - Antdt
     .string "どくけし"	@name
@@ -97,8 +97,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  15	@cost
     .byte   70	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 011 / 0x00B - Acorn
     .string "ちりょくのみ"	@name
@@ -106,8 +106,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  30	@cost
     .byte   19	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 012 / 0x00C - M.Drop
     .string "つきのしずく"	@name
@@ -115,8 +115,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  10000	@cost
     .byte   98	@unkC
-    .byte   0	@unkD
-    .byte   7	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   (ITEM_ELEMENT_UNK | ITEM_ELEMENT_WIND | ITEM_ELEMENT_CRUSH)	@element
 
 @ Item 013 / 0x00D - T.Drop
     .string "ベムのなみだ"	@name
@@ -124,8 +124,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  20	@cost
     .byte   2	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 014 / 0x00E - Charm
     .string "おふだ"	@name
@@ -133,8 +133,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  150	@cost
     .byte   7	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 015 / 0x00F - Life2
     .string "ばんのうやく"	@name
@@ -142,8 +142,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  1000	@cost
     .byte   16	@unkC
-    .byte   0	@unkD
-    .byte   6	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   (ITEM_ELEMENT_UNK | ITEM_ELEMENT_WIND)	@element
 
 @ Item 016 / 0x010 - Mrbl1
     .string "かいしんたん"	@name
@@ -151,8 +151,8 @@ gUnknown_082E60B4:
     .byte   48	@unk9
     .hword  1000	@cost
     .byte   56	@unkC
-    .byte   0	@unkD
-    .byte   16	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_JOLT	@element
 
 @ Item 017 / 0x011 - Mrbl2
     .string "かいしんせき"	@name
@@ -160,8 +160,8 @@ gUnknown_082E60B4:
     .byte   52	@unk9
     .hword  10000	@cost
     .byte   56	@unkC
-    .byte   0	@unkD
-    .byte   16	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_JOLT	@element
 
 @ Item 018 / 0x012 - Mrbl3
     .string "まもりけむり"	@name
@@ -169,8 +169,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  10	@cost
     .byte   57	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 019 / 0x013 - Whskrs
     .string "はずれ"	@name
@@ -178,8 +178,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 020 / 0x014 - Worm
     .string "みみず"	@name
@@ -187,8 +187,8 @@ gUnknown_082E60B4:
     .byte   97	@unk9
     .hword  50	@cost
     .byte   102	@unkC
-    .byte   127	@unkD
-    .byte   0	@flags
+    .byte   ~ITEM_USER_RYU	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 021 / 0x015 - Worm2
     .string "ごかい"	@name
@@ -196,8 +196,8 @@ gUnknown_082E60B4:
     .byte   97	@unk9
     .hword  100	@cost
     .byte   102	@unkC
-    .byte   127	@unkD
-    .byte   0	@flags
+    .byte   ~ITEM_USER_RYU	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 022 / 0x016 - Shrimp
     .string "えび"	@name
@@ -205,8 +205,8 @@ gUnknown_082E60B4:
     .byte   97	@unk9
     .hword  200	@cost
     .byte   102	@unkC
-    .byte   127	@unkD
-    .byte   0	@flags
+    .byte   ~ITEM_USER_RYU	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 023 / 0x017 - Urchin
     .string "うに"	@name
@@ -214,8 +214,8 @@ gUnknown_082E60B4:
     .byte   97	@unk9
     .hword  300	@cost
     .byte   102	@unkC
-    .byte   127	@unkD
-    .byte   0	@flags
+    .byte   ~ITEM_USER_RYU	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 024 / 0x018 - Shell
     .string "さざえ"	@name
@@ -223,8 +223,8 @@ gUnknown_082E60B4:
     .byte   97	@unk9
     .hword  500	@cost
     .byte   102	@unkC
-    .byte   127	@unkD
-    .byte   0	@flags
+    .byte   ~ITEM_USER_RYU	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 025 / 0x019 - Apple
     .string "りんご"	@name
@@ -232,8 +232,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  100	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 026 / 0x01A - ProtnA
     .string "パロテイン"	@name
@@ -241,8 +241,8 @@ gUnknown_082E60B4:
     .byte   48	@unk9
     .hword  300	@cost
     .byte   60	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 027 / 0x01B - Antler
     .string "しかのつの"	@name
@@ -250,8 +250,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  100	@cost
     .byte   70	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 028 / 0x01C - Wmeat
     .string "やきとり"	@name
@@ -259,8 +259,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  800	@cost
     .byte   59	@unkC
-    .byte   0	@unkD
-    .byte   3	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   (ITEM_ELEMENT_WIND | ITEM_ELEMENT_CRUSH)	@element
 
 @ Item 029 / 0x01D - Life
     .string "きつけやく"	@name
@@ -268,8 +268,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  500	@cost
     .byte   69	@unkC
-    .byte   0	@unkD
-    .byte   14	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   (ITEM_ELEMENT_DARK | ITEM_ELEMENT_UNK | ITEM_ELEMENT_WIND)	@element
 
 @ Item 030 / 0x01E - Nails
     .string "はずれ"	@name
@@ -277,8 +277,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 031 / 0x01F - Meat
     .string "げんしにく"	@name
@@ -286,24 +286,24 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  100	@cost
     .byte   59	@unkC
-    .byte   0	@unkD
-    .byte   3	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   (ITEM_ELEMENT_WIND | ITEM_ELEMENT_CRUSH)	@element
 
 @ Item 032 / 0x020 - B.Stn
     .string "サンダ-スト-ン"	@name
     .byte   48	@unk9
     .hword  20	@cost
     .byte   161	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 033 / 0x021 - F.Stn
     .string "ファイアスト-ン"	@name
     .byte   48	@unk9
     .hword  20	@cost
     .byte   161	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 034 / 0x022 - C.Stn
     .string "つめたいいし"	@name
@@ -311,8 +311,8 @@ gUnknown_082E60B4:
     .byte   48	@unk9
     .hword  40	@cost
     .byte   161	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 035 / 0x023 - Smoke
     .string "えんまく"	@name
@@ -320,8 +320,8 @@ gUnknown_082E60B4:
     .byte   48	@unk9
     .hword  100	@cost
     .byte   161	@unkC
-    .byte   0	@unkD
-    .byte   1	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_CRUSH	@element
 
 @ Item 036 / 0x024 - DkKiss
     .string "だてんしのキス"	@name
@@ -329,8 +329,8 @@ gUnknown_082E60B4:
     .byte   48	@unk9
     .hword  200	@cost
     .byte   161	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 037 / 0x025 - Cure2
     .string "リフラルエキス"	@name
@@ -338,8 +338,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  3250	@cost
     .byte   59	@unkC
-    .byte   0	@unkD
-    .byte   3	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   (ITEM_ELEMENT_WIND | ITEM_ELEMENT_CRUSH)	@element
 
 @ Item 038 / 0x026 - ProtnB
     .string "アブナイくすり"	@name
@@ -347,8 +347,8 @@ gUnknown_082E60B4:
     .byte   48	@unk9
     .hword  300	@cost
     .byte   161	@unkC
-    .byte   2	@unkD
-    .byte   2	@flags
+    .byte   ~(ITEM_USER_RYU | ITEM_USER_BO | ITEM_USER_NINA | ITEM_USER_OX | ITEM_USER_GOBI | ITEM_USER_KARN | ITEM_USER_BLEU)	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 039 / 0x027 - Sash
     .string "ゆうきのベルト"	@name
@@ -356,8 +356,8 @@ gUnknown_082E60B4:
     .byte   96	@unk9
     .hword  10	@cost
     .byte   67	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 040 / 0x028 - W.Ptn
     .string "みそのもと"	@name
@@ -365,16 +365,16 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  10	@cost
     .byte   64	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 041 / 0x029 - S.Ptn
     .string "ぶしんのたましい"	@name
     .byte   80	@unk9
     .hword  10	@cost
     .byte   65	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 042 / 0x02A - HrGlas
     .string "すなどけい"	@name
@@ -382,8 +382,8 @@ gUnknown_082E60B4:
     .byte   208	@unk9
     .hword  0	@cost
     .byte   62	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 043 / 0x02B - ExpBug
     .string "はずれ"	@name
@@ -391,16 +391,16 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  10	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 044 / 0x02C - Slab
     .string "こけむすせきばん"	@name
     .byte   240	@unk9
     .hword  0	@cost
     .byte   11	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 045 / 0x02D - Lifter
     .string "とうぞくのうで"	@name
@@ -408,8 +408,8 @@ gUnknown_082E60B4:
     .byte   96	@unk9
     .hword  0	@cost
     .byte   67	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 046 / 0x02E - E.Key
     .string "だいちのかぎ"	@name
@@ -417,8 +417,8 @@ gUnknown_082E60B4:
     .byte   176	@unk9
     .hword  0	@cost
     .byte   9	@unkC
-    .byte   0	@unkD
-    .byte   129	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   (ITEM_ELEMENT_HOLY | ITEM_ELEMENT_CRUSH)	@element
 
 @ Item 047 / 0x02F - ClmWtr
     .string "やすらぎのみず"	@name
@@ -426,8 +426,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   3	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   (ITEM_ELEMENT_WIND | ITEM_ELEMENT_CRUSH)	@element
 
 @ Item 048 / 0x030 - Coach
     .string "まほうのばしゃ"	@name
@@ -435,8 +435,8 @@ gUnknown_082E60B4:
     .byte   224	@unk9
     .hword  0	@cost
     .byte   164	@unkC
-    .byte   239	@unkD
-    .byte   0	@flags
+    .byte   ~ITEM_USER_OX	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 049 / 0x031 - Clog
     .string "そっこうのくつ"	@name
@@ -444,8 +444,8 @@ gUnknown_082E60B4:
     .byte   224	@unk9
     .hword  0	@cost
     .byte   61	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 050 / 0x032 - A.Ptn
     .string "すばやくそう"	@name
@@ -453,8 +453,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  20	@cost
     .byte   74	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 051 / 0x033 - L.Ptn
     .string "ラッきのえだ"	@name
@@ -462,8 +462,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  10	@cost
     .byte   76	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 052 / 0x034 - V.Ptn
     .string "スタミナのもと"	@name
@@ -471,16 +471,16 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  10	@cost
     .byte   78	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 053 / 0x035 - DrSoul
     .string "りゅうのたましい"	@name
     .byte   224	@unk9
     .hword  0	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 054 / 0x036 - DrWarp
     .string "どこでもドア"	@name
@@ -488,8 +488,8 @@ gUnknown_082E60B4:
     .byte   208	@unk9
     .hword  0	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 055 / 0x037 - PlceBo
     .string "はずれ"	@name
@@ -497,8 +497,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 056 / 0x038 - Remedy
     .string "げどくやく"	@name
@@ -506,8 +506,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 057 / 0x039 - WtrJr
     .string "クラインのつぼ"	@name
@@ -515,8 +515,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   71	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 058 / 0x03A - Saw
     .string "のこぎり"	@name
@@ -524,8 +524,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 059 / 0x03B - Tablet
     .string "なぞのせきばん"	@name
@@ -533,24 +533,24 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   89	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 060 / 0x03C - Ring
     .string "ゆうしゃのゆびわ"	@name
     .byte   224	@unk9
     .hword  0	@cost
     .byte   170	@unkC
-    .byte   127	@unkD
-    .byte   128	@flags
+    .byte   ~ITEM_USER_RYU	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 061 / 0x03D - WtrJr'
     .string "クラインのつぼ!"	@name
     .byte   144	@unk9
     .hword  0	@cost
     .byte   91	@unkC
-    .byte   0	@unkD
-    .byte   135	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   (ITEM_ELEMENT_HOLY | ITEM_ELEMENT_UNK | ITEM_ELEMENT_WIND | ITEM_ELEMENT_CRUSH)	@element
 
 @ Item 062 / 0x03E - KngKey
     .string "おうのかぎ"	@name
@@ -558,8 +558,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   92	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 063 / 0x03F - Paper
     .string "はずれ"	@name
@@ -567,8 +567,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 064 / 0x040 - Oath
     .string "はずれ"	@name
@@ -576,8 +576,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 065 / 0x041 - Pouch
     .string "ひもつきさいふ"	@name
@@ -585,16 +585,16 @@ gUnknown_082E60B4:
     .byte   112	@unk9
     .hword  1000	@cost
     .byte   95	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 066 / 0x042 - GnPwdr
     .string "とくせいばくやく"	@name
     .byte   240	@unk9
     .hword  0	@cost
     .byte   96	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 067 / 0x043 - LtKey
     .string "ひかりのかぎ"	@name
@@ -602,8 +602,8 @@ gUnknown_082E60B4:
     .byte   208	@unk9
     .hword  0	@cost
     .byte   9	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 068 / 0x044 - DkKey
     .string "やみのかぎ"	@name
@@ -611,8 +611,8 @@ gUnknown_082E60B4:
     .byte   208	@unk9
     .hword  0	@cost
     .byte   9	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 069 / 0x045 - Mirror
     .string "よみのかがみ"	@name
@@ -620,8 +620,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   97	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 070 / 0x046 - Book
     .string "ひでんのしょ"	@name
@@ -629,8 +629,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   171	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 071 / 0x047 - Srdine
     .string "たんけんいわし"	@name
@@ -638,8 +638,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  50	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 072 / 0x048 - Mackrl
     .string "かぶとあじ"	@name
@@ -647,8 +647,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  100	@cost
     .byte   70	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 073 / 0x049 - Sole
     .string "シ-ルドがれい"	@name
@@ -656,8 +656,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  250	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 074 / 0x04A - Trout
     .string "こばんがつお"	@name
@@ -665,8 +665,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  500	@cost
     .byte   81	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 075 / 0x04B - C.Fsh
     .string "いっかくはまち"	@name
@@ -674,8 +674,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  750	@cost
     .byte   103	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 076 / 0x04C - Snapr
     .string "おおこがねだい"	@name
@@ -683,16 +683,16 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  1000	@cost
     .byte   103	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 077 / 0x04D - Tuna
     .string "りゅうぐうまぐろ"	@name
     .byte   16	@unk9
     .hword  2000	@cost
     .byte   103	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 078 / 0x04E - Puffer
     .string "かっちゅうふぐ"	@name
@@ -700,8 +700,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  5000	@cost
     .byte   104	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 079 / 0x04F - Rod1
     .string "つりざお"	@name
@@ -709,8 +709,8 @@ gUnknown_082E60B4:
     .byte   96	@unk9
     .hword  1000	@cost
     .byte   106	@unkC
-    .byte   127	@unkD
-    .byte   0	@flags
+    .byte   ~ITEM_USER_RYU	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 080 / 0x050 - Rod2
     .string "さおデラックス"	@name
@@ -718,8 +718,8 @@ gUnknown_082E60B4:
     .byte   96	@unk9
     .hword  2000	@cost
     .byte   106	@unkC
-    .byte   127	@unkD
-    .byte   0	@flags
+    .byte   ~ITEM_USER_RYU	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 081 / 0x051 - Rod3
     .string "つりきちのさお"	@name
@@ -727,8 +727,8 @@ gUnknown_082E60B4:
     .byte   96	@unk9
     .hword  5000	@cost
     .byte   106	@unkC
-    .byte   127	@unkD
-    .byte   0	@flags
+    .byte   ~ITEM_USER_RYU	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 082 / 0x052 - Rod4
     .string "すごいさお"	@name
@@ -736,8 +736,8 @@ gUnknown_082E60B4:
     .byte   96	@unk9
     .hword  10000	@cost
     .byte   106	@unkC
-    .byte   127	@unkD
-    .byte   0	@flags
+    .byte   ~ITEM_USER_RYU	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 083 / 0x053 - Rod5
     .string "たくみのさお"	@name
@@ -745,8 +745,8 @@ gUnknown_082E60B4:
     .byte   224	@unk9
     .hword  0	@cost
     .byte   63	@unkC
-    .byte   127	@unkD
-    .byte   0	@flags
+    .byte   ~ITEM_USER_RYU	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 084 / 0x054 - I.Ore
     .string "てっこうせき"	@name
@@ -754,8 +754,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   107	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 085 / 0x055 - Key
     .string "ほこらのかぎ"	@name
@@ -763,16 +763,16 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   111	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 086 / 0x056 - Vitamn
     .string "ふつかよいぐすり"	@name
     .byte   16	@unk9
     .hword  500	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 087 / 0x057 - Statue
     .string "しゅごしんぞう"	@name
@@ -780,8 +780,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   113	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 088 / 0x058 - OldEgg
     .string "ふるいタマゴ"	@name
@@ -789,8 +789,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   114	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 089 / 0x059 - Goods
     .string "しょうひん"	@name
@@ -798,8 +798,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   115	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 090 / 0x05A - Egg
     .string "おおきなタマゴ"	@name
@@ -807,8 +807,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   116	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 091 / 0x05B - Sphere
     .string "しょうにんだま"	@name
@@ -816,8 +816,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   117	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 092 / 0x05C - Gills
     .string "つけえら"	@name
@@ -825,8 +825,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   118	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 093 / 0x05D - G.Bar
     .string "きんののべぼう"	@name
@@ -834,8 +834,8 @@ gUnknown_082E60B4:
     .byte   112	@unk9
     .hword  50000	@cost
     .byte   66	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 094 / 0x05E - Icicle
     .string "こおりのせんす"	@name
@@ -843,8 +843,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   148	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 095 / 0x05F - Fife
     .string "とうぞくのふえ"	@name
@@ -852,8 +852,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   149	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 096 / 0x060 - Pass
     .string "つうこうしょ"	@name
@@ -861,8 +861,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   243	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 097 / 0x061 - B.Part
     .string "こわれたぶひん"	@name
@@ -870,8 +870,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   150	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 098 / 0x062 - Parts
     .string "そうちのぶひん"	@name
@@ -879,16 +879,16 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   162	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 099 / 0x063 - D.Hrt
     .string "ドラゴン.ソウル"	@name
     .byte   176	@unk9
     .hword  0	@cost
     .byte   163	@unkC
-    .byte   0	@unkD
-    .byte   129	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   (ITEM_ELEMENT_HOLY | ITEM_ELEMENT_CRUSH)	@element
 
 @ Item 100 / 0x064 - Map
     .string "まほうのちず"	@name
@@ -896,8 +896,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   80	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 101 / 0x065 - List
     .string "いちらんひょう"	@name
@@ -905,8 +905,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   108	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 102 / 0x066 - Wtzit
     .string "へんなもの"	@name
@@ -914,8 +914,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   67	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 103 / 0x067 - Note1
     .string "おじじのてがみ"	@name
@@ -923,8 +923,8 @@ gUnknown_082E60B4:
     .byte   208	@unk9
     .hword  0	@cost
     .byte   143	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 104 / 0x068 - Note2
     .string "おばばのてがみ"	@name
@@ -932,8 +932,8 @@ gUnknown_082E60B4:
     .byte   208	@unk9
     .hword  0	@cost
     .byte   90	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 105 / 0x069 - I.Claw
     .string "はがんのつめ"	@name
@@ -941,8 +941,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   93	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 106 / 0x06A - TmKey
     .string "ときのかぎ"	@name
@@ -950,16 +950,16 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   9	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 107 / 0x06B - B.Rang
     .string "ふるいブ-メラン"	@name
     .byte   240	@unk9
     .hword  0	@cost
     .byte   112	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 108 / 0x06C - SkyKey
     .string "てんのかぎ"	@name
@@ -967,8 +967,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   9	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 109 / 0x06D - Cowl
     .string "ききみみずきん"	@name
@@ -976,8 +976,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   151	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 110 / 0x06E - Bolster
     .string "セラピのまくら"	@name
@@ -985,8 +985,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   152	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 111 / 0x06F - Maestro
     .string "めいじんのふえ"	@name
@@ -994,8 +994,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   153	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 112 / 0x070 - G.Fly
     .string "きんばえ"	@name
@@ -1003,8 +1003,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   88	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 113 / 0x071 - Oil
     .string "かえるのしる"	@name
@@ -1012,8 +1012,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   110	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 114 / 0x072 - M.Cura
     .string "ネズミのくすり"	@name
@@ -1021,8 +1021,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   242	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 115 / 0x073 - Melon
     .string "マックスメロン"	@name
@@ -1030,8 +1030,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  100	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 116 / 0x074 - Fruit
     .string "ホリディのみ"	@name
@@ -1039,8 +1039,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   253	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 117 / 0x075 - P.Fish
     .string "どフグ"	@name
@@ -1048,8 +1048,8 @@ gUnknown_082E60B4:
     .byte   80	@unk9
     .hword  10	@cost
     .byte   110	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 118 / 0x076 - Root
     .string "ホリのねっこ"	@name
@@ -1057,8 +1057,8 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   110	@unkC
-    .byte   0	@unkD
-    .byte   128	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_HOLY	@element
 
 @ Item 119 / 0x077 - C.Nut
     .string "わだヤシのみ"	@name
@@ -1066,8 +1066,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  10	@cost
     .byte   110	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 120 / 0x078 - W.Ant
     .string "しろしかのつの"	@name
@@ -1075,8 +1075,8 @@ gUnknown_082E60B4:
     .byte   16	@unk9
     .hword  3000	@cost
     .byte   19	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 121 / 0x079 - Tonic
     .string "オリザニン"	@name
@@ -1084,54 +1084,54 @@ gUnknown_082E60B4:
     .byte   240	@unk9
     .hword  0	@cost
     .byte   242	@unkC
-    .byte   0	@unkD
-    .byte   0	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_NONE	@element
 
 @ Item 122 / 0x07A - Herb  X9
     .string "やくそう  X9"	@name
     .byte   16	@unk9
     .hword  90	@cost
     .byte   0	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 123 / 0x07B - Antd  X9
     .string "どくけし  X9"	@name
     .byte   16	@unk9
     .hword  135	@cost
     .byte   70	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 124 / 0x07C - Drop  X9
     .string "ベムのなみだX9"	@name
     .byte   16	@unk9
     .hword  180	@cost
     .byte   2	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 125 / 0x07D - Chrm  X9
     .string "おふだ   X9"	@name
     .byte   16	@unk9
     .hword  1350	@cost
     .byte   7	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
 @ Item 126 / 0x07E - Cure  X9
     .string "きつけやく X9"	@name
     .byte   16	@unk9
     .hword  4500	@cost
     .byte   16	@unkC
-    .byte   0	@unkD
-    .byte   6	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   (ITEM_ELEMENT_UNK | ITEM_ELEMENT_WIND)	@element
 
 @ Item 127 / 0x07F - Acrn  X9
     .string "ちりょくのみX9"	@name
     .byte   16	@unk9
     .hword  270	@cost
     .byte   19	@unkC
-    .byte   0	@unkD
-    .byte   2	@flags
+    .byte   ITEM_USER_ALL	@userblockmask
+    .byte   ITEM_ELEMENT_WIND	@element
 
