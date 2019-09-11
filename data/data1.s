@@ -31127,7 +31127,8 @@ gUnknown_0821754C:
 
     .global gUnknown_08217554
 gUnknown_08217554:
-    .incbin "baserom.gba", 0x00217554, 0x8
+    .word gUnknown_082BAAF4
+    .word gUnknown_082AA83C
 
     .global gUnknown_0821755C
 gUnknown_0821755C:
@@ -31151,11 +31152,30 @@ gUnknown_08217595:
 
     .global gUnknown_082175A8
 gUnknown_082175A8:
-    .incbin "baserom.gba", 0x002175A8, 0x20
+    .incbin "baserom.gba", 0x002175A8, 0x9
+
+    .global gUnknown_082175B1
+gUnknown_082175B1:
+    .incbin "baserom.gba", 0x002175B1, 0x2
+
+    .global gUnknown_082175B3
+gUnknown_082175B3:
+    .incbin "baserom.gba", 0x002175B3, 0x4
+
+    .global gUnknown_082175B7
+gUnknown_082175B7:
+    .incbin "baserom.gba", 0x002175B7, 0x6
+
+    .global gUnknown_082175BD
+gUnknown_082175BD:
+    .incbin "baserom.gba", 0x002175BD, 0xB
 
     .global gUnknown_082175C8
 gUnknown_082175C8:
-    .incbin "baserom.gba", 0x002175C8, 0x10
+    .word gUnknown_082175B1
+    .word gUnknown_082175B3
+    .word gUnknown_082175B7
+    .word gUnknown_082175BD
 
     .global gUnknown_082175D8
 gUnknown_082175D8:
