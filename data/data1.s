@@ -10610,6 +10610,7 @@ gUnknown_08187800:
 gUnknown_08187820:
     .incbin "baserom.gba", 0x00187820, 0x40
 
+@Here starts OamData entries
     .global gUnknown_08187860
 gUnknown_08187860:
     .incbin "baserom.gba", 0x00187860, 0x70
@@ -10705,18 +10706,22 @@ gUnknown_08187BA8:
     .word 2
     .word gUnknown_08187B40
 
+@Breath of Fire logo OamData entries
     .global gUnknown_08187BB0
 gUnknown_08187BB0:
     .incbin "baserom.gba", 0x00187BB0, 0x48
 
+@Copyright OamData entries
     .global gUnknown_08187BF8
 gUnknown_08187BF8:
     .incbin "baserom.gba", 0x00187BF8, 0x38
 
+@Push start OamData entries
     .global gUnknown_08187C30
 gUnknown_08187C30:
     .incbin "baserom.gba", 0x00187C30, 0x18
 
+@Trademark OamData entry
     .global gUnknown_08187C48
 gUnknown_08187C48:
     .incbin "baserom.gba", 0x00187C48, 0x8
@@ -10877,6 +10882,7 @@ gUnknown_08187E40:
     .word gUnknown_08187DF8
     .word 7
     .word gUnknown_08187E08
+@Here ends OamData Entries
 
     .global gUnknown_08187EA8
 gUnknown_08187EA8:
