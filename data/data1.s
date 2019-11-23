@@ -32412,6 +32412,7 @@ gUnknown_082E4450:
 gUnknown_082E49B4:
     .incbin "baserom.gba", 0x002E49B4, 0xD00
 
+@item/shop related data starts
     .include "constants/items/defensive_item_data.inc"
 
     .global gUnknown_082E5F94
@@ -32437,6 +32438,8 @@ gUnknown_082E69F4:
     .incbin "baserom.gba", 0x002E69F4, 0x140
 
     .include "constants/items/offensive_item_data.inc"
+
+@item/shop related data ends
 
     .global gUnknown_082E7134
 gUnknown_082E7134:
