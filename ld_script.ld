@@ -386,7 +386,11 @@ SECTIONS
         *libc.a:strcmp.o(.rodata);
         *libc.a:strlen.o(.rodata);
         *libc.a:syscalls.o(.rodata);
-        . = ALIGN(4); 
+    } = 0
+
+    .data :
+	ALIGN(4)
+    {
         data/data1.o(.data);
         *libc.a:impure.o(.data);
         *libc.a:locale.o(.data);
