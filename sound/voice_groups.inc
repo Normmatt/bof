@@ -1,6 +1,6 @@
 	@********************** Voicegroup **********************@
 	.align 2
-gUnknown_08142684:	@ 0x08142684
+voicegroup000:	@ 0x08142684
 	voice_directsound 60, 0, gUnknown_081438F4, 255, 0, 255, 0	@08142684
 	voice_directsound 60, 0, gUnknown_081495C8, 255, 0, 255, 0	@08142690
 	voice_directsound 60, 0, gUnknown_08149FCC, 255, 0, 255, 0	@0814269C
